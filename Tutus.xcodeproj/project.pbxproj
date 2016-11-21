@@ -152,6 +152,9 @@
 				B90CB8AD1DE347F100A8D68D /* Main.storyboard */,
 				B90CB8B31DE347F100A8D68D /* Assets.xcassets */,
 				B90CB8DA1DE3693600A8D68D /* Login */,
+				B90CB8E41DE36BCD00A8D68D /* GuestList */,
+				B90CB8E51DE36BF900A8D68D /* EventList */,
+				B90CB8E61DE36C0400A8D68D /* Assignments */,
 				B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */,
 				B90CB8B81DE347F100A8D68D /* Info.plist */,
 				B90CB8B01DE347F100A8D68D /* Tutus.xcdatamodeld */,
@@ -186,6 +189,27 @@
 				B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		B90CB8E41DE36BCD00A8D68D /* GuestList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GuestList;
+			sourceTree = "<group>";
+		};
+		B90CB8E51DE36BF900A8D68D /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = EventList;
+			sourceTree = "<group>";
+		};
+		B90CB8E61DE36C0400A8D68D /* Assignments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assignments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
