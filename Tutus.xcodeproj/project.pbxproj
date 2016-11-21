@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8A91DE347F100A8D68D /* AppDelegate.swift */; };
+		B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8AB1DE347F100A8D68D /* ViewController.swift */; };
+		B90CB8AF1DE347F100A8D68D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8AD1DE347F100A8D68D /* Main.storyboard */; };
+		B90CB8B21DE347F100A8D68D /* Tutus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8B01DE347F100A8D68D /* Tutus.xcdatamodeld */; };
+		B90CB8B41DE347F100A8D68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8B31DE347F100A8D68D /* Assets.xcassets */; };
+		B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */; };
+		B90CB8C21DE347F100A8D68D /* TutusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8C11DE347F100A8D68D /* TutusTests.swift */; };
+		B90CB8CD1DE347F100A8D68D /* TutusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8CC1DE347F100A8D68D /* TutusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B90CB8BE1DE347F100A8D68D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B90CB89E1DE347F100A8D68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B90CB8A51DE347F100A8D68D;
+			remoteInfo = Tutus;
+		};
+		B90CB8C91DE347F100A8D68D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B90CB89E1DE347F100A8D68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B90CB8A51DE347F100A8D68D;
+			remoteInfo = Tutus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B90CB8A61DE347F100A8D68D /* Tutus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90CB8A91DE347F100A8D68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B90CB8AB1DE347F100A8D68D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B90CB8AE1DE347F100A8D68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B90CB8B11DE347F100A8D68D /* Tutus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tutus.xcdatamodel; sourceTree = "<group>"; };
+		B90CB8B31DE347F100A8D68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B90CB8B61DE347F100A8D68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B90CB8B81DE347F100A8D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B90CB8BD1DE347F100A8D68D /* TutusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90CB8C11DE347F100A8D68D /* TutusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutusTests.swift; sourceTree = "<group>"; };
+		B90CB8C31DE347F100A8D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B90CB8C81DE347F100A8D68D /* TutusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90CB8CC1DE347F100A8D68D /* TutusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutusUITests.swift; sourceTree = "<group>"; };
+		B90CB8CE1DE347F100A8D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B90CB8A31DE347F100A8D68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90CB8BA1DE347F100A8D68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90CB8C51DE347F100A8D68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B90CB89D1DE347F100A8D68D = {
+			isa = PBXGroup;
+			children = (
+				B90CB8A81DE347F100A8D68D /* Tutus */,
+				B90CB8C01DE347F100A8D68D /* TutusTests */,
+				B90CB8CB1DE347F100A8D68D /* TutusUITests */,
+				B90CB8A71DE347F100A8D68D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B90CB8A71DE347F100A8D68D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B90CB8A61DE347F100A8D68D /* Tutus.app */,
+				B90CB8BD1DE347F100A8D68D /* TutusTests.xctest */,
+				B90CB8C81DE347F100A8D68D /* TutusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B90CB8A81DE347F100A8D68D /* Tutus */ = {
+			isa = PBXGroup;
+			children = (
+				B90CB8A91DE347F100A8D68D /* AppDelegate.swift */,
+				B90CB8AB1DE347F100A8D68D /* ViewController.swift */,
+				B90CB8AD1DE347F100A8D68D /* Main.storyboard */,
+				B90CB8B31DE347F100A8D68D /* Assets.xcassets */,
+				B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */,
+				B90CB8B81DE347F100A8D68D /* Info.plist */,
+				B90CB8B01DE347F100A8D68D /* Tutus.xcdatamodeld */,
+			);
+			path = Tutus;
+			sourceTree = "<group>";
+		};
+		B90CB8C01DE347F100A8D68D /* TutusTests */ = {
+			isa = PBXGroup;
+			children = (
+				B90CB8C11DE347F100A8D68D /* TutusTests.swift */,
+				B90CB8C31DE347F100A8D68D /* Info.plist */,
+			);
+			path = TutusTests;
+			sourceTree = "<group>";
+		};
+		B90CB8CB1DE347F100A8D68D /* TutusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B90CB8CC1DE347F100A8D68D /* TutusUITests.swift */,
+				B90CB8CE1DE347F100A8D68D /* Info.plist */,
+			);
+			path = TutusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B90CB8A51DE347F100A8D68D /* Tutus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B90CB8D11DE347F100A8D68D /* Build configuration list for PBXNativeTarget "Tutus" */;
+			buildPhases = (
+				B90CB8A21DE347F100A8D68D /* Sources */,
+				B90CB8A31DE347F100A8D68D /* Frameworks */,
+				B90CB8A41DE347F100A8D68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tutus;
+			productName = Tutus;
+			productReference = B90CB8A61DE347F100A8D68D /* Tutus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B90CB8BC1DE347F100A8D68D /* TutusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B90CB8D41DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusTests" */;
+			buildPhases = (
+				B90CB8B91DE347F100A8D68D /* Sources */,
+				B90CB8BA1DE347F100A8D68D /* Frameworks */,
+				B90CB8BB1DE347F100A8D68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B90CB8BF1DE347F100A8D68D /* PBXTargetDependency */,
+			);
+			name = TutusTests;
+			productName = TutusTests;
+			productReference = B90CB8BD1DE347F100A8D68D /* TutusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B90CB8C71DE347F100A8D68D /* TutusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B90CB8D71DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusUITests" */;
+			buildPhases = (
+				B90CB8C41DE347F100A8D68D /* Sources */,
+				B90CB8C51DE347F100A8D68D /* Frameworks */,
+				B90CB8C61DE347F100A8D68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B90CB8CA1DE347F100A8D68D /* PBXTargetDependency */,
+			);
+			name = TutusUITests;
+			productName = TutusUITests;
+			productReference = B90CB8C81DE347F100A8D68D /* TutusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B90CB89E1DE347F100A8D68D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Sebastian Guerrero";
+				TargetAttributes = {
+					B90CB8A51DE347F100A8D68D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4DWM5E7J8T;
+						ProvisioningStyle = Automatic;
+					};
+					B90CB8BC1DE347F100A8D68D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4DWM5E7J8T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B90CB8A51DE347F100A8D68D;
+					};
+					B90CB8C71DE347F100A8D68D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4DWM5E7J8T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B90CB8A51DE347F100A8D68D;
+					};
+				};
+			};
+			buildConfigurationList = B90CB8A11DE347F100A8D68D /* Build configuration list for PBXProject "Tutus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B90CB89D1DE347F100A8D68D;
+			productRefGroup = B90CB8A71DE347F100A8D68D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B90CB8A51DE347F100A8D68D /* Tutus */,
+				B90CB8BC1DE347F100A8D68D /* TutusTests */,
+				B90CB8C71DE347F100A8D68D /* TutusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B90CB8A41DE347F100A8D68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */,
+				B90CB8B41DE347F100A8D68D /* Assets.xcassets in Resources */,
+				B90CB8AF1DE347F100A8D68D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90CB8BB1DE347F100A8D68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90CB8C61DE347F100A8D68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B90CB8A21DE347F100A8D68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
+				B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */,
+				B90CB8B21DE347F100A8D68D /* Tutus.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90CB8B91DE347F100A8D68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90CB8C21DE347F100A8D68D /* TutusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90CB8C41DE347F100A8D68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90CB8CD1DE347F100A8D68D /* TutusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B90CB8BF1DE347F100A8D68D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B90CB8A51DE347F100A8D68D /* Tutus */;
+			targetProxy = B90CB8BE1DE347F100A8D68D /* PBXContainerItemProxy */;
+		};
+		B90CB8CA1DE347F100A8D68D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B90CB8A51DE347F100A8D68D /* Tutus */;
+			targetProxy = B90CB8C91DE347F100A8D68D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B90CB8AD1DE347F100A8D68D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90CB8AE1DE347F100A8D68D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90CB8B61DE347F100A8D68D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B90CB8CF1DE347F100A8D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B90CB8D01DE347F100A8D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B90CB8D21DE347F100A8D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4DWM5E7J8T;
+				INFOPLIST_FILE = Tutus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = project.Tutus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B90CB8D31DE347F100A8D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4DWM5E7J8T;
+				INFOPLIST_FILE = Tutus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = project.Tutus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B90CB8D51DE347F100A8D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4DWM5E7J8T;
+				INFOPLIST_FILE = TutusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = project.TutusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tutus.app/Tutus";
+			};
+			name = Debug;
+		};
+		B90CB8D61DE347F100A8D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4DWM5E7J8T;
+				INFOPLIST_FILE = TutusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = project.TutusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tutus.app/Tutus";
+			};
+			name = Release;
+		};
+		B90CB8D81DE347F100A8D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4DWM5E7J8T;
+				INFOPLIST_FILE = TutusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = project.TutusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Tutus;
+			};
+			name = Debug;
+		};
+		B90CB8D91DE347F100A8D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4DWM5E7J8T;
+				INFOPLIST_FILE = TutusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = project.TutusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Tutus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B90CB8A11DE347F100A8D68D /* Build configuration list for PBXProject "Tutus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90CB8CF1DE347F100A8D68D /* Debug */,
+				B90CB8D01DE347F100A8D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B90CB8D11DE347F100A8D68D /* Build configuration list for PBXNativeTarget "Tutus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90CB8D21DE347F100A8D68D /* Debug */,
+				B90CB8D31DE347F100A8D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B90CB8D41DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90CB8D51DE347F100A8D68D /* Debug */,
+				B90CB8D61DE347F100A8D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B90CB8D71DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90CB8D81DE347F100A8D68D /* Debug */,
+				B90CB8D91DE347F100A8D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B90CB8B01DE347F100A8D68D /* Tutus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B90CB8B11DE347F100A8D68D /* Tutus.xcdatamodel */,
+			);
+			currentVersion = B90CB8B11DE347F100A8D68D /* Tutus.xcdatamodel */;
+			path = Tutus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B90CB89E1DE347F100A8D68D /* Project object */;
+}
