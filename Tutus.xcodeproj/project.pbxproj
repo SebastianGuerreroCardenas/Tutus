@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6442B79794084D8866958439 /* Pods_Tutus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C7D0280139E02225888DC0 /* Pods_Tutus.framework */; };
+		907A1A64060614B3C5BB97D4 /* Pods_TutusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1494897E25F3125266F530BC /* Pods_TutusTests.framework */; };
 		B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8A91DE347F100A8D68D /* AppDelegate.swift */; };
 		B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8AB1DE347F100A8D68D /* ViewController.swift */; };
 		B90CB8AF1DE347F100A8D68D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8AD1DE347F100A8D68D /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */; };
 		B90CB8C21DE347F100A8D68D /* TutusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8C11DE347F100A8D68D /* TutusTests.swift */; };
 		B90CB8CD1DE347F100A8D68D /* TutusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8CC1DE347F100A8D68D /* TutusUITests.swift */; };
+		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1494897E25F3125266F530BC /* Pods_TutusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B411B8A56D06B25AF6636A /* Pods-Tutus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.release.xcconfig"; sourceTree = "<group>"; };
+		68C7D0280139E02225888DC0 /* Pods_Tutus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tutus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7690543BBF6C0AE928DE7FBB /* Pods-TutusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9A8E1346EAF0E12BCC701B79 /* Pods-TutusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.release.xcconfig"; sourceTree = "<group>"; };
 		B90CB8A61DE347F100A8D68D /* Tutus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90CB8A91DE347F100A8D68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B90CB8AB1DE347F100A8D68D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		B90CB8C81DE347F100A8D68D /* TutusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90CB8CC1DE347F100A8D68D /* TutusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutusUITests.swift; sourceTree = "<group>"; };
 		B90CB8CE1DE347F100A8D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
+		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6442B79794084D8866958439 /* Pods_Tutus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907A1A64060614B3C5BB97D4 /* Pods_TutusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A561A35F352A1C988683926 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68C7D0280139E02225888DC0 /* Pods_Tutus.framework */,
+				1494897E25F3125266F530BC /* Pods_TutusTests.framework */,
+				2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A65841EE4928DE0FDC1002D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */,
+				55B411B8A56D06B25AF6636A /* Pods-Tutus.release.xcconfig */,
+				CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */,
+				9A8E1346EAF0E12BCC701B79 /* Pods-TutusTests.release.xcconfig */,
+				D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */,
+				7690543BBF6C0AE928DE7FBB /* Pods-TutusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B90CB89D1DE347F100A8D68D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +121,8 @@
 				B90CB8C01DE347F100A8D68D /* TutusTests */,
 				B90CB8CB1DE347F100A8D68D /* TutusUITests */,
 				B90CB8A71DE347F100A8D68D /* Products */,
+				8A65841EE4928DE0FDC1002D /* Pods */,
+				0A561A35F352A1C988683926 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B90CB8D11DE347F100A8D68D /* Build configuration list for PBXNativeTarget "Tutus" */;
 			buildPhases = (
+				0B13BBBB7392FF20475171AE /* [CP] Check Pods Manifest.lock */,
 				B90CB8A21DE347F100A8D68D /* Sources */,
 				B90CB8A31DE347F100A8D68D /* Frameworks */,
 				B90CB8A41DE347F100A8D68D /* Resources */,
+				2A88A2B772326970FBB6B17E /* [CP] Embed Pods Frameworks */,
+				09EF7532643FB3C4F20914ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B90CB8D41DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusTests" */;
 			buildPhases = (
+				D5D0D2BDC13DDDEC560B4D1F /* [CP] Check Pods Manifest.lock */,
 				B90CB8B91DE347F100A8D68D /* Sources */,
 				B90CB8BA1DE347F100A8D68D /* Frameworks */,
 				B90CB8BB1DE347F100A8D68D /* Resources */,
+				FDBFFF2CB63AD6DDC1112C20 /* [CP] Embed Pods Frameworks */,
+				386B42E5656514E613E4EFE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B90CB8D71DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusUITests" */;
 			buildPhases = (
+				5E79510743369DB323F286CC /* [CP] Check Pods Manifest.lock */,
 				B90CB8C41DE347F100A8D68D /* Sources */,
 				B90CB8C51DE347F100A8D68D /* Frameworks */,
 				B90CB8C61DE347F100A8D68D /* Resources */,
+				1F81510265D10B23FE7A379C /* [CP] Embed Pods Frameworks */,
+				879553CA4760D4CEBDBF5F4D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +308,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09EF7532643FB3C4F20914ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tutus/Pods-Tutus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B13BBBB7392FF20475171AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1F81510265D10B23FE7A379C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A88A2B772326970FBB6B17E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tutus/Pods-Tutus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		386B42E5656514E613E4EFE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E79510743369DB323F286CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		879553CA4760D4CEBDBF5F4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5D0D2BDC13DDDEC560B4D1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBFFF2CB63AD6DDC1112C20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B90CB8A21DE347F100A8D68D /* Sources */ = {
@@ -415,6 +602,7 @@
 		};
 		B90CB8D21DE347F100A8D68D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWM5E7J8T;
@@ -428,6 +616,7 @@
 		};
 		B90CB8D31DE347F100A8D68D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55B411B8A56D06B25AF6636A /* Pods-Tutus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWM5E7J8T;
@@ -441,6 +630,7 @@
 		};
 		B90CB8D51DE347F100A8D68D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +646,7 @@
 		};
 		B90CB8D61DE347F100A8D68D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A8E1346EAF0E12BCC701B79 /* Pods-TutusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +662,7 @@
 		};
 		B90CB8D81DE347F100A8D68D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4DWM5E7J8T;
@@ -485,6 +677,7 @@
 		};
 		B90CB8D91DE347F100A8D68D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7690543BBF6C0AE928DE7FBB /* Pods-TutusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4DWM5E7J8T;

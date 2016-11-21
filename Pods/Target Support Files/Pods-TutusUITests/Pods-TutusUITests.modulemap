@@ -1,0 +1,6 @@
+framework module Pods_TutusUITests {
+  umbrella header "Pods-TutusUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
