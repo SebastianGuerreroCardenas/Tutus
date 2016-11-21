@@ -17,6 +17,10 @@
 		B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */; };
 		B90CB8C21DE347F100A8D68D /* TutusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8C11DE347F100A8D68D /* TutusTests.swift */; };
 		B90CB8CD1DE347F100A8D68D /* TutusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8CC1DE347F100A8D68D /* TutusUITests.swift */; };
+		B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8DB1DE3695000A8D68D /* Login.storyboard */; };
+		B90CB8DE1DE369B000A8D68D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8DD1DE369B000A8D68D /* LoginViewController.swift */; };
+		B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */; };
+		B90CB8E21DE36A6000A8D68D /* LoginParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8E11DE36A6000A8D68D /* LoginParser.swift */; };
 		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,10 @@
 		B90CB8C81DE347F100A8D68D /* TutusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90CB8CC1DE347F100A8D68D /* TutusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutusUITests.swift; sourceTree = "<group>"; };
 		B90CB8CE1DE347F100A8D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B90CB8DB1DE3695000A8D68D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B90CB8DD1DE369B000A8D68D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
+		B90CB8E11DE36A6000A8D68D /* LoginParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginParser.swift; sourceTree = "<group>"; };
 		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
 		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 				B90CB8AB1DE347F100A8D68D /* ViewController.swift */,
 				B90CB8AD1DE347F100A8D68D /* Main.storyboard */,
 				B90CB8B31DE347F100A8D68D /* Assets.xcassets */,
+				B90CB8DA1DE3693600A8D68D /* Login */,
 				B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */,
 				B90CB8B81DE347F100A8D68D /* Info.plist */,
 				B90CB8B01DE347F100A8D68D /* Tutus.xcdatamodeld */,
@@ -166,6 +175,17 @@
 				B90CB8CE1DE347F100A8D68D /* Info.plist */,
 			);
 			path = TutusUITests;
+			sourceTree = "<group>";
+		};
+		B90CB8DA1DE3693600A8D68D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B90CB8DB1DE3695000A8D68D /* Login.storyboard */,
+				B90CB8DD1DE369B000A8D68D /* LoginViewController.swift */,
+				B90CB8E11DE36A6000A8D68D /* LoginParser.swift */,
+				B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
 				B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */,
 				B90CB8B41DE347F100A8D68D /* Assets.xcassets in Resources */,
 				B90CB8AF1DE347F100A8D68D /* Main.storyboard in Resources */,
@@ -337,7 +358,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1F81510265D10B23FE7A379C /* [CP] Embed Pods Frameworks */ = {
@@ -397,7 +418,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		879553CA4760D4CEBDBF5F4D /* [CP] Copy Pods Resources */ = {
@@ -427,7 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FDBFFF2CB63AD6DDC1112C20 /* [CP] Embed Pods Frameworks */ = {
@@ -452,6 +473,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90CB8DE1DE369B000A8D68D /* LoginViewController.swift in Sources */,
+				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
+				B90CB8E21DE36A6000A8D68D /* LoginParser.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
 				B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */,
 				B90CB8B21DE347F100A8D68D /* Tutus.xcdatamodeld in Sources */,
@@ -709,6 +733,7 @@
 				B90CB8D31DE347F100A8D68D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B90CB8D41DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +742,7 @@
 				B90CB8D61DE347F100A8D68D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B90CB8D71DE347F100A8D68D /* Build configuration list for PBXNativeTarget "TutusUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +751,7 @@
 				B90CB8D91DE347F100A8D68D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
