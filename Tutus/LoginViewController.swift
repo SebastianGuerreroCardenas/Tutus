@@ -7,13 +7,49 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FacebookCore
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Logged Out")
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        print("Logged in")
+        
+//        let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let controller = loginStoryboard.instantiateViewController(withIdentifier: "MainController") as UIViewController
+//            present(controller, animated: true, completion: nil)
+        
+    }
+    @IBAction func dataAction(_ sender: Any) {
+        loginClient.fetchProfile()
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        return true
+    }
+    
+    let loginClient = LoginClient()
+    
+    
+    let fbLoginButton: FBSDKLoginButton = {
+        let button = FBSDKLoginButton()
+        button.readPermissions = ["email", "user_friends"]
+        return button
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.addSubview(fbLoginButton)
+        fbLoginButton.delegate = self
+        fbLoginButton.center = self.view.center
+//        fbLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
+//         Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

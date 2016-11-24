@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="JyS-J1-xkS">
             <objects>
-                <viewController id="T90-hh-1Y4" customClass="LoginViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="T90-hh-1Y4" customClass="LoginViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DBd-vx-172"/>
                         <viewControllerLayoutGuide type="bottom" id="9oS-Nf-gzV"/>
@@ -22,19 +22,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce6-1P-pj7">
-                                <rect key="frame" x="177" y="270" width="42" height="21"/>
+                                <rect key="frame" x="166" y="271" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgT-eh-juf">
+                                <rect key="frame" x="162" y="363" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="data"/>
+                                <connections>
+                                    <action selector="dataAction:" destination="T90-hh-1Y4" eventType="touchUpInside" id="Lw6-zc-np7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wYz-48-LS3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pg1-eZ-DIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="-96"/>
+            <point key="canvasLocation" x="760.79999999999995" y="-96.7016491754123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="88S-zE-tgx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Un4-Me-TD7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WNf-a1-Orf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T90-hh-1Y4" kind="relationship" relationship="rootViewController" id="LZS-Sm-xAh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijY-jX-GSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="-96.7016491754123"/>
         </scene>
     </scenes>
 </document>
