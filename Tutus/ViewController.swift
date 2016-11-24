@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBAction func data(_ sender: Any) {
         loginClient.fetchProfile()
-        loginClient.createNewUser()
+        //loginClient.createNewUser()
         
     }
 

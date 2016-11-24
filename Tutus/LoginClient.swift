@@ -21,7 +21,7 @@ class LoginClient {
         }
     }
     
-    func createNewUser() -> Bool {
+    func createNewUser(authToken: String, full_name: String, name: String, email: String, role: String) -> Bool {
         let parameters: Parameters = ["user[auth_token]": authToken, "user[full_name]": full_name, "user[email]": email, "user[role]": role]
         
         Alamofire.request("http://localhost:3000/users",  method: .post ,parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
