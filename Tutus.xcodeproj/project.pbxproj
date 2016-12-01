@@ -27,6 +27,11 @@
 		B91622D41DE760B2009D935C /* EventListClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91622D31DE760B2009D935C /* EventListClient.swift */; };
 		B91622D71DE76CC8009D935C /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91622D61DE76CC8009D935C /* Questions.storyboard */; };
 		B91622D91DE76CDA009D935C /* QuestionsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91622D81DE76CDA009D935C /* QuestionsClient.swift */; };
+		B91622DD1DEF6070009D935C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91622DC1DEF6070009D935C /* MenuViewController.swift */; };
+		B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91622DE1DEF6093009D935C /* BaseViewController.swift */; };
+		B97186301DEF93A60096E506 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971862F1DEF93A60096E506 /* Event.storyboard */; };
+		B97186321DEF93D90096E506 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186311DEF93D90096E506 /* EventViewController.swift */; };
+		B97186341DEFA4D40096E506 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186331DEFA4D40096E506 /* UserClient.swift */; };
 		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +84,11 @@
 		B91622D31DE760B2009D935C /* EventListClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListClient.swift; sourceTree = "<group>"; };
 		B91622D61DE76CC8009D935C /* Questions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
 		B91622D81DE76CDA009D935C /* QuestionsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsClient.swift; sourceTree = "<group>"; };
+		B91622DC1DEF6070009D935C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B91622DE1DEF6093009D935C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B971862F1DEF93A60096E506 /* Event.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		B97186311DEF93D90096E506 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		B97186331DEFA4D40096E506 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
 		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
 		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +175,7 @@
 				B9EB83251DE38C1300C0A4B9 /* Main StoryBoard */,
 				B90CB8A91DE347F100A8D68D /* AppDelegate.swift */,
 				B90CB8B31DE347F100A8D68D /* Assets.xcassets */,
+				B971862E1DEF93840096E506 /* Event */,
 				B90CB8DA1DE3693600A8D68D /* Login */,
 				B90CB8E41DE36BCD00A8D68D /* GuestList */,
 				B90CB8E51DE36BF900A8D68D /* EventList */,
@@ -201,6 +212,7 @@
 				B90CB8DD1DE369B000A8D68D /* LoginViewController.swift */,
 				B90CB8E11DE36A6000A8D68D /* LoginParser.swift */,
 				B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */,
+				B97186331DEFA4D40096E506 /* UserClient.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -240,11 +252,22 @@
 			path = Tutus;
 			sourceTree = "<group>";
 		};
+		B971862E1DEF93840096E506 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B971862F1DEF93A60096E506 /* Event.storyboard */,
+				B97186311DEF93D90096E506 /* EventViewController.swift */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
 		B9EB83251DE38C1300C0A4B9 /* Main StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
 				B90CB8AB1DE347F100A8D68D /* ViewController.swift */,
 				B90CB8AD1DE347F100A8D68D /* Main.storyboard */,
+				B91622DC1DEF6070009D935C /* MenuViewController.swift */,
+				B91622DE1DEF6093009D935C /* BaseViewController.swift */,
 			);
 			name = "Main StoryBoard";
 			sourceTree = "<group>";
@@ -374,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
+				B97186301DEF93A60096E506 /* Event.storyboard in Resources */,
 				B91622D21DE760A0009D935C /* EventList.storyboard in Resources */,
 				B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */,
 				B90CB8B41DE347F100A8D68D /* Assets.xcassets in Resources */,
@@ -543,8 +567,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90CB8DE1DE369B000A8D68D /* LoginViewController.swift in Sources */,
+				B91622DD1DEF6070009D935C /* MenuViewController.swift in Sources */,
+				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
+				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
 				B91622D91DE76CDA009D935C /* QuestionsClient.swift in Sources */,
 				B91622D01DE7601E009D935C /* GuestListClient.swift in Sources */,
+				B97186321DEF93D90096E506 /* EventViewController.swift in Sources */,
 				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
 				B90CB8E21DE36A6000A8D68D /* LoginParser.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,

@@ -50,6 +50,19 @@ class LoginClient {
         })
     }
     
+    func logOut() {
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logOut()
+    }
+    
+    func id() -> String {
+        if let id = self.dict["id"] {
+            return id as! String
+        }
+        else {
+            return "nil"
+        }
+    }
     
     func isLoggedIn() -> Bool {
         if let token = FBSDKAccessToken.current() {

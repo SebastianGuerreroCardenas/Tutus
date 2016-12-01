@@ -7,27 +7,15 @@
 //
 
 import UIKit
-import FBSDKLoginKit
-import FacebookCore
 
-class ViewController: BaseViewController {
-
+class EventViewController: BaseViewController {
+    
     var loginClient = LoginClient()
     
-    @IBAction func data(_ sender: Any) {
-        loginClient.fetchProfile()
-        //loginClient.createNewUser()
-        
-        
-    }
-
-    @IBAction func logoutAction(_ sender: Any) {
-        loginClient.logOut()
-    }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         
         if !loginClient.isLoggedIn(){
@@ -36,15 +24,14 @@ class ViewController: BaseViewController {
             let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
             present(controller, animated: true, completion: nil)
         }
-        addSlideMenuButton()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

@@ -20,10 +20,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("Logged in")
         
-//        let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let controller = loginStoryboard.instantiateViewController(withIdentifier: "MainController") as UIViewController
-//            present(controller, animated: true, completion: nil)
-        
+        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
     }
     @IBAction func dataAction(_ sender: Any) {
         loginClient.fetchProfile()
@@ -42,6 +39,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         return button
     }()
     
+    func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String) {
+        let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
+        present(controller, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
