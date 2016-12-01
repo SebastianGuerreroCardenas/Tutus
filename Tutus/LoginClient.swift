@@ -13,7 +13,7 @@ import FacebookCore
 
 class LoginClient {
     
-    var dict : [String : AnyObject]!
+    var dict: [String : AnyObject] = ["Empty": "Empty" as AnyObject]
     
     init() {
         if self.isLoggedIn() {
@@ -21,22 +21,6 @@ class LoginClient {
         }
     }
     
-    func createNewUser(authToken: String, full_name: String, name: String, email: String, role: String) -> Bool {
-        let parameters: Parameters = ["user[auth_token]": authToken, "user[full_name]": full_name, "user[email]": email, "user[role]": role]
-        
-        Alamofire.request("http://localhost:3000/users",  method: .post ,parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
-            
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-        }
-        return true
-    }
     
     func fetchProfile() {
         print("fetching profile")
@@ -44,15 +28,39 @@ class LoginClient {
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).start(completionHandler: {(connection, result, error) -> Void in
             if error == nil {
                 self.dict = result as! [String : AnyObject]
-                print(result!)
+                //print(result!)
                 print(self.dict)
             }
+            
+        })
+    }
+    
+    func getData(completion: @escaping (([String : AnyObject]) -> Void)) {
+        print("fetching profile")
+        let parameters = ["fields": "id, name, first_name, last_name, email"]
+        FBSDKGraphRequest(graphPath: "me", parameters: parameters).start(completionHandler: {(connection, result, error) -> Void in
+            if error == nil {
+                self.dict = result as! [String : AnyObject]
+                //print(result!)
+                print(self.dict)
+                completion(self.dict)
+            }
+            
         })
     }
     
     func logOut() {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logOut()
+    }
+    
+    func name() -> String {
+        if let name = self.dict["name"] {
+            return name as! String
+        }
+        else {
+            return "nil"
+        }
     }
     
     func id() -> String {
@@ -62,6 +70,10 @@ class LoginClient {
         else {
             return "nil"
         }
+    }
+    
+    func dictionary() -> [String : AnyObject] {
+        return self.dict
     }
     
     func isLoggedIn() -> Bool {

@@ -28,6 +28,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         if label == "Log Out" {
             var loginClient = LoginClient()
             loginClient.logOut()
+            mainUser.logOut()
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login")
         }
         else if label == "Add Event" {

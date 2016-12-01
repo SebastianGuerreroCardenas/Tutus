@@ -10,6 +10,9 @@ import UIKit
 import FBSDKLoginKit
 import FacebookCore
 
+var mainUser = UserClient()
+
+
 class ViewController: BaseViewController {
 
     var loginClient = LoginClient()

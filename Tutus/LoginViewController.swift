@@ -20,6 +20,12 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("Logged in")
         
+        loginClient.getData(){ dict in
+            //print(self.loginClient.dictionary())
+            mainUser.setDict(dict: self.loginClient.dictionary())
+            mainUser.createNewUser()
+        }
+        
         self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
     }
     @IBAction func dataAction(_ sender: Any) {
@@ -31,7 +37,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     let loginClient = LoginClient()
-    
     
     let fbLoginButton: FBSDKLoginButton = {
         let button = FBSDKLoginButton()
