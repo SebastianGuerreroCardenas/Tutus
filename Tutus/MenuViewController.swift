@@ -59,9 +59,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func updateArrayMenuOptions(){
-        //arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon", "id":"addEvent"])
-//        arrayMenuOptions.append(["title":"Beeler", "icon":"partyIcon", "id":"1"])
-//        arrayMenuOptions.append(["title":"wow", "icon":"partyIcon", "id":"2"])
+
         menuViewClient.getEventOptions { events in
             self.arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon", "id":"addEvent"])
             for event in events {
@@ -70,9 +68,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
             self.tblMenuOptions.reloadData()
         }
-        //arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
         
-        print(arrayMenuOptions)
         tblMenuOptions.reloadData()
     }
     

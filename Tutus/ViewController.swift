@@ -17,17 +17,8 @@ class ViewController: BaseViewController {
 
     var loginClient = LoginClient()
     
-    @IBAction func data(_ sender: Any) {
-        loginClient.fetchProfile()
-        //loginClient.createNewUser()
-        
-        
-    }
 
-    @IBAction func logoutAction(_ sender: Any) {
-        loginClient.logOut()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

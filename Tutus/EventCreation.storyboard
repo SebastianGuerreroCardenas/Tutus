@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Event View Controller-->
+        <!--Event Creation View Controller-->
         <scene sceneID="9Lt-68-gjD">
             <objects>
-                <viewController storyboardIdentifier="Event" id="cZt-VD-wbK" customClass="EventViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventCreation" id="cZt-VD-wbK" customClass="EventCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adn-0u-KQ2"/>
                         <viewControllerLayoutGuide type="bottom" id="zol-4x-1HO"/>

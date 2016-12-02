@@ -32,10 +32,11 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login")
         }
         else if label == "Add Event" {
-            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Event", strStoryboard: "Event")
+            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation")
         }
         else {
             print("Nothing Happened")
+            self.openViewControllerBasedOnIdentifier("Main")
         }
 //        switch(index){
 //        case 0:

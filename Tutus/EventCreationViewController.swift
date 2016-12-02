@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventViewController: BaseViewController {
+class EventCreationViewController: BaseViewController {
     
     var loginClient = LoginClient()
     
