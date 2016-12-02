@@ -22,7 +22,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func slideMenuItemSelectedAtIndex(_ index: Int32, label: String) {
+    func slideMenuItemSelectedAtIndex(_ index: Int32, label: String, id: String) {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         print("View Controller is : \(topViewController) \n", terminator: "")
         if label == "Log Out" {
@@ -109,7 +109,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         if (sender.tag == 10)
         {
             // To Hide Menu If it already there
-            self.slideMenuItemSelectedAtIndex(-1, label: "Already there");
+            self.slideMenuItemSelectedAtIndex(-1, label: "Already there", id: "alreadythere");
             
             sender.tag = 0;
             

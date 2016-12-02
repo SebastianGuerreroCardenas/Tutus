@@ -34,7 +34,7 @@ class UserClient {
         print("did it work")
         print(self.dict)
         
-        let parameters: Parameters = ["user[auth_token]": self.dict["id"], "user[full_name]": self.dict["name"], "user[email]": self.dict["email"], "user[role]": "empty"]
+        let parameters: Parameters = ["user[auth_token]": self.dict["id"] as! String, "user[full_name]": self.dict["name"] as! String, "user[email]": self.dict["email"] as! String, "user[role]": "empty"]
         
         Alamofire.request("http://riskmanapi.herokuapp.com/users",  method: .post ,parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
             

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SlideMenuDelegate {
-    func slideMenuItemSelectedAtIndex(_ index : Int32, label: String)
+    func slideMenuItemSelectedAtIndex(_ index : Int32, label: String, id: String)
 }
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -56,10 +56,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func updateArrayMenuOptions(){
-        arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon"])
-        arrayMenuOptions.append(["title":"Beeler", "icon":"partyIcon"])
-        arrayMenuOptions.append(["title":"wow", "icon":"partyIcon"])
-        arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon"])
+        arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon", "id":"addEvent"])
+        arrayMenuOptions.append(["title":"Beeler", "icon":"partyIcon", "id":"1"])
+        arrayMenuOptions.append(["title":"wow", "icon":"partyIcon", "id":"2"])
+        arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
         
         tblMenuOptions.reloadData()
     }
@@ -72,7 +72,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if(button == self.btnCloseMenuOverlay){
                 index = -1
             }
-            delegate?.slideMenuItemSelectedAtIndex(index, label: arrayMenuOptions[button.tag]["title"]!)
+            delegate?.slideMenuItemSelectedAtIndex(index, label: arrayMenuOptions[button.tag]["title"]!, id: arrayMenuOptions[button.tag]["id"]!)
         }
         
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
