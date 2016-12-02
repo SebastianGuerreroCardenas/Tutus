@@ -20,7 +20,6 @@
 		B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CB8DB1DE3695000A8D68D /* Login.storyboard */; };
 		B90CB8DE1DE369B000A8D68D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8DD1DE369B000A8D68D /* LoginViewController.swift */; };
 		B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */; };
-		B90CB8E21DE36A6000A8D68D /* LoginParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8E11DE36A6000A8D68D /* LoginParser.swift */; };
 		B91622CE1DE76000009D935C /* GuestList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91622CD1DE76000009D935C /* GuestList.storyboard */; };
 		B91622D01DE7601E009D935C /* GuestListClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91622CF1DE7601E009D935C /* GuestListClient.swift */; };
 		B91622D21DE760A0009D935C /* EventList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91622D11DE760A0009D935C /* EventList.storyboard */; };
@@ -76,7 +75,6 @@
 		B90CB8DB1DE3695000A8D68D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B90CB8DD1DE369B000A8D68D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
-		B90CB8E11DE36A6000A8D68D /* LoginParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginParser.swift; sourceTree = "<group>"; };
 		B91622CA1DE75AC1009D935C /* Tutus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tutus.entitlements; sourceTree = "<group>"; };
 		B91622CD1DE76000009D935C /* GuestList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GuestList.storyboard; sourceTree = "<group>"; };
 		B91622CF1DE7601E009D935C /* GuestListClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListClient.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				B90CB8A81DE347F100A8D68D /* Tutus */,
-				B91622D51DE76CB3009D935C /* Questions */,
 				B90CB8C01DE347F100A8D68D /* TutusTests */,
 				B90CB8CB1DE347F100A8D68D /* TutusUITests */,
 				B90CB8A71DE347F100A8D68D /* Products */,
@@ -173,14 +170,14 @@
 			children = (
 				B91622CA1DE75AC1009D935C /* Tutus.entitlements */,
 				B9EB83251DE38C1300C0A4B9 /* Main StoryBoard */,
-				B90CB8A91DE347F100A8D68D /* AppDelegate.swift */,
-				B90CB8B31DE347F100A8D68D /* Assets.xcassets */,
-				B971862E1DEF93840096E506 /* Event */,
 				B90CB8DA1DE3693600A8D68D /* Login */,
+				B971862E1DEF93840096E506 /* Event */,
 				B90CB8E41DE36BCD00A8D68D /* GuestList */,
 				B90CB8E51DE36BF900A8D68D /* EventList */,
 				B90CB8E61DE36C0400A8D68D /* Assignments */,
+				B91622D51DE76CB3009D935C /* Questions */,
 				B90CB8B51DE347F100A8D68D /* LaunchScreen.storyboard */,
+				B90CB8B31DE347F100A8D68D /* Assets.xcassets */,
 				B90CB8B81DE347F100A8D68D /* Info.plist */,
 				B90CB8B01DE347F100A8D68D /* Tutus.xcdatamodeld */,
 			);
@@ -210,7 +207,6 @@
 			children = (
 				B90CB8DB1DE3695000A8D68D /* Login.storyboard */,
 				B90CB8DD1DE369B000A8D68D /* LoginViewController.swift */,
-				B90CB8E11DE36A6000A8D68D /* LoginParser.swift */,
 				B90CB8DF1DE36A5600A8D68D /* LoginClient.swift */,
 				B97186331DEFA4D40096E506 /* UserClient.swift */,
 			);
@@ -245,11 +241,11 @@
 		B91622D51DE76CB3009D935C /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				B90CB8A91DE347F100A8D68D /* AppDelegate.swift */,
 				B91622D61DE76CC8009D935C /* Questions.storyboard */,
 				B91622D81DE76CDA009D935C /* QuestionsClient.swift */,
 			);
 			name = Questions;
-			path = Tutus;
 			sourceTree = "<group>";
 		};
 		B971862E1DEF93840096E506 /* Event */ = {
@@ -264,8 +260,8 @@
 		B9EB83251DE38C1300C0A4B9 /* Main StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				B90CB8AB1DE347F100A8D68D /* ViewController.swift */,
 				B90CB8AD1DE347F100A8D68D /* Main.storyboard */,
+				B90CB8AB1DE347F100A8D68D /* ViewController.swift */,
 				B91622DC1DEF6070009D935C /* MenuViewController.swift */,
 				B91622DE1DEF6093009D935C /* BaseViewController.swift */,
 			);
@@ -574,7 +570,6 @@
 				B91622D01DE7601E009D935C /* GuestListClient.swift in Sources */,
 				B97186321DEF93D90096E506 /* EventViewController.swift in Sources */,
 				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
-				B90CB8E21DE36A6000A8D68D /* LoginParser.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
 				B91622D41DE760B2009D935C /* EventListClient.swift in Sources */,
 				B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */,
