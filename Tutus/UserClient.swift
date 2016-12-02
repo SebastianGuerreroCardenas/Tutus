@@ -12,6 +12,7 @@ import Alamofire
 class UserClient {
     
     var dict: [String : AnyObject]!
+    var id: String = ""
     
     init() {
 
@@ -25,14 +26,21 @@ class UserClient {
         self.dict = [:]
     }
     
-//    func getEvents() ->  [Dictionary<String,String>] {
-//        return ["title":"Add Event", "icon":"addIcon"]
-//    }
+    func hasID() -> Bool {
+        if id == "" {
+            return false
+        }
+        else {
+            return true
+        }
+    }
     
     
     func createNewUser() -> Bool {
         print("did it work")
         print(self.dict)
+        
+        self.id = self.dict["id"] as! String
         
         let parameters: Parameters = ["user[auth_token]": self.dict["id"] as! String, "user[full_name]": self.dict["name"] as! String, "user[email]": self.dict["email"] as! String, "user[role]": "empty"]
         

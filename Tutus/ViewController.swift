@@ -31,13 +31,20 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        //If the user is not logged in it will send the user to the login view
         if !loginClient.isLoggedIn(){
             print("is not logged in")
             let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
             let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
             present(controller, animated: true, completion: nil)
+        }
+        else {
+            if !mainUser.hasID() {
+                loginClient.getData(){ dict in
+                    mainUser.setDict(dict: self.loginClient.dictionary())
+                    mainUser.createNewUser()
+                }
+            }
         }
         addSlideMenuButton()
         // Do any additional setup after loading the view, typically from a nib.

@@ -15,21 +15,19 @@ class MenuViewClient {
         
     }
     
-    func getEventOptions(completion: @escaping (([String : AnyObject]) -> Void)) {
+    func getEventOptions(completion: @escaping (([Dictionary<String,String>]) -> Void)) {
         print("fetching event options")
-        
+        var eventOptions = [Dictionary<String,String>]()
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
         
-        Alamofire.request("http://localhost:3000/users", headers: headers).responseJSON {response in
+        Alamofire.request("https://riskmanapi.herokuapp.com/events", headers: headers).responseJSON {response in
             
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
+            let json = JSON(response.result.value)
+            for (index,event):(String, JSON) in json {
+                eventOptions.append(["title": event["title"].stringValue, "icon":"partyIcon", "id": event["id"].stringValue])
             }
+            
+            completion(eventOptions)
         }
 
         

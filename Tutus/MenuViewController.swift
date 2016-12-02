@@ -14,6 +14,9 @@ protocol SlideMenuDelegate {
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
+    let menuViewClient = MenuViewClient()
+    
     /**
      *  Array to display menu options
      */
@@ -56,11 +59,20 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func updateArrayMenuOptions(){
-        arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon", "id":"addEvent"])
-        arrayMenuOptions.append(["title":"Beeler", "icon":"partyIcon", "id":"1"])
-        arrayMenuOptions.append(["title":"wow", "icon":"partyIcon", "id":"2"])
-        arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
+        //arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon", "id":"addEvent"])
+//        arrayMenuOptions.append(["title":"Beeler", "icon":"partyIcon", "id":"1"])
+//        arrayMenuOptions.append(["title":"wow", "icon":"partyIcon", "id":"2"])
+        menuViewClient.getEventOptions { events in
+            self.arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon", "id":"addEvent"])
+            for event in events {
+                self.arrayMenuOptions.append(event)
+            }
+            self.arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
+            self.tblMenuOptions.reloadData()
+        }
+        //arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
         
+        print(arrayMenuOptions)
         tblMenuOptions.reloadData()
     }
     
