@@ -16,6 +16,7 @@ var mainUser = UserClient()
 class ViewController: BaseViewController {
 
     var loginClient = LoginClient()
+    var menuViewClient = MenuViewClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,16 @@ class ViewController: BaseViewController {
                 loginClient.getData(){ dict in
                     mainUser.setDict(dict: self.loginClient.dictionary())
                     mainUser.createNewUser()
+                    //checks if the user has any events, if they are a user with no events they are taken to a specific screen
+                    self.menuViewClient.getEventCount { count in
+                        if count == 0 {
+                            let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
+                            self.present(controller, animated: true, completion: nil)
+                        }
+                    }
                 }
+                
             }
         }
         addSlideMenuButton()

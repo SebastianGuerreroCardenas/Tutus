@@ -157,11 +157,11 @@
             </objects>
             <point key="canvasLocation" x="-4250" y="-895"/>
         </scene>
-        <!--Item 1-->
+        <!--Guests-->
         <scene sceneID="cY4-EK-fVR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CfX-Mx-145" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="zIh-Yq-F9u"/>
+                    <tabBarItem key="tabBarItem" title="Guests" image="guestIcon" id="zIh-Yq-F9u"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="U0z-NI-WKl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -177,11 +177,11 @@
             </objects>
             <point key="canvasLocation" x="-2420" y="-1222"/>
         </scene>
-        <!--Item 2-->
+        <!--Event Info-->
         <scene sceneID="jDr-nL-dHN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jy1-hj-Klu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ouA-lp-ojj"/>
+                    <tabBarItem key="tabBarItem" title="Event Info" image="eventIcon" id="ouA-lp-ojj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="NJN-O8-sBX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -198,4 +198,8 @@
             <point key="canvasLocation" x="-2420" y="-568.06596701649175"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="eventIcon" width="30" height="30"/>
+        <image name="guestIcon" width="30" height="30"/>
+    </resources>
 </document>

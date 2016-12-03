@@ -37,6 +37,58 @@
             </objects>
             <point key="canvasLocation" x="386" y="152"/>
         </scene>
+        <!--No Event View Controller-->
+        <scene sceneID="Pxh-QJ-kUV">
+            <objects>
+                <viewController storyboardIdentifier="NoEvent" id="9Sv-J4-Fcx" customClass="NoEventViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YW1-wt-wfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="fuP-hp-RkH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="waE-SU-1vM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cjw-wm-MTu">
+                                <rect key="frame" x="16" y="115" width="343" height="228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Hi! Welcome to Tutus, we are a mobile application to help you run and mange any parties you throw. At the moment, it seems you do not have any events! Lets change that, by either joining an event or creating your own!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-0v-Owi">
+                                <rect key="frame" x="141" y="405" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Join an Event"/>
+                                <connections>
+                                    <action selector="joinAnEventAction:" destination="9Sv-J4-Fcx" eventType="touchUpInside" id="B8c-Cn-G0i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2r-LN-T9k">
+                                <rect key="frame" x="133" y="457" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create an Event"/>
+                                <connections>
+                                    <action selector="createEventAction:" destination="9Sv-J4-Fcx" eventType="touchUpInside" id="6bN-yi-f4d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92l-LV-XjC">
+                                <rect key="frame" x="160" y="617" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="9Sv-J4-Fcx" eventType="touchUpInside" id="3eb-6y-keg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOt-y8-XAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407.19999999999999" y="1020.5397301349326"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="PSI-h6-ksl">
             <objects>

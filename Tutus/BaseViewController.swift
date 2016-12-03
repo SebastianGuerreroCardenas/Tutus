@@ -12,8 +12,6 @@ var newEvent = ""
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
-    var storyboardID: String = "Main"
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,34 +27,18 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         print("View Controller is : \(topViewController) \n", terminator: "")
         if label == "Log Out" {
-            var loginClient = LoginClient()
+            let loginClient = LoginClient()
             loginClient.logOut()
             mainUser.logOut()
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login")
         }
-        else if label == "Add Event" {
+        else if label == "Join Event" {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation")
         }
         else {
             newEvent = id
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event")
         }
-//        switch(index){
-//        case 0:
-//            print("Home\n", terminator: "")
-//            
-//            self.openViewControllerBasedOnIdentifier("Home")
-//            
-//            break
-//        case 1:
-//            print("Play\n", terminator: "")
-//            
-//            self.openViewControllerBasedOnIdentifier("PlayVC")
-//            
-//            break
-//        default:
-//            print("default\n", terminator: "")
-//        }
     }
     
     
@@ -64,9 +46,10 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
         let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
         
-        //if self.tabBarController!.restorationIdentifier! == controller.restorationIdentifier! {
-        //
-        //} else {
+        if strStoryboard == "Login" {
+            present(controller, animated: true, completion: nil)
+        }
+        
         if currentEvent == newEvent {
             print("same")
         }
@@ -79,7 +62,6 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             view.window!.layer.add(transition, forKey: kCATransition)
             present(controller, animated: false, completion: nil)
         }
-        //}
         
     }
     
@@ -95,15 +77,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         }
     }
     
-    func setStoryBoardID(id: String) {
-        self.storyboardID = id
-        print(self.storyboardID)
-    }
-    
     func addSlideManuButtonOnStoryboard(storyBoard: String,completion: @escaping (() -> Void)) {
-        //self.setStoryBoardID(id: storyBoard)
-        self.storyboardID = storyBoard
-        print(self.storyboardID)
         completion()
     }
     

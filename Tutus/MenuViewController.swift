@@ -61,10 +61,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func updateArrayMenuOptions(){
 
         menuViewClient.getEventOptions { events in
-            self.arrayMenuOptions.append(["title":"Add Event", "icon":"addIcon", "id":"addEvent"])
+            self.arrayMenuOptions.append(["title":"Join Event", "icon":"addIcon", "id":"addEvent"])
             for event in events {
                 self.arrayMenuOptions.append(event)
             }
+            self.arrayMenuOptions.append(["title":"Create Event", "icon":"createIcon", "id":"logout"])
             self.arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
             self.tblMenuOptions.reloadData()
         }
