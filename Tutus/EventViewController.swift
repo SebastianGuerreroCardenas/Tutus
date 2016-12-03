@@ -26,6 +26,7 @@ class EventViewController: BaseViewController {
             present(controller, animated: true, completion: nil)
         }
         addSlideMenuButton()
+        currentEvent = newEvent
         //self.tabBar.delegate = self
     }
     

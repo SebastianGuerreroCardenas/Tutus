@@ -7,6 +7,8 @@
 //
 
 import UIKit
+var currentEvent = ""
+var newEvent = ""
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
@@ -36,6 +38,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation")
         }
         else {
+            newEvent = id
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event")
         }
 //        switch(index){
@@ -60,7 +63,23 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String) {
         let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
         let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
-        present(controller, animated: true, completion: nil)
+        
+        //if self.tabBarController!.restorationIdentifier! == controller.restorationIdentifier! {
+        //
+        //} else {
+        if currentEvent == newEvent {
+            print("same")
+        }
+        else {
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = kCATransitionPush
+            transition.subtype = kCATransitionFromRight
+            view.window!.layer.add(transition, forKey: kCATransition)
+            present(controller, animated: false, completion: nil)
+        }
+        //}
+        
     }
     
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String){
