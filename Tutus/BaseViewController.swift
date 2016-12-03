@@ -71,6 +71,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             print("same")
         }
         else {
+            //source: http://stackoverflow.com/questions/37722323/how-to-present-view-controller-from-right-to-left-in-ios-using-swift
             let transition = CATransition()
             transition.duration = 0.5
             transition.type = kCATransitionPush
