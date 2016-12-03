@@ -10,6 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
+    var storyboardID: String = "Main"
     
     
     override func viewDidLoad() {
@@ -35,8 +36,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation")
         }
         else {
-            print("Nothing Happened")
-            self.openViewControllerBasedOnIdentifier("Main")
+            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event")
         }
 //        switch(index){
 //        case 0:
@@ -73,6 +73,18 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         } else {
             self.navigationController!.pushViewController(destViewController, animated: true)
         }
+    }
+    
+    func setStoryBoardID(id: String) {
+        self.storyboardID = id
+        print(self.storyboardID)
+    }
+    
+    func addSlideManuButtonOnStoryboard(storyBoard: String,completion: @escaping (() -> Void)) {
+        //self.setStoryBoardID(id: storyBoard)
+        self.storyboardID = storyBoard
+        print(self.storyboardID)
+        completion()
     }
     
     func addSlideMenuButton(){
@@ -131,8 +143,12 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         
         sender.isEnabled = false
         sender.tag = 10
-        
+        //print("What is the storyboard id:")
+        //print(self.storyboardID)
+        //print(currentStoryBoardID)
+        //let mainStoryboard = UIStoryboard(name: currentStoryBoardID, bundle: nil)
         let menuVC : MenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        //let menuVC : MenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         menuVC.btnMenu = sender
         menuVC.delegate = self
         self.view.addSubview(menuVC.view)

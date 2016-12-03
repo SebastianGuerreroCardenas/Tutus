@@ -29,7 +29,7 @@ class LoginClient {
             if error == nil {
                 self.dict = result as! [String : AnyObject]
                 //print(result!)
-                print(self.dict)
+                //print(self.dict)
             }
             
         })
@@ -42,7 +42,7 @@ class LoginClient {
             if error == nil {
                 self.dict = result as! [String : AnyObject]
                 //print(result!)
-                print(self.dict)
+                //print(self.dict)
                 completion(self.dict)
             }
             

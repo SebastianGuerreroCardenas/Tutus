@@ -7,43 +7,44 @@
 //
 
 import UIKit
-import FBSDKLoginKit
-import FacebookCore
 
-var mainUser = UserClient()
-
-
-class ViewController: BaseViewController {
-
+class EventViewController: BaseViewController {
+    
     var loginClient = LoginClient()
+    
+    //@IBOutlet weak var tabBar: UITabBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //If the user is not logged in it will send the user to the login view
+        
         if !loginClient.isLoggedIn(){
             print("is not logged in")
             let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
             let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
             present(controller, animated: true, completion: nil)
         }
-        else {
-            if !mainUser.hasID() {
-                loginClient.getData(){ dict in
-                    mainUser.setDict(dict: self.loginClient.dictionary())
-                    mainUser.createNewUser()
-                }
-            }
-        }
         addSlideMenuButton()
-        // Do any additional setup after loading the view, typically from a nib.
+        //self.tabBar.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+//    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        switch item.tag {
+//        case 0:
+//            print("0")
+//        case 1:
+//            print("1")
+//        default:
+//            print("default")
+//        }
+//    }
+    
+    
 }
 
