@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class EventListClient {
+class EventClient {
     
     init() {
         
