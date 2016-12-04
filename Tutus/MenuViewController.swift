@@ -70,7 +70,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.tblMenuOptions.reloadData()
         }
         
-        tblMenuOptions.reloadData()
+        //tblMenuOptions.reloadData()
     }
     
     @IBAction func onCloseMenuClick(_ button:UIButton!){

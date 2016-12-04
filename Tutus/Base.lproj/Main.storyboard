@@ -94,7 +94,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="7CM-JC-L0n" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Er5-fr-oDF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Er5-fr-oDF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.98703879117965698" green="0.23440390825271606" blue="0.36417692899703979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

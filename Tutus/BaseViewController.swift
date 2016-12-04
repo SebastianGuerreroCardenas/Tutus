@@ -9,6 +9,7 @@
 import UIKit
 var currentEvent = ""
 var newEvent = ""
+var currentEventObject: Event!
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
