@@ -23,6 +23,7 @@ class EventCreationViewController: BaseViewController {
     @IBOutlet weak var listOpenField: UITextField!
     @IBOutlet weak var listCloseField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var pageTitle: UILabel!
     
     @IBAction func createButtonTapped(sender: UIButton) {
         self.eventInfo["title"] = self.titleField.text
@@ -102,6 +103,7 @@ class EventCreationViewController: BaseViewController {
             self.populateFields()
             self.isEdit = true
             self.submitButton.setTitle("Edit Event",for: .normal)
+            self.pageTitle.text = "Edit Event"
         }
         
         if !loginClient.isLoggedIn(){

@@ -110,6 +110,7 @@
                         <outlet property="listOpenField" destination="fmB-Fb-Eep" id="yNz-PH-WMB"/>
                         <outlet property="locationField" destination="Il9-RA-lFb" id="yCN-dQ-kuL"/>
                         <outlet property="maxInvitesField" destination="d14-Rp-XlC" id="4VL-sf-NMd"/>
+                        <outlet property="pageTitle" destination="ZOd-dm-ZsM" id="QXJ-hL-7QS"/>
                         <outlet property="startField" destination="zxp-Gf-cGx" id="eWp-ZF-Dug"/>
                         <outlet property="submitButton" destination="TEk-Ed-MSP" id="9nr-9N-vie"/>
                         <outlet property="titleField" destination="COl-ne-2ww" id="Ivt-k4-SGJ"/>

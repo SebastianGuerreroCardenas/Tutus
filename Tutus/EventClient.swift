@@ -17,7 +17,6 @@ class EventClient {
     func createEvent(completion: @escaping ((Dictionary<String,String>) -> Void)) {
         if dict["isEdit"] == "true" {
             print("editing event")
-            var eventInfo = Dictionary<String,String>()
             let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
             let parameters: Parameters = ["event": ["title": self.dict["title"]! as String, "location": self.dict["location"]! as String, "start": self.dict["startTime"]! as String, "end": self.dict["endTime"]! as String, "max_attendance": self.dict["maxInvites"]! as String, "time_to_send_invites": self.dict["listOpen"]! as String, "list_close": self.dict["listClose"]! as String]]
             let urlForRequest = "https://riskmanapi.herokuapp.com/events/" + self.dict["eventId"]!
@@ -26,12 +25,11 @@ class EventClient {
                 
                 let json = JSON(response.result.value!)
                 
-                completion(eventInfo)
+                completion(self.dict)
             }
         }
         else {
             print("creating event")
-            var eventInfo = Dictionary<String,String>()
             let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
             let parameters: Parameters = ["event": ["title": self.dict["title"]! as String, "location": self.dict["location"]! as String, "start": self.dict["startTime"]! as String, "end": self.dict["endTime"]! as String, "max_attendance": self.dict["maxInvites"]! as String, "time_to_send_invites": self.dict["listOpen"]! as String, "list_close": self.dict["listClose"]! as String]]
         
@@ -39,7 +37,7 @@ class EventClient {
             
                 let json = JSON(response.result.value!)
             
-                completion(eventInfo)
+                completion(self.dict)
             }
         }
     }

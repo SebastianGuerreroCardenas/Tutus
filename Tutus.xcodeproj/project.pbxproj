@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6442B79794084D8866958439 /* Pods_Tutus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C7D0280139E02225888DC0 /* Pods_Tutus.framework */; };
+		8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */; };
+		8E1309991DF4C83E00577E51 /* GuestCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */; };
+		8E13099B1DF4C86200577E51 /* GuestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13099A1DF4C86200577E51 /* GuestClient.swift */; };
 		907A1A64060614B3C5BB97D4 /* Pods_TutusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1494897E25F3125266F530BC /* Pods_TutusTests.framework */; };
 		B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8A91DE347F100A8D68D /* AppDelegate.swift */; };
 		B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CB8AB1DE347F100A8D68D /* ViewController.swift */; };
@@ -65,6 +68,9 @@
 		55B411B8A56D06B25AF6636A /* Pods-Tutus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.release.xcconfig"; sourceTree = "<group>"; };
 		68C7D0280139E02225888DC0 /* Pods_Tutus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tutus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7690543BBF6C0AE928DE7FBB /* Pods-TutusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GuestCreation.storyboard; sourceTree = "<group>"; };
+		8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCreationViewController.swift; sourceTree = "<group>"; };
+		8E13099A1DF4C86200577E51 /* GuestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClient.swift; sourceTree = "<group>"; };
 		9A8E1346EAF0E12BCC701B79 /* Pods-TutusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.release.xcconfig"; sourceTree = "<group>"; };
 		B90CB8A61DE347F100A8D68D /* Tutus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90CB8A91DE347F100A8D68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +264,9 @@
 			children = (
 				B9224D971DF48F4500F39F2E /* GuestDetailViewController.swift */,
 				B9224D991DF494D000F39F2E /* GuestDetailViewModel.swift */,
+				8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */,
+				8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */,
+				8E13099A1DF4C86200577E51 /* GuestClient.swift */,
 			);
 			name = Guest;
 			sourceTree = "<group>";
@@ -420,6 +429,7 @@
 				B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */,
 				B91622D21DE760A0009D935C /* Event.storyboard in Resources */,
 				B93D66391DF355FE00210219 /* RiskTableViewCell.xib in Resources */,
+				8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */,
 				B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */,
 				B90CB8B41DE347F100A8D68D /* Assets.xcassets in Resources */,
 				B90CB8AF1DE347F100A8D68D /* Main.storyboard in Resources */,
@@ -593,7 +603,9 @@
 				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
 				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
 				B93D66271DF1F4B800210219 /* MenuViewClient.swift in Sources */,
+				8E1309991DF4C83E00577E51 /* GuestCreationViewController.swift in Sources */,
 				B97186321DEF93D90096E506 /* EventCreationViewController.swift in Sources */,
+				8E13099B1DF4C86200577E51 /* GuestClient.swift in Sources */,
 				B93D662B1DF3419900210219 /* NoEventViewController.swift in Sources */,
 				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
 				B93D66291DF236F200210219 /* EventViewController.swift in Sources */,
