@@ -35,6 +35,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Start Date and Time" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="zxp-Gf-cGx">
+                                <rect key="frame" x="0.0" y="269" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="startFieldEditingWithSender:" destination="cZt-VD-wbK" eventType="editingDidBegin" id="D2Q-u9-aXK"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="End Date and Time" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="E3A-Zd-J0T">
+                                <rect key="frame" x="0.0" y="333" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="endFieldEditingWithSender:" destination="cZt-VD-wbK" eventType="editingDidBegin" id="aeF-W8-tns"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="List Open Date and Time" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-Fb-Eep">
+                                <rect key="frame" x="0.0" y="465" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="listOpenFieldEditingWithSender:" destination="cZt-VD-wbK" eventType="editingDidBegin" id="Bk6-xD-VNs"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Max Invites Per Member " textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="d14-Rp-XlC">
+                                <rect key="frame" x="0.0" y="401" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOd-dm-ZsM">
                                 <rect key="frame" x="138" y="91" width="99" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,10 +79,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEk-Ed-MSP">
+                                <rect key="frame" x="121" y="587" width="133" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97091796793181007" green="0.8054390638431782" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Create Event">
+                                    <color key="titleShadowColor" red="1" green="0.15836446508063795" blue="0.15984100102780852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButtonTappedWithSender:" destination="cZt-VD-wbK" eventType="touchUpInside" id="FQb-Hc-5ul"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="List Close Date and Time" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-JH-iXR">
+                                <rect key="frame" x="0.0" y="524" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="listCloseFieldEditingWithSender:" destination="cZt-VD-wbK" eventType="editingDidBegin" id="Ec2-rt-YTt"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sA8-3D-Bc3"/>
+                    <connections>
+                        <outlet property="endField" destination="E3A-Zd-J0T" id="ilk-yS-mUq"/>
+                        <outlet property="listCloseField" destination="eZM-JH-iXR" id="NrQ-R8-iqs"/>
+                        <outlet property="listOpenField" destination="fmB-Fb-Eep" id="yNz-PH-WMB"/>
+                        <outlet property="locationField" destination="Il9-RA-lFb" id="yCN-dQ-kuL"/>
+                        <outlet property="maxInvitesField" destination="d14-Rp-XlC" id="4VL-sf-NMd"/>
+                        <outlet property="startField" destination="zxp-Gf-cGx" id="eWp-ZF-Dug"/>
+                        <outlet property="submitButton" destination="TEk-Ed-MSP" id="9nr-9N-vie"/>
+                        <outlet property="titleField" destination="COl-ne-2ww" id="Ivt-k4-SGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TT-B4-bsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
