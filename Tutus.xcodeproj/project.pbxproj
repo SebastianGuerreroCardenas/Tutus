@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6442B79794084D8866958439 /* Pods_Tutus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C7D0280139E02225888DC0 /* Pods_Tutus.framework */; };
+		8E118E3B1DF61E91006AA6FA /* AssignmentCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E118E3A1DF61E91006AA6FA /* AssignmentCreation.storyboard */; };
+		8E118E3D1DF61EA0006AA6FA /* AssignmentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E118E3C1DF61EA0006AA6FA /* AssignmentClient.swift */; };
+		8E118E3F1DF61EB0006AA6FA /* AssignmentCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E118E3E1DF61EB0006AA6FA /* AssignmentCreationViewController.swift */; };
+		8E118E411DF61ECC006AA6FA /* LocationCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E118E401DF61ECC006AA6FA /* LocationCreation.storyboard */; };
+		8E118E431DF61EE7006AA6FA /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E118E421DF61EE7006AA6FA /* LocationClient.swift */; };
+		8E118E451DF61FAD006AA6FA /* LocationCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E118E441DF61FAD006AA6FA /* LocationCreationViewController.swift */; };
 		8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */; };
 		8E1309991DF4C83E00577E51 /* GuestCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */; };
 		8E13099B1DF4C86200577E51 /* GuestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13099A1DF4C86200577E51 /* GuestClient.swift */; };
@@ -68,6 +74,12 @@
 		55B411B8A56D06B25AF6636A /* Pods-Tutus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.release.xcconfig"; sourceTree = "<group>"; };
 		68C7D0280139E02225888DC0 /* Pods_Tutus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tutus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7690543BBF6C0AE928DE7FBB /* Pods-TutusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E118E3A1DF61E91006AA6FA /* AssignmentCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AssignmentCreation.storyboard; sourceTree = "<group>"; };
+		8E118E3C1DF61EA0006AA6FA /* AssignmentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentClient.swift; sourceTree = "<group>"; };
+		8E118E3E1DF61EB0006AA6FA /* AssignmentCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCreationViewController.swift; sourceTree = "<group>"; };
+		8E118E401DF61ECC006AA6FA /* LocationCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationCreation.storyboard; sourceTree = "<group>"; };
+		8E118E421DF61EE7006AA6FA /* LocationClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationClient.swift; sourceTree = "<group>"; };
+		8E118E441DF61FAD006AA6FA /* LocationCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCreationViewController.swift; sourceTree = "<group>"; };
 		8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GuestCreation.storyboard; sourceTree = "<group>"; };
 		8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCreationViewController.swift; sourceTree = "<group>"; };
 		8E13099A1DF4C86200577E51 /* GuestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClient.swift; sourceTree = "<group>"; };
@@ -165,6 +177,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E118E381DF61E40006AA6FA /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				8E118E401DF61ECC006AA6FA /* LocationCreation.storyboard */,
+				8E118E421DF61EE7006AA6FA /* LocationClient.swift */,
+				8E118E441DF61FAD006AA6FA /* LocationCreationViewController.swift */,
+			);
+			name = Locations;
+			sourceTree = "<group>";
+		};
+		8E118E391DF61E4A006AA6FA /* Assignments */ = {
+			isa = PBXGroup;
+			children = (
+				8E118E3A1DF61E91006AA6FA /* AssignmentCreation.storyboard */,
+				8E118E3C1DF61EA0006AA6FA /* AssignmentClient.swift */,
+				8E118E3E1DF61EB0006AA6FA /* AssignmentCreationViewController.swift */,
+			);
+			name = Assignments;
+			sourceTree = "<group>";
+		};
 		B90CB89D1DE347F100A8D68D = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +222,8 @@
 		B90CB8A81DE347F100A8D68D /* Tutus */ = {
 			isa = PBXGroup;
 			children = (
+				8E118E391DF61E4A006AA6FA /* Assignments */,
+				8E118E381DF61E40006AA6FA /* Locations */,
 				B9224D961DF48F2D00F39F2E /* Guest */,
 				B93D66311DF353D100210219 /* models */,
 				B91622CA1DE75AC1009D935C /* Tutus.entitlements */,
@@ -425,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E118E411DF61ECC006AA6FA /* LocationCreation.storyboard in Resources */,
 				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
 				B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */,
 				B91622D21DE760A0009D935C /* Event.storyboard in Resources */,
@@ -432,6 +467,7 @@
 				8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */,
 				B90CB8B71DE347F100A8D68D /* LaunchScreen.storyboard in Resources */,
 				B90CB8B41DE347F100A8D68D /* Assets.xcassets in Resources */,
+				8E118E3B1DF61E91006AA6FA /* AssignmentCreation.storyboard in Resources */,
 				B90CB8AF1DE347F100A8D68D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +636,7 @@
 				B93D662D1DF34C1300210219 /* EventGuestRiskListViewController.swift in Sources */,
 				B90CB8DE1DE369B000A8D68D /* LoginViewController.swift in Sources */,
 				B91622DD1DEF6070009D935C /* MenuViewController.swift in Sources */,
+				8E118E451DF61FAD006AA6FA /* LocationCreationViewController.swift in Sources */,
 				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
 				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
 				B93D66271DF1F4B800210219 /* MenuViewClient.swift in Sources */,
@@ -612,8 +649,11 @@
 				B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
 				B91622D41DE760B2009D935C /* EventClient.swift in Sources */,
+				8E118E3D1DF61EA0006AA6FA /* AssignmentClient.swift in Sources */,
+				8E118E3F1DF61EB0006AA6FA /* AssignmentCreationViewController.swift in Sources */,
 				B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */,
 				B9224D9C1DF4A99D00F39F2E /* Event.swift in Sources */,
+				8E118E431DF61EE7006AA6FA /* LocationClient.swift in Sources */,
 				B90CB8B21DE347F100A8D68D /* Tutus.xcdatamodeld in Sources */,
 				B93D66331DF353DE00210219 /* Guest.swift in Sources */,
 				B9224D981DF48F4500F39F2E /* GuestDetailViewController.swift in Sources */,
