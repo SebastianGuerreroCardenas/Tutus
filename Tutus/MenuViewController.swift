@@ -65,7 +65,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             for event in events {
                 self.arrayMenuOptions.append(event)
             }
-            self.arrayMenuOptions.append(["title":"Create Event", "icon":"createIcon", "id":"logout"])
+            self.arrayMenuOptions.append(["title":"Create Event", "icon":"createIcon", "id":"createEvent"])
             self.arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
             self.tblMenuOptions.reloadData()
         }
