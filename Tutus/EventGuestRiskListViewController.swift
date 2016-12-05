@@ -56,7 +56,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     
     // MARK: Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return eventGuestRiskListModel.numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,7 +68,15 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "toDetailVC", sender: indexPath)
+        performSegue(withIdentifier: "toDetailVC", sender: indexPath)
+    }
+    
+    // MARK: Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? GuestDetailViewController,
+            let indexPath = sender as? IndexPath {
+            detailVC.guestDetailViewModel = eventGuestRiskListModel.detailViewModelForRowAtIndexPath(indexPath)
+        }
     }
     
     // MARK: Search Methods

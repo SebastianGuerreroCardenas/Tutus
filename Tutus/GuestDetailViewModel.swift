@@ -7,10 +7,10 @@ class GuestDetailViewModel {
         self.guest = guest
     }
     
-//    func title() -> String {
-//        return repository.name
-//    }
-//    
+    func name() -> String {
+        return guest.name
+    }
+//
 //    func URLString() -> String? {
 //        return repository.htmlURL
 //    }

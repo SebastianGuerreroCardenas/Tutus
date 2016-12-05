@@ -182,7 +182,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/RiskTableViewCell.swift"
@@ -198,7 +198,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/RiskTableViewCell.swift"
@@ -209,6 +209,99 @@
             endingLineNumber = "20"
             landmarkName = "inOutAction(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tutus/GuestDetailViewController.swift"
+            timestampString = "502606014.5156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3"
+            endingLineNumber = "3"
+            landmarkName = "GuestDetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.GuestDetailViewController.__deallocating_deinit"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/GuestDetailViewController.swift"
+                  timestampString = "502606016.837499"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.GuestDetailViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Tutus.GuestDetailViewController"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/GuestDetailViewController.swift"
+                  timestampString = "502606016.852543"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3"
+                  endingLineNumber = "3"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.GuestDetailViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Tutus.GuestDetailViewController"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/GuestDetailViewController.swift"
+                  timestampString = "502606016.86216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.GuestDetailViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Tutus.GuestDetailViewController&gt;"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/GuestDetailViewController.swift"
+                  timestampString = "502606016.869218"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.GuestDetailViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Tutus.GuestDetailViewController&gt;"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/GuestDetailViewController.swift"
+                  timestampString = "502606016.877744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3"
+                  endingLineNumber = "3"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
