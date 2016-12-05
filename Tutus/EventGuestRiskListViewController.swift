@@ -71,6 +71,28 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
         performSegue(withIdentifier: "toDetailVC", sender: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        //what
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        var checkInOption = UITableViewRowAction(style: .normal, title: "Check In") {action,index in
+            print("hello");
+            
+            self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+
+        }
+        
+        var checkOutOption = UITableViewRowAction(style: .normal, title: "Check Out") {action,index in
+            print("hello");
+            self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+            
+        }
+        checkInOption.backgroundColor = UIColor.green
+        checkOutOption.backgroundColor = UIColor.orange
+        return[checkInOption, checkOutOption]
+    }
+    
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailVC = segue.destination as? GuestDetailViewController,

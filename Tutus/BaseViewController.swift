@@ -27,13 +27,14 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index: Int32, label: String, id: String) {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         print("View Controller is : \(topViewController) \n", terminator: "")
+        print(label)
         if label == "Log Out" {
             let loginClient = LoginClient()
             loginClient.logOut()
             mainUser.logOut()
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login")
         }
-        else if label == "Join Event" {
+        else if label == "Create Event" {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation")
         }
         else {
@@ -47,7 +48,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
         let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
         
-        if strStoryboard == "Login" {
+        if strStoryboard == "Login" || strStoryboard == "EventCreation" {
             present(controller, animated: true, completion: nil)
         }
         
