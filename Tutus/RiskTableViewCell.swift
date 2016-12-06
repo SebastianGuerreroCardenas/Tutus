@@ -13,19 +13,6 @@ class RiskTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var birthday: UILabel!
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-
-    @IBAction func inOutAction(_ sender: Any) {
-        print(segmentedControl.selectedSegmentIndex)
-//        switch segmentedControl.selectedSegmentIndex {
-//        case 0:
-//            print("0" + id)
-//        case 1:
-//            print("1" + id)
-//        default:
-//            break
-//        }
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

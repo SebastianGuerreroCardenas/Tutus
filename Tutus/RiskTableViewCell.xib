@@ -26,42 +26,24 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/16/1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHJ-zC-ZYJ">
-                        <rect key="frame" x="0.0" y="34" width="177" height="34"/>
+                        <rect key="frame" x="0.0" y="34" width="74.5" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DDy-CB-QWI">
-                        <rect key="frame" x="185" y="19" width="112" height="29"/>
-                        <segments>
-                            <segment title="OUT"/>
-                            <segment title="IN"/>
-                        </segments>
-                        <connections>
-                            <action selector="inOutAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="s4N-aD-kT2"/>
-                            <action selector="outAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="lyv-Di-6OC"/>
-                        </connections>
-                    </segmentedControl>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="DDy-CB-QWI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="5pU-Is-fwe"/>
                     <constraint firstItem="yHJ-zC-ZYJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="61a-bJ-Dkb"/>
                     <constraint firstItem="58y-67-htm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="PSQ-Xe-TfM"/>
-                    <constraint firstItem="DDy-CB-QWI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qux-qG-fBT"/>
                     <constraint firstItem="yHJ-zC-ZYJ" firstAttribute="top" secondItem="58y-67-htm" secondAttribute="bottom" id="V9S-Je-ePl"/>
                     <constraint firstItem="yHJ-zC-ZYJ" firstAttribute="height" secondItem="58y-67-htm" secondAttribute="height" id="YTI-3l-4Fz"/>
-                    <constraint firstItem="DDy-CB-QWI" firstAttribute="leading" secondItem="58y-67-htm" secondAttribute="trailing" constant="8" id="YiR-EG-Rhr"/>
-                    <constraint firstItem="DDy-CB-QWI" firstAttribute="leading" secondItem="yHJ-zC-ZYJ" secondAttribute="trailing" constant="8" id="Yzq-AW-b3Y"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="DDy-CB-QWI" secondAttribute="trailing" constant="15" id="dgh-Ic-SlZ"/>
                     <constraint firstItem="58y-67-htm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="iLy-Pu-AWJ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="yHJ-zC-ZYJ" secondAttribute="bottom" constant="-8.5" id="xMt-5r-h8U"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="DDy-CB-QWI" secondAttribute="bottom" constant="12.5" id="zuI-RH-afk"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="birthday" destination="yHJ-zC-ZYJ" id="h5B-nZ-WfB"/>
                 <outlet property="name" destination="58y-67-htm" id="M4f-pv-KZ2"/>
-                <outlet property="segmentedControl" destination="DDy-CB-QWI" id="C5F-6h-gJO"/>
             </connections>
             <point key="canvasLocation" x="34" y="105"/>
         </tableViewCell>
