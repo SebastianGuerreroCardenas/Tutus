@@ -39,6 +39,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     let fbLoginButton: FBSDKLoginButton = {
         let button = FBSDKLoginButton()
+        
         button.readPermissions = ["email", "user_friends"]
         return button
     }()

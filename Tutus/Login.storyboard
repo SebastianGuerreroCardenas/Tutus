@@ -21,23 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce6-1P-pj7">
-                                <rect key="frame" x="166" y="271" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgT-eh-juf">
-                                <rect key="frame" x="162" y="363" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="data"/>
-                                <connections>
-                                    <action selector="dataAction:" destination="T90-hh-1Y4" eventType="touchUpInside" id="Lw6-zc-np7"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-O3-sWl">
+                                <rect key="frame" x="67" y="98" width="240" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="K5b-l2-AUJ"/>
+                                    <constraint firstAttribute="height" constant="380" id="mgN-K5-DF0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aeM-O3-sWl" firstAttribute="top" secondItem="DBd-vx-172" secondAttribute="bottom" constant="34" id="hPK-mR-Yj0"/>
+                            <constraint firstItem="aeM-O3-sWl" firstAttribute="centerX" secondItem="dc4-S2-o5z" secondAttribute="centerX" id="iIq-Lx-5zt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wYz-48-LS3"/>
                 </viewController>
@@ -64,4 +60,7 @@
             <point key="canvasLocation" x="-178.40000000000001" y="-96.7016491754123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loginLogo" width="711" height="1202"/>
+    </resources>
 </document>
