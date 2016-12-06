@@ -25,6 +25,12 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     var eventClient = EventClient()
     var guestClient = GuestClient()
     
+    @IBAction func addGuestAction(_ sender: Any) {
+        print("add a guest")
+        openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "GuestCreation", strStoryboard: "GuestCreation", animationStyle: "fade")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         currentEvent = newEvent

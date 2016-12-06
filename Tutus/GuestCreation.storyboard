@@ -12,7 +12,7 @@
         <!--Guest Creation View Controller-->
         <scene sceneID="VJv-Ly-lL4">
             <objects>
-                <viewController id="gM6-KV-RtV" customClass="GuestCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuestCreation" id="gM6-KV-RtV" customClass="GuestCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="90H-oH-7E7"/>
                         <viewControllerLayoutGuide type="bottom" id="C1O-Zf-iNX"/>
@@ -65,6 +65,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjp-k5-0bJ">
+                                <rect key="frame" x="163" y="596" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="gM6-KV-RtV" eventType="touchUpInside" id="y1C-mF-lrG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

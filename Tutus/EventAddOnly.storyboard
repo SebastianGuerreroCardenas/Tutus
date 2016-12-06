@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="-1480.8" y="-568.06596701649175"/>
         </scene>
-        <!--Add Guest-->
+        <!--Guest-->
         <scene sceneID="H10-te-lgL">
             <objects>
                 <viewController id="UyO-70-sHd" customClass="EventGuestRiskListViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5mw-jm-ZLZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5mw-jm-ZLZ" customClass="RiskTableViewCell" customModule="Tutus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mw-jm-ZLZ" id="zDP-EY-AGe">
@@ -81,7 +81,9 @@
                             <constraint firstItem="H3Z-8R-9Rf" firstAttribute="top" secondItem="Fka-Bw-C3m" secondAttribute="bottom" id="qea-Hz-U3i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Guest" id="0fk-n2-nFZ"/>
+                    <navigationItem key="navigationItem" title="Guest" id="nrS-pk-PxC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oYQ-LA-wvY"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Fka-Bw-C3m" id="v7m-BO-2xy"/>
                     </connections>
@@ -123,7 +125,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="3iS-m7-yuJ">
             <objects>
-                <tabBarController storyboardIdentifier="EventAddOnly" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EYt-sd-6gj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="EventMain" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EYt-sd-6gj" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="xKx-jK-dGT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -23,6 +23,9 @@ class GuestCreationViewController: BaseViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageTitle: UILabel!
     
+    @IBAction func cancelAction(_ sender: Any) {
+    }
+    
     @IBAction func submitButtonTapped(sender: UIButton) {
         self.guestInfo["name"] = self.nameField.text
         self.guestInfo["phone"] = self.phoneField.text

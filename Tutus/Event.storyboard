@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="-1480.8" y="-568.06596701649175"/>
         </scene>
-        <!--Event Guest Risk List View Controller-->
+        <!--Guest-->
         <scene sceneID="pVL-Ji-xpQ">
             <objects>
                 <viewController id="dVX-pF-niW" customClass="EventGuestRiskListViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,13 @@
                             <constraint firstAttribute="trailing" secondItem="H3Z-MP-Iog" secondAttribute="trailing" id="tiY-wd-Q88"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tca-gG-Pgd"/>
+                    <navigationItem key="navigationItem" title="Guest" id="On7-Ya-nSn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dxS-MF-OOP">
+                            <connections>
+                                <action selector="addGuestAction:" destination="dVX-pF-niW" id="x1d-Kk-xL2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="H3Z-MP-Iog" id="DZU-Ed-EXM"/>
                     </connections>

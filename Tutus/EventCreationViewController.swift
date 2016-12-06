@@ -25,6 +25,8 @@ class EventCreationViewController: BaseViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageTitle: UILabel!
     
+    @IBAction func cancelAction(_ sender: Any) {
+    }
     @IBAction func createButtonTapped(sender: UIButton) {
         self.eventInfo["title"] = self.titleField.text
         self.eventInfo["location"] = self.locationField.text

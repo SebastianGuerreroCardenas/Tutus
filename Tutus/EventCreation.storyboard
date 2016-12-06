@@ -103,7 +103,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sA8-3D-Bc3"/>
+                    <navigationItem key="navigationItem" id="sA8-3D-Bc3">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="k4n-vg-086">
+                            <connections>
+                                <action selector="cancelAction:" destination="cZt-VD-wbK" id="S0a-qw-lMo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="endField" destination="E3A-Zd-J0T" id="ilk-yS-mUq"/>
                         <outlet property="listCloseField" destination="eZM-JH-iXR" id="NrQ-R8-iqs"/>

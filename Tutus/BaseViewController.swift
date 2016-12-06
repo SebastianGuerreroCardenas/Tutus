@@ -95,7 +95,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
         let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
         
-        if strStoryboard == "Login" || strStoryboard == "EventCreation" {
+        if strStoryboard == "Login" || strStoryboard == "EventCreation" || strStoryboard == "GuestCreation" || strStoryboard == "EventInvite" {
             present(controller, animated: true, completion: nil)
         }
         
