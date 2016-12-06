@@ -9,19 +9,10 @@
 import UIKit
 
 class EventViewController: BaseViewController {
-    
-    var loginClient = LoginClient()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        if !loginClient.isLoggedIn(){
-            print("is not logged in")
-            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
-            present(controller, animated: true, completion: nil)
-        }
         addSlideMenuButton()
         currentEvent = newEvent
     }

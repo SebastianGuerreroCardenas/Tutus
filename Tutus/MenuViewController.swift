@@ -69,8 +69,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.arrayMenuOptions.append(["title":"Log Out", "icon":"logoutIcon", "id":"logout"])
             self.tblMenuOptions.reloadData()
         }
-        
-        //tblMenuOptions.reloadData()
     }
     
     @IBAction func onCloseMenuClick(_ button:UIButton!){

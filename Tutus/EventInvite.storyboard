@@ -12,7 +12,7 @@
         <!--Event User View Controller-->
         <scene sceneID="NJv-qB-Kfo">
             <objects>
-                <viewController id="sc3-tW-5Vr" customClass="EventUserViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventInvite" id="sc3-tW-5Vr" customClass="EventUserViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Okg-TX-col"/>
                         <viewControllerLayoutGuide type="bottom" id="EnU-LQ-1eu"/>
@@ -52,6 +52,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONk-s0-YA3">
+                                <rect key="frame" x="163" y="587" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="sc3-tW-5Vr" eventType="touchUpInside" id="Wai-rB-uHl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

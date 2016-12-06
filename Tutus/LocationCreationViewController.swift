@@ -10,7 +10,6 @@ import UIKit
 
 class LocationCreationViewController: BaseViewController {
 
-    var loginClient = LoginClient()
     var locationClient = LocationClient()
     var locationInfo = [String: String]()
     var isEdit = false
@@ -40,13 +39,6 @@ class LocationCreationViewController: BaseViewController {
             self.isEdit = true
             self.submitButton.setTitle("Edit Location",for: .normal)
             self.pageTitle.text = "Edit Location"
-        }
-        
-        if !loginClient.isLoggedIn(){
-            print("is not logged in")
-            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
-            present(controller, animated: true, completion: nil)
         }
     }
     

@@ -10,7 +10,6 @@ import UIKit
 
 class GuestCreationViewController: BaseViewController {
     
-    var loginClient = LoginClient()
     var guestClient = GuestClient()
     var guestInfo = [String: String]()
     var isEdit = false
@@ -48,13 +47,6 @@ class GuestCreationViewController: BaseViewController {
             self.isEdit = true
             self.submitButton.setTitle("Edit Guest",for: .normal)
             self.pageTitle.text = "Edit Guest"
-        }
-        
-        if !loginClient.isLoggedIn(){
-            print("is not logged in")
-            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
-            present(controller, animated: true, completion: nil)
         }
     }
 

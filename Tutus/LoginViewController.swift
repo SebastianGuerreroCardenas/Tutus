@@ -21,7 +21,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         print("Logged in")
         
         loginClient.getData(){ dict in
-            //print(self.loginClient.dictionary())
             mainUser.setDict(dict: self.loginClient.dictionary())
             mainUser.createNewUser()
         }

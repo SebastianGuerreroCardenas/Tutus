@@ -30,15 +30,17 @@ class MenuViewClient {
         }
     }
     
-    func getEventCount(completion: @escaping ((Int) -> Void)) {
+    func getEventCount(completion: @escaping ((Int, String) -> Void)) {
         print("fetching event options")
-        var eventOptions = [Dictionary<String,String>]()
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
         
         Alamofire.request("https://riskmanapi.herokuapp.com/events", headers: headers).responseJSON {response in
-            
-            let json = JSON(response.result.value)
-            completion(json.count)
+            let json: JSON = JSON(response.result.value)
+            var firstID:String = ""
+            if (json.count != 0) {
+                firstID = json[0]["id"].stringValue
+            }
+            completion(json.count, firstID)
         }
     }
 }

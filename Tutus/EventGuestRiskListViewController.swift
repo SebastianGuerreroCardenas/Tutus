@@ -20,9 +20,9 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
     
-    var loginClient = LoginClient()
     var eventGuestRiskListModel = EventGuestRiskListModel()
     var eventClient = EventClient()
+    var guestClient = GuestClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +30,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
         eventClient.getEventByID() { event in
             currentEventObject = event
         }
-        
-        if !loginClient.isLoggedIn(){
-            print("is not logged in")
-            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
-            present(controller, animated: true, completion: nil)
-        }
+
         let cellNib = UINib(nibName: "RiskTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
         addSlideMenuButton()
@@ -78,18 +72,24 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         var checkInOption = UITableViewRowAction(style: .normal, title: "Check In") {action,index in
             print("hello");
-            
-            self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
-
+            print(index.row);
+            let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
+            self.guestClient.checkGuestIntoEvent(checkIn: true, guest: guest) {
+                self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+            }
         }
         
         var checkOutOption = UITableViewRowAction(style: .normal, title: "Check Out") {action,index in
             print("hello");
-            self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+            print(index.row);
+            let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
+            self.guestClient.checkGuestIntoEvent(checkIn: false, guest: guest) {
+                self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+            }
             
         }
         checkInOption.backgroundColor = UIColor.green
-        checkOutOption.backgroundColor = UIColor.orange
+        checkOutOption.backgroundColor = UIColor.red
         return[checkInOption, checkOutOption]
     }
     
@@ -107,11 +107,12 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.barTintColor = UIColor(red: 0.98, green:0.24, blue:0.36, alpha:1.0)
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        //viewModel.updateFiltering(searchText)
+        eventGuestRiskListModel.updateFiltering(searchText)
         tableView.reloadData()
     }
     

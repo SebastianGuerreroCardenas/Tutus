@@ -46,6 +46,27 @@ class GuestClient {
         }
     }
     
+    
+    func checkGuestIntoEvent(checkIn: Bool, guest: Guest ,completion: @escaping(() -> Void)) {
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "event_id": currentEventObject.id, "guest_id": guest.id]
+        let url: String!
+        if checkIn {
+            url = "https://riskmanapi.herokuapp.com/check_ins"
+        }
+        else {
+            url = "https://riskmanapi.herokuapp.com/check_outs"
+        }
+        let parameters: Parameters = [:]
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
+            
+            //let json = JSON(response.result.value!)
+            
+            completion()
+        }
+        
+
+    }
+    
     func setDict(diction: [String : String] , completion: @escaping (() -> Void)) {
         self.dict = diction
         completion()

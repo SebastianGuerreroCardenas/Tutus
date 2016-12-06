@@ -10,24 +10,25 @@ import UIKit
 
 
 
-class NoEventViewController: UIViewController {
+class NoEventViewController: BaseViewController {
     
     @IBAction func logoutAction(_ sender: Any) {
         let loginClient = LoginClient()
         loginClient.logOut()
         mainUser.logOut()
-        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login")
+        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login", animationStyle: "")
     }
     
     @IBAction func joinAnEventAction(_ sender: Any) {
-        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventJoin", strStoryboard: "EventCreation")
+        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventJoin", strStoryboard: "EventCreation", animationStyle: "")
     }
     
     @IBAction func createEventAction(_ sender: Any) {
-        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation")
+        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation", animationStyle: "")
     }
     
-    func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String) {
+    //CHECK THIS MARK, I MADE IT OVERRIDE
+    override func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String, animationStyle: String) {
         let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
         let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
         

@@ -10,13 +10,52 @@ import UIKit
 var currentEvent = ""
 var newEvent = ""
 var currentEventObject: Event!
+var mainUser = UserClient()
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
     
+    var loginClient = LoginClient()
+    var menuViewClient = MenuViewClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // checks if client is logged in, if they arent they are taken to the login page.
+        if !loginClient.isLoggedIn(){
+            print("is not logged in")
+            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
+            present(controller, animated: true, completion: nil)
+        }
+        else {
+            //if they are logged the mainUser global varible is not set up, it will generate the data for it
+            if !mainUser.hasID() {
+                loginClient.getData(){ dict in
+                    mainUser.setDict(dict: self.loginClient.dictionary())
+                    // if they are a new user it will add the person to the database, if not it will fail to create it.
+                    mainUser.createNewUser()
+                    //checks if the user has any events, if they are a user with no events they are taken to the NoEvent storyboard
+                    self.menuViewClient.getEventCount { count, id in
+                        print(count)
+                        print(currentEvent)
+                        if count == 0 {
+                            let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
+                            self.present(controller, animated: true, completion: nil)
+                        }
+                        else if (count != 0 && newEvent == "") {
+                            newEvent = id
+                            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+                        }
+                    }
+                }
+            }
+        }
+
+
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,19 +71,25 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             let loginClient = LoginClient()
             loginClient.logOut()
             mainUser.logOut()
-            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login")
+            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LoginController", strStoryboard: "Login", animationStyle: "")
         }
         else if label == "Create Event" {
-            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation")
+            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation", animationStyle: "")
+        }
+        else if label == "Join Event" {
+            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventInvite", strStoryboard: "EventInvite", animationStyle: "")
+        }
+        else if label == "Already there" {
+            print("Nothing Happens")
         }
         else {
             newEvent = id
-            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event")
+            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "")
         }
     }
     
     
-    func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String) {
+    func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String, animationStyle: String) {
         let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
         let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
         
@@ -57,11 +102,20 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         }
         else {
             //source: http://stackoverflow.com/questions/37722323/how-to-present-view-controller-from-right-to-left-in-ios-using-swift
-            let transition = CATransition()
-            transition.duration = 0.5
-            transition.type = kCATransitionPush
-            transition.subtype = kCATransitionFromRight
-            view.window!.layer.add(transition, forKey: kCATransition)
+            if animationStyle == "fade" {
+                let transition = CATransition()
+                transition.duration = 0.5
+                transition.type = kCATransitionFade
+                transition.subtype = kCATransitionFromRight
+                view.window!.layer.add(transition, forKey: kCATransition)
+            }
+            else {
+                let transition = CATransition()
+                transition.duration = 0.5
+                transition.type = kCATransitionPush
+                transition.subtype = kCATransitionFromRight
+                view.window!.layer.add(transition, forKey: kCATransition)
+            }
             present(controller, animated: false, completion: nil)
         }
         
@@ -139,12 +193,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         
         sender.isEnabled = false
         sender.tag = 10
-        //print("What is the storyboard id:")
-        //print(self.storyboardID)
-        //print(currentStoryBoardID)
-        //let mainStoryboard = UIStoryboard(name: currentStoryBoardID, bundle: nil)
         let menuVC : MenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
-        //let menuVC : MenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         menuVC.btnMenu = sender
         menuVC.delegate = self
         self.view.addSubview(menuVC.view)

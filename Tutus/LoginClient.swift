@@ -28,7 +28,6 @@ class LoginClient {
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).start(completionHandler: {(connection, result, error) -> Void in
             if error == nil {
                 self.dict = result as! [String : AnyObject]
-                //print(result!)
                 //print(self.dict)
             }
             

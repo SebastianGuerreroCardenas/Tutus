@@ -36,7 +36,7 @@ class UserClient {
     }
     
     
-    func createNewUser() -> Bool {
+    func createNewUser() {
         print("did it work")
         print(self.dict)
         
@@ -46,16 +46,10 @@ class UserClient {
         
         Alamofire.request("http://riskmanapi.herokuapp.com/users",  method: .post ,parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
             
-//            print(response.request)  // original URL request
-//            print(response.response) // HTTP URL response
-//            print(response.data)     // server data
-//            print(response.result)   // result of response serialization
-            
             if let JSON = response.result.value {
                 print("JSON: \(JSON)")
             }
         }
-        return true
     }
     
 }

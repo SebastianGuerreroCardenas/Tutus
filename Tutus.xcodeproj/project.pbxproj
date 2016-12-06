@@ -47,6 +47,7 @@
 		B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D66341DF3549A00210219 /* SearchGuestListRiskClient.swift */; };
 		B93D66381DF355FE00210219 /* RiskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D66361DF355FE00210219 /* RiskTableViewCell.swift */; };
 		B93D66391DF355FE00210219 /* RiskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93D66371DF355FE00210219 /* RiskTableViewCell.xib */; };
+		B96517031DF67CF5005F4987 /* EventAddOnly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96517021DF67CF5005F4987 /* EventAddOnly.storyboard */; };
 		B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971862F1DEF93A60096E506 /* EventCreation.storyboard */; };
 		B97186321DEF93D90096E506 /* EventCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186311DEF93D90096E506 /* EventCreationViewController.swift */; };
 		B97186341DEFA4D40096E506 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186331DEFA4D40096E506 /* UserClient.swift */; };
@@ -122,6 +123,7 @@
 		B93D66341DF3549A00210219 /* SearchGuestListRiskClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGuestListRiskClient.swift; sourceTree = "<group>"; };
 		B93D66361DF355FE00210219 /* RiskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiskTableViewCell.swift; sourceTree = "<group>"; };
 		B93D66371DF355FE00210219 /* RiskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RiskTableViewCell.xib; sourceTree = "<group>"; };
+		B96517021DF67CF5005F4987 /* EventAddOnly.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventAddOnly.storyboard; sourceTree = "<group>"; };
 		B971862F1DEF93A60096E506 /* EventCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventCreation.storyboard; sourceTree = "<group>"; };
 		B97186311DEF93D90096E506 /* EventCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreationViewController.swift; sourceTree = "<group>"; };
 		B97186331DEFA4D40096E506 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
@@ -276,8 +278,8 @@
 		B90CB8E51DE36BF900A8D68D /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				B96517011DF67C9D005F4987 /* EventAddList */,
 				B9224D951DF48ECC00F39F2E /* EventRiskList */,
-				B91622D11DE760A0009D935C /* Event.storyboard */,
 				B91622D31DE760B2009D935C /* EventClient.swift */,
 				B93D66281DF236F200210219 /* EventViewController.swift */,
 				B93D662A1DF3419900210219 /* NoEventViewController.swift */,
@@ -292,6 +294,7 @@
 				B93D662F1DF353A800210219 /* EventGuestRiskListModel.swift */,
 				B93D66361DF355FE00210219 /* RiskTableViewCell.swift */,
 				B93D66371DF355FE00210219 /* RiskTableViewCell.xib */,
+				B91622D11DE760A0009D935C /* Event.storyboard */,
 				B93D66341DF3549A00210219 /* SearchGuestListRiskClient.swift */,
 			);
 			name = EventRiskList;
@@ -316,6 +319,14 @@
 				B9224D9B1DF4A99D00F39F2E /* Event.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		B96517011DF67C9D005F4987 /* EventAddList */ = {
+			isa = PBXGroup;
+			children = (
+				B96517021DF67CF5005F4987 /* EventAddOnly.storyboard */,
+			);
+			name = EventAddList;
 			sourceTree = "<group>";
 		};
 		B971862E1DEF93840096E506 /* EventCreation */ = {
@@ -468,6 +479,7 @@
 				8E118E411DF61ECC006AA6FA /* LocationCreation.storyboard in Resources */,
 				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
 				B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */,
+				B96517031DF67CF5005F4987 /* EventAddOnly.storyboard in Resources */,
 				B91622D21DE760A0009D935C /* Event.storyboard in Resources */,
 				B93D66391DF355FE00210219 /* RiskTableViewCell.xib in Resources */,
 				8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */,

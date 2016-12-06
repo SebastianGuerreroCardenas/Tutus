@@ -55,6 +55,14 @@ class EventGuestRiskListModel {
         }
     }
     
+    func guestModelForRowAtIndexPath(_ indexPath: IndexPath) -> Guest {
+        if filteredGuests.isEmpty {
+            return guests[indexPath.row]
+        } else {
+            return filteredGuests[indexPath.row]
+        }
+    }
+    
     func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> GuestDetailViewModel {
         let guest = (filteredGuests.isEmpty ? guests[indexPath.row] : filteredGuests[indexPath.row])
         return GuestDetailViewModel(guest: guest)
