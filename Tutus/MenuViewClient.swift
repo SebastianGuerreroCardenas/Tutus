@@ -23,7 +23,7 @@ class MenuViewClient {
         Alamofire.request("https://riskmanapi.herokuapp.com/events", headers: headers).responseJSON {response in
             
             let json = JSON(response.result.value)
-            for (index,event):(String, JSON) in json {
+            for (_,event):(String, JSON) in json {
                 eventOptions.append(["title": event["title"].stringValue, "icon":"partyIcon", "id": event["id"].stringValue])
             }
             completion(eventOptions)

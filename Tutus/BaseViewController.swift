@@ -14,7 +14,7 @@ var mainUser = UserClient()
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
-    
+    // MARK: Properties & Outlets
     var loginClient = LoginClient()
     var menuViewClient = MenuViewClient()
     
@@ -47,6 +47,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
                         }
                         else if (count != 0 && newEvent == "") {
                             newEvent = id
+                            //here is where you get the role of the user for that event and pick where to go
                             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
                         }
                     }
@@ -83,6 +84,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             print("Nothing Happens")
         }
         else {
+            //here is where you get the role of the user for that event and pick where to go
             newEvent = id
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "")
         }

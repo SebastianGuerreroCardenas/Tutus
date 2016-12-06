@@ -10,6 +10,7 @@ import UIKit
 
 class LocationCreationViewController: BaseViewController {
 
+    // MARK: Properties & Outlets
     var locationClient = LocationClient()
     var locationInfo = [String: String]()
     var isEdit = false

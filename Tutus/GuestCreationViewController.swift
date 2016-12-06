@@ -10,6 +10,7 @@ import UIKit
 
 class GuestCreationViewController: BaseViewController {
     
+    // MARK: Properties & Outlets
     var guestClient = GuestClient()
     var guestInfo = [String: String]()
     var isEdit = false

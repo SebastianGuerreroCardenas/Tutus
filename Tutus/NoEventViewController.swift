@@ -12,6 +12,7 @@ import UIKit
 
 class NoEventViewController: BaseViewController {
     
+    // MARK: IB ACTIONS
     @IBAction func logoutAction(_ sender: Any) {
         let loginClient = LoginClient()
         loginClient.logOut()
@@ -27,15 +28,6 @@ class NoEventViewController: BaseViewController {
         self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation", animationStyle: "")
     }
     
-    //CHECK THIS MARK, I MADE IT OVERRIDE
-    override func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String, animationStyle: String) {
-        let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
-        let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
-        
-        present(controller, animated: true, completion: nil)
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +38,15 @@ class NoEventViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //CHECK THIS MARK, I MADE IT OVERRIDE
+    override func openViewControllerOnIdentifierOnStoryBoard(strIdentifier: String, strStoryboard: String, animationStyle: String) {
+        let loginStoryboard = UIStoryboard(name: strStoryboard, bundle: nil)
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: strIdentifier) as UIViewController
+        
+        present(controller, animated: true, completion: nil)
+        
     }
     
     

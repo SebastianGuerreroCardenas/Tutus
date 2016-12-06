@@ -14,32 +14,14 @@ protocol SlideMenuDelegate {
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
+    // MARK: Properties & Outlets
     let menuViewClient = MenuViewClient()
     
-    /**
-     *  Array to display menu options
-     */
     @IBOutlet var tblMenuOptions : UITableView!
-    
-    /**
-     *  Transparent button to hide menu
-     */
     @IBOutlet var btnCloseMenuOverlay : UIButton!
     
-    /**
-     *  Array containing menu options
-     */
     var arrayMenuOptions = [Dictionary<String,String>]()
-    
-    /**
-     *  Menu button which was tapped to display the menu
-     */
     var btnMenu : UIButton!
-    
-    /**
-     *  Delegate of the MenuVC
-     */
     var delegate : SlideMenuDelegate?
     
     override func viewDidLoad() {

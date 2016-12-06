@@ -17,6 +17,7 @@ extension EventGuestRiskListViewController: UISearchResultsUpdating {
 
 class EventGuestRiskListViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: Properties & Outlets
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -70,18 +71,14 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        var checkInOption = UITableViewRowAction(style: .normal, title: "Check In") {action,index in
-            print("hello");
-            print(index.row);
+        let checkInOption = UITableViewRowAction(style: .normal, title: "Check In") {action,index in
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: true, guest: guest) {
                 self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
             }
         }
         
-        var checkOutOption = UITableViewRowAction(style: .normal, title: "Check Out") {action,index in
-            print("hello");
-            print(index.row);
+        let checkOutOption = UITableViewRowAction(style: .normal, title: "Check Out") {action,index in
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: false, guest: guest) {
                 self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)

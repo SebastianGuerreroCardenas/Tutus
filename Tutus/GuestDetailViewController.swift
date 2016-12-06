@@ -2,6 +2,7 @@ import UIKit
 
 class GuestDetailViewController: UIViewController {
     
+    // MARK: Properties & Outlets
     @IBOutlet weak var nameLabel: UILabel!
     
     var guestDetailViewModel: GuestDetailViewModel?
