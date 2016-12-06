@@ -24,7 +24,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             mainUser.setDict(dict: self.loginClient.dictionary())
             mainUser.createNewUser()
         }
-        
+        //here connect them to the event that ehy should be going
         self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
     }
     @IBAction func dataAction(_ sender: Any) {

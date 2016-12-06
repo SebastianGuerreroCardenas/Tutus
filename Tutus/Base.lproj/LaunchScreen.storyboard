@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +21,29 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6ni-3M-kDS">
+                                <rect key="frame" x="0.0" y="71" width="375" height="524"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6ni-3M-kDS" secondAttribute="height" multiplier="375:524" id="8be-S4-l7e"/>
+                                    <constraint firstAttribute="height" constant="524" id="HG9-MY-lf5"/>
+                                    <constraint firstAttribute="width" constant="375" id="HNk-wO-9sa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.23529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6ni-3M-kDS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YHQ-c6-eds"/>
+                            <constraint firstItem="6ni-3M-kDS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uwz-6P-tB4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loadingLogo" width="956" height="1431"/>
+    </resources>
 </document>

@@ -9,17 +9,24 @@
 import UIKit
 
 class EventViewController: BaseViewController {
-        
+    @IBOutlet weak var eventNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addSlideMenuButton()
         currentEvent = newEvent
+        setLabels()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setLabels() {
+        eventNameLabel.text = currentEventObject.title
     }
     
     
