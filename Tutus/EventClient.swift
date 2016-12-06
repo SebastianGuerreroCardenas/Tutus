@@ -47,6 +47,19 @@ class EventClient {
         completion()
     }
     
+    func createEventUser(completion: @escaping ((Dictionary<String,String>) -> Void)) {
+        print("creating event user")
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "InviteCode": self.dict["invite"]!]
+            
+        Alamofire.request("https://riskmanapi.herokuapp.com/event_users", method: .post, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
+                
+            let json = JSON(response.result.value!)
+                
+            completion(self.dict)
+        }
+    }
+
+    
     func getEventByID(completion: @escaping ((Event) -> Void)) {
         print("fetching event options")
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
