@@ -17,6 +17,8 @@
 		8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */; };
 		8E1309991DF4C83E00577E51 /* GuestCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */; };
 		8E13099B1DF4C86200577E51 /* GuestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13099A1DF4C86200577E51 /* GuestClient.swift */; };
+		8E294CEC1DF7D85400E722D0 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E294CEB1DF7D85400E722D0 /* CollectionReusableView.swift */; };
+		8E294CEE1DF7EF8200E722D0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E294CED1DF7EF8200E722D0 /* CollectionViewCell.swift */; };
 		8E9139051DF63AF40004BC31 /* EventInvite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9139041DF63AF40004BC31 /* EventInvite.storyboard */; };
 		8E9139071DF63C1D0004BC31 /* EventUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9139061DF63C1D0004BC31 /* EventUserViewController.swift */; };
 		907A1A64060614B3C5BB97D4 /* Pods_TutusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1494897E25F3125266F530BC /* Pods_TutusTests.framework */; };
@@ -88,6 +90,8 @@
 		8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GuestCreation.storyboard; sourceTree = "<group>"; };
 		8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCreationViewController.swift; sourceTree = "<group>"; };
 		8E13099A1DF4C86200577E51 /* GuestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClient.swift; sourceTree = "<group>"; };
+		8E294CEB1DF7D85400E722D0 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		8E294CED1DF7EF8200E722D0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8E9139041DF63AF40004BC31 /* EventInvite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventInvite.storyboard; sourceTree = "<group>"; };
 		8E9139061DF63C1D0004BC31 /* EventUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventUserViewController.swift; sourceTree = "<group>"; };
 		9A8E1346EAF0E12BCC701B79 /* Pods-TutusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				8E118E3A1DF61E91006AA6FA /* AssignmentCreation.storyboard */,
 				8E118E3C1DF61EA0006AA6FA /* AssignmentClient.swift */,
 				8E118E3E1DF61EB0006AA6FA /* AssignmentCreationViewController.swift */,
+				8E294CEB1DF7D85400E722D0 /* CollectionReusableView.swift */,
+				8E294CED1DF7EF8200E722D0 /* CollectionViewCell.swift */,
 			);
 			name = Assignments;
 			sourceTree = "<group>";
@@ -671,6 +677,7 @@
 				B90CB8DE1DE369B000A8D68D /* LoginViewController.swift in Sources */,
 				B91622DD1DEF6070009D935C /* MenuViewController.swift in Sources */,
 				8E118E451DF61FAD006AA6FA /* LocationCreationViewController.swift in Sources */,
+				8E294CEC1DF7D85400E722D0 /* CollectionReusableView.swift in Sources */,
 				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
 				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
 				B96517081DF7816D005F4987 /* User.swift in Sources */,
@@ -685,6 +692,7 @@
 				B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
 				B91622D41DE760B2009D935C /* EventClient.swift in Sources */,
+				8E294CEE1DF7EF8200E722D0 /* CollectionViewCell.swift in Sources */,
 				8E118E3D1DF61EA0006AA6FA /* AssignmentClient.swift in Sources */,
 				8E118E3F1DF61EB0006AA6FA /* AssignmentCreationViewController.swift in Sources */,
 				B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */,
