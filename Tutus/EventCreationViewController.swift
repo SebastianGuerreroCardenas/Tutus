@@ -26,7 +26,21 @@ class EventCreationViewController: BaseViewController {
     @IBOutlet weak var pageTitle: UILabel!
     
     @IBAction func cancelAction(_ sender: Any) {
+        if haveZeroEvents {
+            let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
+            present(controller, animated: true, completion: nil)
+
+        }
+        else {
+            mainUser.setMainUserRole(eventID: currentEvent) {
+                currentEvent = ""
+                self.openViewControllerBasedOnRole(animationStyle: "fade")
+            }
+        }
     }
+    
+    
     @IBAction func createButtonTapped(sender: UIButton) {
         self.eventInfo["title"] = self.titleField.text
         self.eventInfo["location"] = self.locationField.text
@@ -41,6 +55,10 @@ class EventCreationViewController: BaseViewController {
         eventClient.setDict(diction: eventInfo) {
             self.eventClient.createEvent(){ dict in
                 print(self.eventClient.dict)
+                mainUser.setMainUserRole(eventID: currentEvent) {
+                    currentEvent = ""
+                    self.openViewControllerBasedOnRole(animationStyle: "fade")
+                }
             }
         }
     }

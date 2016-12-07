@@ -47,7 +47,9 @@
 		B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D66341DF3549A00210219 /* SearchGuestListRiskClient.swift */; };
 		B93D66381DF355FE00210219 /* RiskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D66361DF355FE00210219 /* RiskTableViewCell.swift */; };
 		B93D66391DF355FE00210219 /* RiskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93D66371DF355FE00210219 /* RiskTableViewCell.xib */; };
-		B96517031DF67CF5005F4987 /* EventAddOnly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96517021DF67CF5005F4987 /* EventAddOnly.storyboard */; };
+		B96517031DF67CF5005F4987 /* EventMember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96517021DF67CF5005F4987 /* EventMember.storyboard */; };
+		B96517061DF7608C005F4987 /* EventTeam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96517051DF7608C005F4987 /* EventTeam.storyboard */; };
+		B96517081DF7816D005F4987 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96517071DF7816D005F4987 /* User.swift */; };
 		B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971862F1DEF93A60096E506 /* EventCreation.storyboard */; };
 		B97186321DEF93D90096E506 /* EventCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186311DEF93D90096E506 /* EventCreationViewController.swift */; };
 		B97186341DEFA4D40096E506 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186331DEFA4D40096E506 /* UserClient.swift */; };
@@ -123,7 +125,9 @@
 		B93D66341DF3549A00210219 /* SearchGuestListRiskClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGuestListRiskClient.swift; sourceTree = "<group>"; };
 		B93D66361DF355FE00210219 /* RiskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiskTableViewCell.swift; sourceTree = "<group>"; };
 		B93D66371DF355FE00210219 /* RiskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RiskTableViewCell.xib; sourceTree = "<group>"; };
-		B96517021DF67CF5005F4987 /* EventAddOnly.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventAddOnly.storyboard; sourceTree = "<group>"; };
+		B96517021DF67CF5005F4987 /* EventMember.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventMember.storyboard; sourceTree = "<group>"; };
+		B96517051DF7608C005F4987 /* EventTeam.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventTeam.storyboard; sourceTree = "<group>"; };
+		B96517071DF7816D005F4987 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B971862F1DEF93A60096E506 /* EventCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventCreation.storyboard; sourceTree = "<group>"; };
 		B97186311DEF93D90096E506 /* EventCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreationViewController.swift; sourceTree = "<group>"; };
 		B97186331DEFA4D40096E506 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
@@ -278,7 +282,8 @@
 		B90CB8E51DE36BF900A8D68D /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				B96517011DF67C9D005F4987 /* EventAddList */,
+				B96517041DF76066005F4987 /* EventTeam */,
+				B96517011DF67C9D005F4987 /* EventMember */,
 				B9224D951DF48ECC00F39F2E /* EventRiskList */,
 				B91622D31DE760B2009D935C /* EventClient.swift */,
 				B93D66281DF236F200210219 /* EventViewController.swift */,
@@ -317,16 +322,25 @@
 			children = (
 				B93D66321DF353DE00210219 /* Guest.swift */,
 				B9224D9B1DF4A99D00F39F2E /* Event.swift */,
+				B96517071DF7816D005F4987 /* User.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
 		};
-		B96517011DF67C9D005F4987 /* EventAddList */ = {
+		B96517011DF67C9D005F4987 /* EventMember */ = {
 			isa = PBXGroup;
 			children = (
-				B96517021DF67CF5005F4987 /* EventAddOnly.storyboard */,
+				B96517021DF67CF5005F4987 /* EventMember.storyboard */,
 			);
-			name = EventAddList;
+			name = EventMember;
+			sourceTree = "<group>";
+		};
+		B96517041DF76066005F4987 /* EventTeam */ = {
+			isa = PBXGroup;
+			children = (
+				B96517051DF7608C005F4987 /* EventTeam.storyboard */,
+			);
+			name = EventTeam;
 			sourceTree = "<group>";
 		};
 		B971862E1DEF93840096E506 /* EventCreation */ = {
@@ -477,9 +491,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E118E411DF61ECC006AA6FA /* LocationCreation.storyboard in Resources */,
+				B96517061DF7608C005F4987 /* EventTeam.storyboard in Resources */,
 				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
 				B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */,
-				B96517031DF67CF5005F4987 /* EventAddOnly.storyboard in Resources */,
+				B96517031DF67CF5005F4987 /* EventMember.storyboard in Resources */,
 				B91622D21DE760A0009D935C /* Event.storyboard in Resources */,
 				B93D66391DF355FE00210219 /* RiskTableViewCell.xib in Resources */,
 				8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */,
@@ -658,6 +673,7 @@
 				8E118E451DF61FAD006AA6FA /* LocationCreationViewController.swift in Sources */,
 				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
 				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
+				B96517081DF7816D005F4987 /* User.swift in Sources */,
 				8E9139071DF63C1D0004BC31 /* EventUserViewController.swift in Sources */,
 				B93D66271DF1F4B800210219 /* MenuViewClient.swift in Sources */,
 				8E1309991DF4C83E00577E51 /* GuestCreationViewController.swift in Sources */,

@@ -11,6 +11,7 @@ var currentEvent = ""
 var newEvent = ""
 var currentEventObject: Event!
 var mainUser = UserClient()
+var haveZeroEvents: Bool = false
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
@@ -20,6 +21,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("fhasdkljfhasdkjfhasdlkjfhasdlkjfhsadkjfhsakldjfhlkj")
         // Do any additional setup after loading the view.
         
         // checks if client is logged in, if they arent they are taken to the login page.
@@ -36,19 +38,61 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
                     mainUser.setDict(dict: self.loginClient.dictionary())
                     // if they are a new user it will add the person to the database, if not it will fail to create it.
                     mainUser.createNewUser()
+                    mainUser.getEventUsersByAuthToken() { user in
+                        mainUser.userObject = user
+                    }
                     //checks if the user has any events, if they are a user with no events they are taken to the NoEvent storyboard
                     self.menuViewClient.getEventCount { count, id in
                         print(count)
                         print(currentEvent)
                         if count == 0 {
+                            haveZeroEvents = true
                             let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
                             let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
                             self.present(controller, animated: true, completion: nil)
                         }
                         else if (count != 0 && newEvent == "") {
+                            haveZeroEvents = false
                             newEvent = id
                             //here is where you get the role of the user for that event and pick where to go
-                            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+                            mainUser.setMainUserRole(eventID: newEvent) {
+                                print("THIS IS ME HERE")
+                                print(mainUser.userObject.role)
+                                self.openViewControllerBasedOnRole(animationStyle: "fade")
+                            }
+                            //self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+                        }
+                    }
+                }
+            }
+            else {
+                if !mainUser.hasID() {
+                    loginClient.getData(){ dict in
+                        mainUser.setDict(dict: self.loginClient.dictionary())
+                        // if they are a new user it will add the person to the database, if not it will fail to create it.
+                        mainUser.createNewUser()
+                        mainUser.getEventUsersByAuthToken() { user in
+                            mainUser.userObject = user
+                        }
+                        //checks if the user has any events, if they are a user with no events they are taken to the NoEvent storyboard
+                        self.menuViewClient.getEventCount { count, id in
+                           
+                            if count == 0 {
+                                haveZeroEvents = true
+                                let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
+                                self.present(controller, animated: true, completion: nil)
+                            }
+                            else if (count != 0 && newEvent == "") {
+                                haveZeroEvents = false
+                                newEvent = id
+                                mainUser.setMainUserRole(eventID: newEvent) {
+                                    print("THIS IS ME HERE")
+                                    print(mainUser.userObject.role)
+                                    self.openViewControllerBasedOnRole(animationStyle: "fade")
+                                }
+
+                            }
                         }
                     }
                 }
@@ -58,6 +102,40 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
 
         
     }
+    
+//    func authFunction() {
+//        if !mainUser.hasID() {
+//            loginClient.getData(){ dict in
+//                mainUser.setDict(dict: self.loginClient.dictionary())
+//                // if they are a new user it will add the person to the database, if not it will fail to create it.
+//                mainUser.createNewUser()
+//                mainUser.getEventUsersByAuthToken() { user in
+//                    mainUser.userObject = user
+//                }
+//                //checks if the user has any events, if they are a user with no events they are taken to the NoEvent storyboard
+//                self.menuViewClient.getEventCount { count, id in
+//                    print(count)
+//                    print(currentEvent)
+//                    if count == 0 {
+//                        haveZeroEvents = true
+//                        let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                        let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
+//                        self.present(controller, animated: true, completion: nil)
+//                    }
+//                    else if (count != 0 && newEvent == "") {
+//                        haveZeroEvents = false
+//                        newEvent = id
+//                        //here is where you get the role of the user for that event and pick where to go
+//                        mainUser.setMainUserRole(eventID: newEvent) {
+//                            print("THIS IS ME HERE")
+//                            print(mainUser.userObject.role)
+//                            self.openViewControllerBasedOnRole(animationStyle: "fade")
+//                        }
+//                        //self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+//                    }
+//                }
+//            }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -86,7 +164,10 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         else {
             //here is where you get the role of the user for that event and pick where to go
             newEvent = id
-            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "")
+            mainUser.setMainUserRole(eventID: newEvent) {
+                self.openViewControllerBasedOnRole(animationStyle: "fade")
+            }
+            //self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "")
         }
     }
     
@@ -121,6 +202,27 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             present(controller, animated: false, completion: nil)
         }
         
+    }
+    
+    //function in progress
+    func openViewControllerBasedOnRole(animationStyle: String) {
+        var strIdentifier:String = ""
+        var strStoryboard:String = ""
+        if mainUser.userObject.role == "Admin"{
+            strIdentifier = "EventMain"
+            strStoryboard = "Event"
+        }
+        else if mainUser.userObject.role == "Team" {
+            strIdentifier = "EventTeam"
+            strStoryboard = "EventTeam"
+            
+        }
+        else if mainUser.userObject.role == "Member"{
+            strIdentifier = "EventMember"
+            strStoryboard = "EventMember"
+        }
+        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: strIdentifier, strStoryboard: strStoryboard, animationStyle: animationStyle)
+
     }
     
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String){

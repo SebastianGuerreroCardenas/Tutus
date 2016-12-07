@@ -25,8 +25,10 @@ class GuestCreationViewController: BaseViewController {
     
     @IBAction func cancelAction(_ sender: Any) {
         //Here you are suppose to ge the role of the user for the event
-        currentEvent = ""
-        openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+        mainUser.setMainUserRole(eventID: currentEvent) {
+            currentEvent = ""
+            self.openViewControllerBasedOnRole(animationStyle: "fade")
+        }
     }
     
     @IBAction func submitButtonTapped(sender: UIButton) {

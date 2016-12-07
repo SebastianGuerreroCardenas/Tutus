@@ -39,7 +39,7 @@ class GuestClient {
             
             Alamofire.request("https://riskmanapi.herokuapp.com/guests", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
                 
-                _ = JSON(response.result.value!)
+                //let json = JSON(response.result.value!)
                 
                 completion(self.dict)
             }

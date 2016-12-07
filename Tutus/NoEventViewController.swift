@@ -21,11 +21,11 @@ class NoEventViewController: BaseViewController {
     }
     
     @IBAction func joinAnEventAction(_ sender: Any) {
-        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventJoin", strStoryboard: "EventCreation", animationStyle: "")
+        openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventInvite", strStoryboard: "EventInvite", animationStyle: "")
     }
     
     @IBAction func createEventAction(_ sender: Any) {
-        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation", animationStyle: "")
+        openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventCreation", strStoryboard: "EventCreation", animationStyle: "")
     }
     
     

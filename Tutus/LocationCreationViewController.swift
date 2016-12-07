@@ -19,6 +19,13 @@ class LocationCreationViewController: BaseViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageTitle: UILabel!
     
+    @IBAction func cancelAction(_ sender: Any) {
+        mainUser.setMainUserRole(eventID: currentEvent) {
+            currentEvent = ""
+            self.openViewControllerBasedOnRole(animationStyle: "fade")
+        }
+    }
+    
     @IBAction func submitButtonTapped(sender: UIButton) {
         self.locationInfo["name"] = self.nameField.text
         self.locationInfo["isEdit"] = String(self.isEdit)

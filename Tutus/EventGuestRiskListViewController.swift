@@ -50,6 +50,14 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        eventGuestRiskListModel.refresh { [unowned self] in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

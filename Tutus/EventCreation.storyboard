@@ -79,17 +79,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEk-Ed-MSP">
-                                <rect key="frame" x="121" y="587" width="133" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.97091796793181007" green="0.8054390638431782" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Create Event">
-                                    <color key="titleShadowColor" red="1" green="0.15836446508063795" blue="0.15984100102780852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="createButtonTappedWithSender:" destination="cZt-VD-wbK" eventType="touchUpInside" id="FQb-Hc-5ul"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="List Close Date and Time" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-JH-iXR">
                                 <rect key="frame" x="0.0" y="524" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,16 +89,29 @@
                                     <action selector="listCloseFieldEditingWithSender:" destination="cZt-VD-wbK" eventType="editingDidBegin" id="Ec2-rt-YTt"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2N-hc-RTJ">
+                                <rect key="frame" x="61" y="599" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="cZt-VD-wbK" eventType="touchUpInside" id="bBH-En-mdz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEk-Ed-MSP">
+                                <rect key="frame" x="198" y="584" width="133" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97091796793181007" green="0.8054390638431782" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Create Event">
+                                    <color key="titleShadowColor" red="1" green="0.15836446508063795" blue="0.15984100102780852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButtonTappedWithSender:" destination="cZt-VD-wbK" eventType="touchUpInside" id="FQb-Hc-5ul"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sA8-3D-Bc3">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="k4n-vg-086">
-                            <connections>
-                                <action selector="cancelAction:" destination="cZt-VD-wbK" id="S0a-qw-lMo"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="sA8-3D-Bc3"/>
                     <connections>
                         <outlet property="endField" destination="E3A-Zd-J0T" id="ilk-yS-mUq"/>
                         <outlet property="listCloseField" destination="eZM-JH-iXR" id="NrQ-R8-iqs"/>

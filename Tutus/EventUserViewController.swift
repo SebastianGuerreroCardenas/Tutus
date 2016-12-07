@@ -17,6 +17,18 @@ class EventUserViewController: BaseViewController {
     @IBOutlet weak var inviteCodeField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBAction func cancelAction(_ sender: Any) {
+        if haveZeroEvents {
+            let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
+            present(controller, animated: true, completion: nil)
+            
+        }
+        else {
+            mainUser.setMainUserRole(eventID: currentEvent) {
+                currentEvent = ""
+                self.openViewControllerBasedOnRole(animationStyle: "fade")
+            }
+        }
     }
     
     @IBAction func submitButtonTapped(sender: UIButton) {
@@ -25,6 +37,10 @@ class EventUserViewController: BaseViewController {
         eventClient.setDict(diction: inviteInfo) {
             self.eventClient.createEventUser(){ dict in
                 print(self.eventClient.dict)
+                mainUser.setMainUserRole(eventID: currentEvent) {
+                    currentEvent = ""
+                    self.openViewControllerBasedOnRole(animationStyle: "fade")
+                }
             }
         }
     }
@@ -32,12 +48,6 @@ class EventUserViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if !loginClient.isLoggedIn(){
-//            print("is not logged in")
-//            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-//            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
-//            present(controller, animated: true, completion: nil)
-//        }
     }
     
     override func didReceiveMemoryWarning() {
