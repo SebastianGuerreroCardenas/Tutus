@@ -15,25 +15,23 @@ class AssignmentCreationViewController: BaseViewController, UICollectionViewDele
     var locations = ["Location 1", "Location 2", "Location 3", "Location 4", "Location 5"]
     
     var hours: Int = 0
-    var startTime: String = ""
+    var startTime: String = "not loaded"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //var nib = UINib(nibName: "UICollectionElementKindCell", bundle:nil)
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
-        //collectionView.register(CollectionReusableView.self, forCellWithReuseIdentifier: "CollectionReusableView")
-        //collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
+        collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
         let date1 = dateFormatter.date(from: "2016-12-05 15:10:00")
         let date2 = dateFormatter.date(from: "2016-12-06 15:10:00")
-        hours = Int((date2?.timeIntervalSince(date1!))! / 360)
+        self.hours = Int((date2?.timeIntervalSince(date1!))! / 360)
     
         let dateFormatter2 = DateFormatter()
         dateFormatter2.dateFormat = "HH:mm a"
-        startTime = dateFormatter2.string(from:date1!)
+        self.startTime = dateFormatter2.string(from:date1!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,8 +67,8 @@ class AssignmentCreationViewController: BaseViewController, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         var reusableview: UICollectionReusableView? = nil
-        let headerView: CollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath) as! CollectionReusableView
-        headerView.headerLabel.text = "Hour " + String(indexPath.section) + ", Starts at " + startTime
+        let headerView: CollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
+        //headerView.headerLabel.text = "Hour " + String(indexPath.section) + ", Starts at " + self.startTime
         reusableview = headerView
         return reusableview!
     }
