@@ -21,7 +21,6 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("fhasdkljfhasdkjfhasdlkjfhasdlkjfhsadkjfhsakldjfhlkj")
         // Do any additional setup after loading the view.
         
         // checks if client is logged in, if they arent they are taken to the login page.

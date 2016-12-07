@@ -19,7 +19,12 @@ class AssignmentCreationViewController: BaseViewController, UICollectionViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //var nib = UINib(nibName: "UICollectionElementKindCell", bundle:nil)
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+        //collectionView.register(CollectionReusableView.self, forCellWithReuseIdentifier: "CollectionReusableView")
+        //collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
         let date1 = dateFormatter.date(from: "2016-12-05 15:10:00")
@@ -46,7 +51,8 @@ class AssignmentCreationViewController: BaseViewController, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.personLocation.text = locations[indexPath.row]
+        print(indexPath.row)
+        cell.personLocation?.text = locations[indexPath.row]
         return cell
     }
     

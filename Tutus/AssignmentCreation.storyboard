@@ -12,7 +12,7 @@
         <!--Assignment Creation View Controller-->
         <scene sceneID="q7V-h5-5xs">
             <objects>
-                <viewController id="Umq-gL-NI1" customClass="AssignmentCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssignmentCreation" id="Umq-gL-NI1" customClass="AssignmentCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gW3-wj-hJh"/>
                         <viewControllerLayoutGuide type="bottom" id="66f-mb-tST"/>
@@ -32,7 +32,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4tW-dm-ppx" customClass="CollectionViewCell" customModule="Tutus" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="4tW-dm-ppx" customClass="CollectionViewCell" customModule="Tutus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="111" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -61,7 +61,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cv2-WY-XM0" customClass="CollectionReusableView" customModule="Tutus" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionReusableView" id="cv2-WY-XM0" customClass="CollectionReusableView" customModule="Tutus" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -124,6 +124,10 @@
         <scene sceneID="s5m-yS-xOL">
             <objects>
                 <viewController id="oZW-i6-Obt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yV5-ja-9tY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Okt-2A-fpp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dpe-Ch-WXG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,6 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi9-5j-a8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-314" y="-99"/>
         </scene>
     </scenes>
 </document>
