@@ -73,24 +73,23 @@ class LocationViewController: BaseViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        //what
+
     }
+
+
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let editOption = UITableViewRowAction(style: .normal, title: "Edit") {action,index in
-            let location: Location = self.locationListModel.locationtModelForRowAtIndexPath(index)
-//            self.locationClient.deleteLocation(id: location.id){
-//                self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
-//            }
+            let loginStoryboard = UIStoryboard(name: "LocationCreation", bundle: nil)
+            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LocationCreation") as! LocationCreationViewController
+            controller.locationInfo = self.locationListModel.locationtDictionaryForRowAtIndexPath(index)
+            self.present(controller, animated: true, completion: nil)
         }
-
         let deleteOption = UITableViewRowAction(style: .normal, title: "Delete") {action,index in
             let location: Location = self.locationListModel.locationtModelForRowAtIndexPath(index)
             self.locationClient.deleteLocation(id: location.id){
-                //self.tableView.deleteRows(at: <#T##[IndexPath]#>, with: <#T##UITableViewRowAnimation#>)
-                //self.tableView.deselectRow(at: [index], animated: true)
-                self.tableView.deleteRows(at: [index], with: UITableViewRowAnimation.right)
-                //self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+                self.locationListModel.locations.remove(at: index.row)
+                self.tableView.reloadData()
             }
 
         }

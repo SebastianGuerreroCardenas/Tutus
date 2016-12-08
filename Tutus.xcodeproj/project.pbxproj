@@ -216,11 +216,11 @@
 			children = (
 				8E118E401DF61ECC006AA6FA /* LocationCreation.storyboard */,
 				8E118E421DF61EE7006AA6FA /* LocationClient.swift */,
-				8E118E441DF61FAD006AA6FA /* LocationCreationViewController.swift */,
 				B96517121DF8DA34005F4987 /* LocationTableViewCell.swift */,
 				B96517131DF8DA34005F4987 /* LocationTableViewCell.xib */,
-				B96517161DF8DCB9005F4987 /* LocationViewController.swift */,
 				B96517181DF8DEC0005F4987 /* LocationListModel.swift */,
+				8E118E441DF61FAD006AA6FA /* LocationCreationViewController.swift */,
+				B96517161DF8DCB9005F4987 /* LocationViewController.swift */,
 			);
 			name = Locations;
 			sourceTree = "<group>";

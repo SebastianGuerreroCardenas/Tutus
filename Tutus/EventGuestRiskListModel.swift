@@ -68,6 +68,11 @@ class EventGuestRiskListModel {
         return GuestDetailViewModel(guest: guest)
     }
     
+    func guestDictionaryForRowAtIndexPath(_ indexPath: IndexPath) -> [String : String] {
+        let guest: Guest = guests[indexPath.row]
+        return ["name": guest.name, "phone": guest.phone, "isEdit" : "true", "GuestId" : guest.id,"birthdate": guest.birthdate, "optionalText": guest.optional_text,"optionalTitle": guest.optional_title]
+    }
+    
     func updateFiltering(_ searchText: String) -> Void {
         filteredGuests = self.guests.filter { repo in
             return repo.name.lowercased().contains(searchText.lowercased())
