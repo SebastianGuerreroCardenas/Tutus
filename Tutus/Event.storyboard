@@ -278,7 +278,6 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ViI-Ks-lvt" id="kch-Su-1bs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
-
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -565,7 +564,7 @@
             </objects>
             <point key="canvasLocation" x="-2420" y="-1222"/>
         </scene>
-        <!--Locaitons-->
+        <!--Locations-->
         <scene sceneID="GtN-1a-znW">
             <objects>
                 <viewController id="0wA-dg-TgX" customClass="LocationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
@@ -604,7 +603,7 @@
                             <constraint firstItem="e3Y-se-caQ" firstAttribute="top" secondItem="aIz-36-fb0" secondAttribute="bottom" id="jh3-kE-RsM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Locaitons" id="Uyu-Et-dnU">
+                    <navigationItem key="navigationItem" title="Locations" id="Uyu-Et-dnU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="elG-s7-mNR">
                             <connections>
                                 <action selector="addLocationAction:" destination="0wA-dg-TgX" id="8Ii-l5-k0W"/>

@@ -12,21 +12,21 @@ import SwiftyJSON
 
 class AssignmentClient {
     
-    init() {
-        
-    }
+    var locations = [Location]()
+    
+    init() {}
     
     func getLocationsByID(completion: @escaping (([Location]) -> Void)) {
-        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEventObject.id]
         
         Alamofire.request("https://riskmanapi.herokuapp.com/locations", headers: headers).responseJSON {response in
             
             let json = JSON(response.result.value!)
             var locationList: [Location] = []
-            print(json)
             for (_,location):(String, JSON) in json {
                 locationList.append(Location(id: location["id"].stringValue, event_id: location["event_id"].stringValue, description: location["description"].stringValue, name: location["name"].stringValue))
             }
+            self.locations = locationList
             completion(locationList)
 
         }
