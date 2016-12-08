@@ -8,69 +8,92 @@
 
 import UIKit
 
-class AssignmentCreationViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class AssignmentCreationViewController: UICollectionViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    var locations = ["Location 1", "Location 2", "Location 3", "Location 4", "Location 5"]
-    
+    var locations:[String] = []
+    var people:[String] = []
     var hours: Int = 0
     var startTime: String = "not loaded"
+    var chosenPeople:[[String]] = [[]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
-        collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        let date1 = dateFormatter.date(from: "2016-12-05 15:10:00")
-        let date2 = dateFormatter.date(from: "2016-12-06 15:10:00")
-        self.hours = Int((date2?.timeIntervalSince(date1!))! / 360)
+        let date1 = dateFormatter.date(from: "2016-12-08 20:00:00")
+        let date2 = dateFormatter.date(from: "2016-12-08 23:10:00")
+        self.hours = Int(((date2?.timeIntervalSince(date1!))! / 60) / 60)
     
         let dateFormatter2 = DateFormatter()
-        dateFormatter2.dateFormat = "HH:mm a"
+        dateFormatter2.dateFormat = "hh:mm a"
         self.startTime = dateFormatter2.string(from:date1!)
+        self.locations = ["Location 1", "Location 2", "Location 3", "Location 4", "Location 5"]
+        self.people = ["Mark", "Sebastian", "Prof H.", "Charles", "Dad"]
+        self.people.insert("Please Select", at: 0)
+        self.chosenPeople = Array(repeating: Array(repeating: "", count:self.locations.count), count:self.hours)
+        
+        for h in 1...self.hours {
+            for l in 1...self.locations.count {
+                self.chosenPeople[h-1][l-1] = ""
+            }
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1 //we only want one column of data, just the person
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.people.count //we want as many rows as there are people in the array
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return people[row] //put in the person's name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.chosenPeople[Int(pickerView.restorationIdentifier!)!][Int(pickerView.accessibilityHint!)!] = people[row]
+        print(self.chosenPeople)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.hours
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return locations.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        print(indexPath.row)
-        cell.personLocation?.text = locations[indexPath.row]
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
+        let locationLabel = cell.viewWithTag(2) as! UILabel
+        locationLabel.text = self.locations[indexPath.row]
+        let picker = cell.viewWithTag(4) as! UIPickerView
+        picker.delegate = self
+        picker.dataSource = self
+        picker.restorationIdentifier = String(indexPath.section)
+        picker.accessibilityHint = String(indexPath.row)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        //display picker
-        collectionView.reloadData()
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        //dismiss picker and change text labels to match
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        var reusableview: UICollectionReusableView? = nil
-        let headerView: CollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
-        //headerView.headerLabel.text = "Hour " + String(indexPath.section) + ", Starts at " + self.startTime
-        reusableview = headerView
-        return reusableview!
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView", for: indexPath) as UICollectionReusableView
+        let headerLabel = headerView.viewWithTag(1) as! UILabel
+        headerLabel.text = "Hour " + String(indexPath.section + 1) + ", started at " + self.startTime
+        return headerView
     }
     
     
