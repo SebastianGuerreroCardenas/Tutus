@@ -9,7 +9,6 @@ class SearchGuestListRiskClient {
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
 
     
-        
         Alamofire.request(urlString, headers: headers).responseJSON {response in
             let json = JSON(response.result.value)
             var guestList: [Guest] = []

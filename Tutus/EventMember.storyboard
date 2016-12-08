@@ -43,7 +43,7 @@
         <!--Memeber-->
         <scene sceneID="qfa-ri-IWg">
             <objects>
-                <viewController id="SDr-Xi-VJj" customClass="EventGuestRiskListViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SDr-Xi-VJj" customClass="EventGuestMemberListViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R1I-kA-Caa"/>
                         <viewControllerLayoutGuide type="bottom" id="PVk-dj-kdb"/>

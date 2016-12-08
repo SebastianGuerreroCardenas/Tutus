@@ -102,43 +102,18 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         
     }
     
-//    func authFunction() {
-//        if !mainUser.hasID() {
-//            loginClient.getData(){ dict in
-//                mainUser.setDict(dict: self.loginClient.dictionary())
-//                // if they are a new user it will add the person to the database, if not it will fail to create it.
-//                mainUser.createNewUser()
-//                mainUser.getEventUsersByAuthToken() { user in
-//                    mainUser.userObject = user
-//                }
-//                //checks if the user has any events, if they are a user with no events they are taken to the NoEvent storyboard
-//                self.menuViewClient.getEventCount { count, id in
-//                    print(count)
-//                    print(currentEvent)
-//                    if count == 0 {
-//                        haveZeroEvents = true
-//                        let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                        let controller = loginStoryboard.instantiateViewController(withIdentifier: "NoEvent") as UIViewController
-//                        self.present(controller, animated: true, completion: nil)
-//                    }
-//                    else if (count != 0 && newEvent == "") {
-//                        haveZeroEvents = false
-//                        newEvent = id
-//                        //here is where you get the role of the user for that event and pick where to go
-//                        mainUser.setMainUserRole(eventID: newEvent) {
-//                            print("THIS IS ME HERE")
-//                            print(mainUser.userObject.role)
-//                            self.openViewControllerBasedOnRole(animationStyle: "fade")
-//                        }
-//                        //self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
-//                    }
-//                }
-//            }
-//    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func showAlertWithTitle(title: String, message:String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alertVC.addAction(okAction)
+        
+        self.present(alertVC, animated: true, completion: nil)
     }
     
     func slideMenuItemSelectedAtIndex(_ index: Int32, label: String, id: String) {
@@ -203,7 +178,6 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         
     }
     
-    //function in progress
     func openViewControllerBasedOnRole(animationStyle: String) {
         var strIdentifier:String = ""
         var strStoryboard:String = ""

@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/EventViewController.swift"
-            timestampString = "502436370.311453"
+            timestampString = "502838457.005593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/EventViewController.swift"
-            timestampString = "502732586.902952"
+            timestampString = "502838457.005593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "slideMenuItemSelectedAtIndex(_:label:id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "slideMenuItemSelectedAtIndex(_:label:id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "slideMenuItemSelectedAtIndex(_:label:id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "slideMenuItemSelectedAtIndex(_:label:id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -599,11 +599,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -615,11 +615,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -631,11 +631,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -647,91 +647,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "openViewControllerBasedOnRole(animationStyle:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "openViewControllerBasedOnRole(animationStyle:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "openViewControllerBasedOnRole(animationStyle:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "185"
             endingLineNumber = "185"
+            landmarkName = "openViewControllerBasedOnRole(animationStyle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tutus/BaseViewController.swift"
+            timestampString = "502826854.597908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "openViewControllerBasedOnRole(animationStyle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tutus/BaseViewController.swift"
+            timestampString = "502826854.597908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -743,11 +695,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "openViewControllerBasedOnRole(animationStyle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tutus/BaseViewController.swift"
+            timestampString = "502826854.597908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tutus/BaseViewController.swift"
+            timestampString = "502826854.597908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tutus/BaseViewController.swift"
+            timestampString = "502826854.597908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "slideMenuItemSelectedAtIndex(_:label:id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -759,11 +759,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -775,11 +775,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -807,11 +807,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "BaseViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -823,11 +823,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -839,11 +839,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -855,11 +855,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/BaseViewController.swift"
-            timestampString = "502809087.704311"
+            timestampString = "502826854.597908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "openViewControllerOnIdentifierOnStoryBoard(strIdentifier:strStoryboard:animationStyle:)"
             landmarkType = "7">
          </BreakpointContent>

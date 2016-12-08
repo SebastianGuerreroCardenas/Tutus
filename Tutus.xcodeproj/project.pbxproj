@@ -52,6 +52,12 @@
 		B96517031DF67CF5005F4987 /* EventMember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96517021DF67CF5005F4987 /* EventMember.storyboard */; };
 		B96517061DF7608C005F4987 /* EventTeam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96517051DF7608C005F4987 /* EventTeam.storyboard */; };
 		B96517081DF7816D005F4987 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96517071DF7816D005F4987 /* User.swift */; };
+		B965170B1DF87474005F4987 /* EventGuestMemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965170A1DF87474005F4987 /* EventGuestMemberListViewController.swift */; };
+		B965170D1DF874A6005F4987 /* EventGuestMemberListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965170C1DF874A6005F4987 /* EventGuestMemberListModel.swift */; };
+		B965170F1DF874CC005F4987 /* SearchMemberGuestListClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965170E1DF874CC005F4987 /* SearchMemberGuestListClient.swift */; };
+		B96517111DF88A0E005F4987 /* EventGuestTeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96517101DF88A0E005F4987 /* EventGuestTeamListViewController.swift */; };
+		B96517141DF8DA34005F4987 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96517121DF8DA34005F4987 /* LocationTableViewCell.swift */; };
+		B96517151DF8DA34005F4987 /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96517131DF8DA34005F4987 /* LocationTableViewCell.xib */; };
 		B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971862F1DEF93A60096E506 /* EventCreation.storyboard */; };
 		B97186321DEF93D90096E506 /* EventCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186311DEF93D90096E506 /* EventCreationViewController.swift */; };
 		B97186341DEFA4D40096E506 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186331DEFA4D40096E506 /* UserClient.swift */; };
@@ -132,6 +138,12 @@
 		B96517021DF67CF5005F4987 /* EventMember.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventMember.storyboard; sourceTree = "<group>"; };
 		B96517051DF7608C005F4987 /* EventTeam.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventTeam.storyboard; sourceTree = "<group>"; };
 		B96517071DF7816D005F4987 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B965170A1DF87474005F4987 /* EventGuestMemberListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGuestMemberListViewController.swift; sourceTree = "<group>"; };
+		B965170C1DF874A6005F4987 /* EventGuestMemberListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGuestMemberListModel.swift; sourceTree = "<group>"; };
+		B965170E1DF874CC005F4987 /* SearchMemberGuestListClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMemberGuestListClient.swift; sourceTree = "<group>"; };
+		B96517101DF88A0E005F4987 /* EventGuestTeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGuestTeamListViewController.swift; sourceTree = "<group>"; };
+		B96517121DF8DA34005F4987 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		B96517131DF8DA34005F4987 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
 		B971862F1DEF93A60096E506 /* EventCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventCreation.storyboard; sourceTree = "<group>"; };
 		B97186311DEF93D90096E506 /* EventCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreationViewController.swift; sourceTree = "<group>"; };
 		B97186331DEFA4D40096E506 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
@@ -197,6 +209,8 @@
 				8E118E401DF61ECC006AA6FA /* LocationCreation.storyboard */,
 				8E118E421DF61EE7006AA6FA /* LocationClient.swift */,
 				8E118E441DF61FAD006AA6FA /* LocationCreationViewController.swift */,
+				B96517121DF8DA34005F4987 /* LocationTableViewCell.swift */,
+				B96517131DF8DA34005F4987 /* LocationTableViewCell.xib */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -337,6 +351,9 @@
 			isa = PBXGroup;
 			children = (
 				B96517021DF67CF5005F4987 /* EventMember.storyboard */,
+				B965170A1DF87474005F4987 /* EventGuestMemberListViewController.swift */,
+				B965170C1DF874A6005F4987 /* EventGuestMemberListModel.swift */,
+				B965170E1DF874CC005F4987 /* SearchMemberGuestListClient.swift */,
 			);
 			name = EventMember;
 			sourceTree = "<group>";
@@ -345,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				B96517051DF7608C005F4987 /* EventTeam.storyboard */,
+				B96517101DF88A0E005F4987 /* EventGuestTeamListViewController.swift */,
 			);
 			name = EventTeam;
 			sourceTree = "<group>";
@@ -498,6 +516,7 @@
 			files = (
 				8E118E411DF61ECC006AA6FA /* LocationCreation.storyboard in Resources */,
 				B96517061DF7608C005F4987 /* EventTeam.storyboard in Resources */,
+				B96517151DF8DA34005F4987 /* LocationTableViewCell.xib in Resources */,
 				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
 				B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */,
 				B96517031DF67CF5005F4987 /* EventMember.storyboard in Resources */,
@@ -671,6 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B965170B1DF87474005F4987 /* EventGuestMemberListViewController.swift in Sources */,
 				B9224D9A1DF494D000F39F2E /* GuestDetailViewModel.swift in Sources */,
 				B93D66381DF355FE00210219 /* RiskTableViewCell.swift in Sources */,
 				B93D662D1DF34C1300210219 /* EventGuestRiskListViewController.swift in Sources */,
@@ -679,6 +699,7 @@
 				8E118E451DF61FAD006AA6FA /* LocationCreationViewController.swift in Sources */,
 				8E294CEC1DF7D85400E722D0 /* CollectionReusableView.swift in Sources */,
 				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
+				B96517111DF88A0E005F4987 /* EventGuestTeamListViewController.swift in Sources */,
 				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
 				B96517081DF7816D005F4987 /* User.swift in Sources */,
 				8E9139071DF63C1D0004BC31 /* EventUserViewController.swift in Sources */,
@@ -686,10 +707,12 @@
 				8E1309991DF4C83E00577E51 /* GuestCreationViewController.swift in Sources */,
 				B97186321DEF93D90096E506 /* EventCreationViewController.swift in Sources */,
 				8E13099B1DF4C86200577E51 /* GuestClient.swift in Sources */,
+				B965170D1DF874A6005F4987 /* EventGuestMemberListModel.swift in Sources */,
 				B93D662B1DF3419900210219 /* NoEventViewController.swift in Sources */,
 				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
 				B93D66291DF236F200210219 /* EventViewController.swift in Sources */,
 				B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */,
+				B965170F1DF874CC005F4987 /* SearchMemberGuestListClient.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
 				B91622D41DE760B2009D935C /* EventClient.swift in Sources */,
 				8E294CEE1DF7EF8200E722D0 /* CollectionViewCell.swift in Sources */,
@@ -697,6 +720,7 @@
 				8E118E3F1DF61EB0006AA6FA /* AssignmentCreationViewController.swift in Sources */,
 				B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */,
 				B9224D9C1DF4A99D00F39F2E /* Event.swift in Sources */,
+				B96517141DF8DA34005F4987 /* LocationTableViewCell.swift in Sources */,
 				8E118E431DF61EE7006AA6FA /* LocationClient.swift in Sources */,
 				B90CB8B21DE347F100A8D68D /* Tutus.xcdatamodeld in Sources */,
 				B93D66331DF353DE00210219 /* Guest.swift in Sources */,

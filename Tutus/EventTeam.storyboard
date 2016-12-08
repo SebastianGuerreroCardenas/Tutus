@@ -43,7 +43,7 @@
         <!--Team-->
         <scene sceneID="aur-n9-s5r">
             <objects>
-                <viewController id="fna-kf-qZ0" customClass="EventGuestRiskListViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fna-kf-qZ0" customClass="EventGuestTeamListViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Auf-li-P2B"/>
                         <viewControllerLayoutGuide type="bottom" id="Yuc-0X-7mK"/>
