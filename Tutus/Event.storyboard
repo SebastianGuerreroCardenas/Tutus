@@ -305,6 +305,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="H3Z-MP-Iog" id="DZU-Ed-EXM"/>
+                        <outlet property="titleLabel" destination="On7-Ya-nSn" id="r3a-Ol-CB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfG-vo-69F" userLabel="First Responder" sceneMemberID="firstResponder"/>

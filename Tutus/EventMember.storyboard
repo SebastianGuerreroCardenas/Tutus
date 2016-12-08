@@ -88,6 +88,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Bd2-TC-3he" id="abU-in-URT"/>
+                        <outlet property="titleLabel" destination="QFZ-zx-GTX" id="IbA-JM-O7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82U-vY-vs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
