@@ -12,7 +12,7 @@
         <!--Location Creation View Controller-->
         <scene sceneID="Dmh-4L-Bi9">
             <objects>
-                <viewController id="h0r-A7-pSG" customClass="LocationCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationCreation" id="h0r-A7-pSG" customClass="LocationCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bLm-0F-4Up"/>
                         <viewControllerLayoutGuide type="bottom" id="OVH-W1-pZT"/>

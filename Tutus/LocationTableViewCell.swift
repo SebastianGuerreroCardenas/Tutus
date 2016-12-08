@@ -10,6 +10,7 @@ import UIKit
 
 class LocationTableViewCell: UITableViewCell {
 
+    var id: String = ""
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     override func awakeFromNib() {
