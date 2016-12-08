@@ -14,9 +14,9 @@ class MessageClient {
     
     //needs testing
     func sendMessage(message: String, completion: @escaping (() -> Void)) {
-        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent, "message": message]
         //notsure
-        Alamofire.request("https://riskmanapi.herokuapp.com/message", headers: headers).responseJSON {response in
+        Alamofire.request("https://riskmanapi.herokuapp.com/twilio/text", method: .post ,headers: headers).responseJSON {response in
             let json = JSON(response.result.value)
             
             
