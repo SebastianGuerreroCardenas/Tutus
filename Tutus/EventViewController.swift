@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventViewController: BaseViewController {
+class EventViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
@@ -20,12 +20,12 @@ class EventViewController: BaseViewController {
     @IBOutlet weak var adminCodeLabel: UILabel!
     @IBOutlet weak var memberCodeLabel: UILabel!
     @IBOutlet weak var teamCodeLabel: UILabel!
-
-    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let cellNib = UINib(nibName: "eventUsersCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "eventUserCell")
         addSlideMenuButton()
         currentEvent = newEvent
         setLabels()
@@ -37,6 +37,21 @@ class EventViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Table View
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currentEventObject.event_users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventUserCell", for: indexPath) as! eventUsersCell
+        cell.nameLabel?.text = currentEventObject.event_users[indexPath.row].full_name
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+
     
     func setLabels() {
         eventNameLabel.text = currentEventObject.title

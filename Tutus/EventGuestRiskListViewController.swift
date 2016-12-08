@@ -21,6 +21,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
     
+    @IBOutlet weak var titleLabel: UINavigationItem!
     var eventGuestRiskListModel = EventGuestRiskListModel()
     var eventClient = EventClient()
     var guestClient = GuestClient()
@@ -34,6 +35,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         currentEvent = newEvent
+        self.titleLabel.title = "Guest List"
         eventClient.getEventByID() { event in
             currentEventObject = event
             self.eventClient.getEventUsers() { event_users in
@@ -108,6 +110,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: true, guest: guest) {
                 self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+                self.titleLabel.title = "Checked In!"
             }
         }
         
@@ -115,6 +118,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: false, guest: guest) {
                 self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+                self.titleLabel.title = "Checked Out!"
             }
             
         }

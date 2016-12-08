@@ -94,15 +94,14 @@ class EventClient {
     func getEventUsers(completion: @escaping (([User]) -> Void)) {
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
         
-        Alamofire.request("https://riskmanapi.herokuapp.com/event_users", headers: headers).responseJSON {response in
+        Alamofire.request("https://riskmanapi.herokuapp.com/geteventuserobjects", headers: headers).responseJSON {response in
             
             let json = JSON(response.result.value)
             var userList: [User] = []
             
-            for (_,eventUser):(String, JSON) in json {
-                self.getUsersByID(userID: eventUser["id"].stringValue, role: eventUser["role"].stringValue) {user in
-                    userList.append(user)
-                }
+            for (_,user):(String, JSON) in json {
+                print("PLEASE GOD MAKE THIS WORK" + user["email"].stringValue)
+                userList.append(User(id: user["id"].stringValue, role: user["role"].stringValue, email: user["email"].stringValue ,full_name: user["full_name"].stringValue, auth_token: user["auth_token"].stringValue ,created_at: user["created_at"].stringValue))
             }
             completion(userList)
         }

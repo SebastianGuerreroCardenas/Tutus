@@ -16,9 +16,12 @@ class QuestionViewController: BaseViewController {
     
     var question: Question!
     
+    @IBAction func refreshAction(_ sender: Any) {
+        getQuestion()
+    }
     @IBAction func Submit(_ sender: Any) {
         questionClient.submitData(questionId: question.id, response: responseField.text! as String) {
-            self.openViewControllerBasedOnRole(animationStyle: "fade")
+            self.getQuestion()
         }
     }
     override func viewDidLoad() {
@@ -40,6 +43,7 @@ class QuestionViewController: BaseViewController {
         questionClient.getQuestion() { question in
             self.question = question
             self.questionLabel.text = question.question
+            self.responseField.text = ""
         }
     }
     /*

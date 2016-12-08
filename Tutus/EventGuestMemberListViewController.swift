@@ -20,7 +20,7 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
     // MARK: Properties & Outlets
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
-    
+    @IBOutlet weak var titleLabel: UINavigationItem!
     var eventGuestMemberListModel = EventGuestMemberListModel()
     var eventClient = EventClient()
     var guestClient = GuestClient()
@@ -40,6 +40,7 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         currentEvent = newEvent
+        titleLabel.title = "Invite Guests!"
         eventClient.getEventByID() { event in
             currentEventObject = event
         }
@@ -97,6 +98,7 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
             self.guestClient.deleteGuest(id: guest.id){
                 self.eventGuestMemberListModel.guests.remove(at: index.row)
                 self.tableView.reloadData()
+                self.titleLabel.title = "Guest Deleted"
             }
             
         }
