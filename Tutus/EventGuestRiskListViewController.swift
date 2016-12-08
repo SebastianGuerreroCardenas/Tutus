@@ -85,6 +85,22 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteOption = UITableViewRowAction(style: .normal, title: "Delete") {action,index in
+            let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
+            self.guestClient.deleteGuest(id: guest.id){
+                self.eventGuestRiskListModel.guests.remove(at: index.row)
+                self.tableView.reloadData()
+            }
+            
+        }
+        
+        let editOption = UITableViewRowAction(style: .normal, title: "Edit") {action,index in
+            let Storyboard = UIStoryboard(name: "GuestCreation", bundle: nil)
+            let controller = Storyboard.instantiateViewController(withIdentifier: "GuestCreation") as! GuestCreationViewController
+            controller.guestInfo = self.eventGuestRiskListModel.guestDictionaryForRowAtIndexPath(index)
+            self.present(controller, animated: true, completion: nil)
+        }
+        
         let checkInOption = UITableViewRowAction(style: .normal, title: "Check In") {action,index in
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: true, guest: guest) {
@@ -99,9 +115,11 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
             }
             
         }
+        deleteOption.backgroundColor = UIColor.red
+        editOption.backgroundColor = UIColor.blue
         checkInOption.backgroundColor = UIColor.green
-        checkOutOption.backgroundColor = UIColor.red
-        return[checkInOption, checkOutOption]
+        checkOutOption.backgroundColor = UIColor.orange
+        return[deleteOption, editOption,checkInOption, checkOutOption]
     }
     
     // MARK: Segues

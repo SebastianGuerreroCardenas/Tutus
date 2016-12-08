@@ -62,6 +62,11 @@ class EventGuestMemberListModel {
         }
     }
     
+    func guestDictionaryForRowAtIndexPath(_ indexPath: IndexPath) -> [String : String] {
+        let guest: Guest = guests[indexPath.row]
+        return ["name": guest.name, "phone": guest.phone, "isEdit" : "true", "GuestId" : guest.id,"birthdate": guest.birthdate, "optionalText": guest.optional_text,"optionalTitle": guest.optional_title]
+    }
+    
     func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> GuestDetailViewModel {
         let guest = (filteredGuests.isEmpty ? guests[indexPath.row] : filteredGuests[indexPath.row])
         return GuestDetailViewModel(guest: guest)

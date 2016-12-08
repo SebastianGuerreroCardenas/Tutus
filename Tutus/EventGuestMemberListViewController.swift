@@ -89,25 +89,27 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
         //what
     }
     
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//        let checkInOption = UITableViewRowAction(style: .normal, title: "Check In") {action,index in
-//            let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
-//            self.guestClient.checkGuestIntoEvent(checkIn: true, guest: guest) {
-//                self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
-//            }
-//        }
-//        
-//        let checkOutOption = UITableViewRowAction(style: .normal, title: "Check Out") {action,index in
-//            let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
-//            self.guestClient.checkGuestIntoEvent(checkIn: false, guest: guest) {
-//                self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
-//            }
-//            
-//        }
-//        checkInOption.backgroundColor = UIColor.green
-//        checkOutOption.backgroundColor = UIColor.red
-//        return[checkInOption, checkOutOption]
-//    }
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteOption = UITableViewRowAction(style: .normal, title: "Delete") {action,index in
+            let guest: Guest = self.eventGuestMemberListModel.guestModelForRowAtIndexPath(index)
+            self.guestClient.deleteGuest(id: guest.id){
+                self.eventGuestMemberListModel.guests.remove(at: index.row)
+                self.tableView.reloadData()
+            }
+            
+        }
+        
+        let editOption = UITableViewRowAction(style: .normal, title: "Edit") {action,index in
+            let Storyboard = UIStoryboard(name: "GuestCreation", bundle: nil)
+            let controller = Storyboard.instantiateViewController(withIdentifier: "GuestCreation") as! GuestCreationViewController
+            controller.guestInfo = self.eventGuestMemberListModel.guestDictionaryForRowAtIndexPath(index)
+            self.present(controller, animated: true, completion: nil)
+        }
+        
+        editOption.backgroundColor = UIColor.blue
+        deleteOption.backgroundColor = UIColor.red
+        return[editOption, deleteOption]
+    }
     
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -44,15 +44,9 @@ class LocationListModel {
         return locations[indexPath.row]
     }
     
-//    func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> GuestDetailViewModel {
-//        let location = (filteredGuests.isEmpty ? guests[indexPath.row] : filteredGuests[indexPath.row])
-//        return GuestDetailViewModel(guest: guest)
-//    }
-    
-//    func updateFiltering(_ searchText: String) -> Void {
-//        filteredGuests = self.guests.filter { repo in
-//            return repo.name.lowercased().contains(searchText.lowercased())
-//        }
-//    }
+    func locationtDictionaryForRowAtIndexPath(_ indexPath: IndexPath) -> [String : String] {
+        let location: Location = locations[indexPath.row]
+        return ["name": location.name, "description": location.description, "isEdit" : "true", "LocationId" : location.id]
+    }
     
 }

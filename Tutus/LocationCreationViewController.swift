@@ -36,6 +36,8 @@ class LocationCreationViewController: BaseViewController {
         locationClient.setDict(diction: locationInfo) {
             self.locationClient.createLocation(){ dict in
                 print(self.locationClient.dict)
+                currentEvent = ""
+                self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
             }
         }
     }
@@ -59,6 +61,7 @@ class LocationCreationViewController: BaseViewController {
     
     func populateFields() {
         self.nameField.text = self.locationInfo["name"]
+        self.desField.text = self.locationInfo["description"]
     }
 
 
