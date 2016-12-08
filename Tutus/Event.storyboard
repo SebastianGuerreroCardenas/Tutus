@@ -278,6 +278,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ViI-Ks-lvt" id="kch-Su-1bs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -454,6 +455,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-DX-goh">
                                 <rect key="frame" x="216" y="121" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9824252724647522" green="0.34482249617576599" blue="0.45473200082778931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Edit View Controller"/>
                                 <connections>
                                     <action selector="editAssignmentAction:" destination="MqE-6G-3Xo" eventType="touchUpInside" id="wzy-hn-9lZ"/>
