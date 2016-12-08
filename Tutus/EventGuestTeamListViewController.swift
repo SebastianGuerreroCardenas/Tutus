@@ -93,8 +93,8 @@ class EventGuestTeamListViewController: BaseViewController, UITableViewDataSourc
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let editOption = UITableViewRowAction(style: .normal, title: "Edit") {action,index in
-            let loginStoryboard = UIStoryboard(name: "GuestCreation", bundle: nil)
-            let controller = loginStoryboard.instantiateViewController(withIdentifier: "GuestCreation") as! GuestCreationViewController
+            let Storyboard = UIStoryboard(name: "GuestCreation", bundle: nil)
+            let controller = Storyboard.instantiateViewController(withIdentifier: "GuestCreation") as! GuestCreationViewController
             controller.guestInfo = self.eventGuestRiskListModel.guestDictionaryForRowAtIndexPath(index)
             self.present(controller, animated: true, completion: nil)
         }

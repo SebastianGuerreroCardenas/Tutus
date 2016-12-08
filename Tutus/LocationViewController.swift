@@ -80,8 +80,8 @@ class LocationViewController: BaseViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let editOption = UITableViewRowAction(style: .normal, title: "Edit") {action,index in
-            let loginStoryboard = UIStoryboard(name: "LocationCreation", bundle: nil)
-            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LocationCreation") as! LocationCreationViewController
+            let Storyboard = UIStoryboard(name: "LocationCreation", bundle: nil)
+            let controller = Storyboard.instantiateViewController(withIdentifier: "LocationCreation") as! LocationCreationViewController
             controller.locationInfo = self.locationListModel.locationtDictionaryForRowAtIndexPath(index)
             self.present(controller, animated: true, completion: nil)
         }
