@@ -689,7 +689,7 @@
         <scene sceneID="cuP-bM-caR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2we-z2-wZM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Questions" image="questionIcon" id="de2-WN-PhB"/>
+                    <tabBarItem key="tabBarItem" title="Questions" image="dataIcon" id="de2-WN-PhB"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AKw-j0-IZv">
@@ -706,9 +706,77 @@
             </objects>
             <point key="canvasLocation" x="-2319" y="1240"/>
         </scene>
+        <!--Message View Controller-->
+        <scene sceneID="P46-dc-vwT">
+            <objects>
+                <viewController id="6sG-5j-oub" customClass="MessageViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3gl-BC-UOm"/>
+                        <viewControllerLayoutGuide type="bottom" id="eT2-V3-kip"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wwV-GT-07L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWC-0a-1qj">
+                                <rect key="frame" x="74" y="139" width="227" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asI-FK-rij">
+                                <rect key="frame" x="16" y="337" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-y2-yRN">
+                                <rect key="frame" x="137" y="501" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="6sG-5j-oub" eventType="touchUpInside" id="6co-1m-TBU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GEo-8h-HCR"/>
+                    <connections>
+                        <outlet property="messageField" destination="asI-FK-rij" id="eif-Cv-pe9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUu-Rp-eGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362.39999999999998" y="1972.2638680659672"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="A2o-C0-vPr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dw4-6F-TxZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Message" image="questionIcon" id="uVk-9f-3gy"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8m7-oJ-GO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98703879120000004" green="0.23440390829999999" blue="0.36417692899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6sG-5j-oub" kind="relationship" relationship="rootViewController" id="wWf-mG-j7T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvJ-PF-7z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2177" y="1990"/>
+        </scene>
     </scenes>
     <resources>
         <image name="assignmnetsIcon" width="30" height="30"/>
+        <image name="dataIcon" width="30" height="30"/>
         <image name="eventIcon" width="30" height="30"/>
         <image name="guestIcon" width="30" height="30"/>
         <image name="locationIcon" width="30" height="30"/>

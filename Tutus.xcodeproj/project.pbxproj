@@ -73,6 +73,8 @@
 		B9D60EB01DF959C100598123 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EAF1DF959C100598123 /* QuestionViewController.swift */; };
 		B9D60EB21DF959E300598123 /* QuestionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EB11DF959E300598123 /* QuestionClient.swift */; };
 		B9D60EB61DF95A4600598123 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EB51DF95A4600598123 /* Question.swift */; };
+		B9D60EB91DF962EC00598123 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EB81DF962EC00598123 /* MessageViewController.swift */; };
+		B9D60EBB1DF963D400598123 /* MessageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EBA1DF963D400598123 /* MessageClient.swift */; };
 		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +173,8 @@
 		B9D60EAF1DF959C100598123 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		B9D60EB11DF959E300598123 /* QuestionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionClient.swift; sourceTree = "<group>"; };
 		B9D60EB51DF95A4600598123 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B9D60EB81DF962EC00598123 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		B9D60EBA1DF963D400598123 /* MessageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageClient.swift; sourceTree = "<group>"; };
 		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
 		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -426,6 +430,8 @@
 		B9D60EB71DF961E500598123 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				B9D60EB81DF962EC00598123 /* MessageViewController.swift */,
+				B9D60EBA1DF963D400598123 /* MessageClient.swift */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -753,6 +759,7 @@
 				8E118E451DF61FAD006AA6FA /* LocationCreationViewController.swift in Sources */,
 				8E294CEC1DF7D85400E722D0 /* CollectionReusableView.swift in Sources */,
 				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
+				B9D60EB91DF962EC00598123 /* MessageViewController.swift in Sources */,
 				B9D60EB21DF959E300598123 /* QuestionClient.swift in Sources */,
 				B96517111DF88A0E005F4987 /* EventGuestTeamListViewController.swift in Sources */,
 				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
@@ -790,6 +797,7 @@
 				B93D66331DF353DE00210219 /* Guest.swift in Sources */,
 				B9224D981DF48F4500F39F2E /* GuestDetailViewController.swift in Sources */,
 				B93D66301DF353A800210219 /* EventGuestRiskListModel.swift in Sources */,
+				B9D60EBB1DF963D400598123 /* MessageClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
