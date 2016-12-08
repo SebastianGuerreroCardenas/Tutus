@@ -279,11 +279,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/EventGuestRiskListViewController.swift"
-            timestampString = "502859089.092066"
+            timestampString = "502915762.723185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "tableView(_:editActionsForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1077,7 +1077,7 @@
                   moduleName = "Tutus"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.884984"
+                  timestampString = "502915764.194637"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1092,7 +1092,7 @@
                   moduleName = "Tutus"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.88649"
+                  timestampString = "502915764.196751"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1103,26 +1103,11 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Tutus.EventViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Tutus.EventViewController"
-                  moduleName = "Tutus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.887977"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "70">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
                   symbolName = "Tutus.EventViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Tutus.EventViewController"
                   moduleName = "Tutus"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.88923"
+                  timestampString = "502915764.200061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1137,12 +1122,27 @@
                   moduleName = "Tutus"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.890342"
+                  timestampString = "502915764.202357"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
                   offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.EventViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Tutus.EventViewController&gt;"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
+                  timestampString = "502915764.204895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1170,7 +1170,7 @@
                   moduleName = "Tutus"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.895443"
+                  timestampString = "502915764.209723"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
@@ -1185,7 +1185,7 @@
                   moduleName = "Tutus"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.896867"
+                  timestampString = "502915764.210804"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
@@ -1200,27 +1200,12 @@
                   moduleName = "Tutus"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.898296"
+                  timestampString = "502915764.211902"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "587">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tutus.EventViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Tutus.EventViewController&gt;"
-                  moduleName = "Tutus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventViewController.swift"
-                  timestampString = "502883534.899672"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "480">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1271,6 +1256,54 @@
             endingLineNumber = "13"
             landmarkName = "MessageViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tutus/EventGuestRiskListViewController.swift"
+            timestampString = "502915587.345629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.EventGuestRiskListViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventGuestRiskListViewController.swift"
+                  timestampString = "502915587.357969"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tutus.EventGuestRiskListViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Tutus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastian_Guerrero/Google%20Drive/junior/iOS/final/Tutus/Tutus/Tutus/EventGuestRiskListViewController.swift"
+                  timestampString = "502915587.359447"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "2189">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

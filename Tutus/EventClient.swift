@@ -104,7 +104,6 @@ class EventClient {
                     userList.append(user)
                 }
             }
-            currentEventObject.event_users = userList
             completion(userList)
         }
     }

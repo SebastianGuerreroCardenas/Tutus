@@ -36,6 +36,9 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
         currentEvent = newEvent
         eventClient.getEventByID() { event in
             currentEventObject = event
+            self.eventClient.getEventUsers() { event_users in
+                currentEventObject.event_users = event_users
+            }
         }
 
         let cellNib = UINib(nibName: "RiskTableViewCell", bundle: nil)
