@@ -35,7 +35,7 @@ class LocationClient {
         else {
             print("creating location")
             let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
-            let parameters: Parameters = ["location": ["event_id": currentEventObject.id, "description": self.dict["name"]! as String]]
+            let parameters: Parameters = ["location": ["event_id": currentEventObject.id, "description": self.dict["description"]! as String, "name": self.dict["name"]! as String]]
             
             Alamofire.request("https://riskmanapi.herokuapp.com/locations", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
                 
@@ -44,6 +44,21 @@ class LocationClient {
                 completion(self.dict)
             }
         }
+    }
+    
+    func deleteLocation(id: String, completion: @escaping (() -> Void)) {
+
+
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
+
+            
+        Alamofire.request("https://riskmanapi.herokuapp.com/locations/" + id,  method: .delete, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
+                
+            let json = JSON(response.result.value!)
+                
+            completion()
+        }
+        
     }
     
     func setDict(diction: [String : String] , completion: @escaping (() -> Void)) {

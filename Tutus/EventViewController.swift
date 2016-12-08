@@ -32,11 +32,6 @@ class EventViewController: BaseViewController {
         scrollView.contentSize.height = 1000
         
     }
-    @IBAction func editAssignmentAction(_ sender: Any) {
-        let loginStoryboard = UIStoryboard(name: "AssignmentCreation", bundle: nil)
-        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentCreation") as UIViewController
-        self.present(controller, animated: true, completion: nil)
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

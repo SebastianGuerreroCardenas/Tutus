@@ -61,6 +61,7 @@
 		B96517171DF8DCB9005F4987 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96517161DF8DCB9005F4987 /* LocationViewController.swift */; };
 		B96517191DF8DEC0005F4987 /* LocationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96517181DF8DEC0005F4987 /* LocationListModel.swift */; };
 		B965171B1DF8DEF7005F4987 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965171A1DF8DEF7005F4987 /* Location.swift */; };
+		B965171D1DF8F7AB005F4987 /* AssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965171C1DF8F7AB005F4987 /* AssignmentViewController.swift */; };
 		B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971862F1DEF93A60096E506 /* EventCreation.storyboard */; };
 		B97186321DEF93D90096E506 /* EventCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186311DEF93D90096E506 /* EventCreationViewController.swift */; };
 		B97186341DEFA4D40096E506 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186331DEFA4D40096E506 /* UserClient.swift */; };
@@ -150,6 +151,7 @@
 		B96517161DF8DCB9005F4987 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B96517181DF8DEC0005F4987 /* LocationListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListModel.swift; sourceTree = "<group>"; };
 		B965171A1DF8DEF7005F4987 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B965171C1DF8F7AB005F4987 /* AssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentViewController.swift; sourceTree = "<group>"; };
 		B971862F1DEF93A60096E506 /* EventCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventCreation.storyboard; sourceTree = "<group>"; };
 		B97186311DEF93D90096E506 /* EventCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreationViewController.swift; sourceTree = "<group>"; };
 		B97186331DEFA4D40096E506 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				8E118E3E1DF61EB0006AA6FA /* AssignmentCreationViewController.swift */,
 				8E294CEB1DF7D85400E722D0 /* CollectionReusableView.swift */,
 				8E294CED1DF7EF8200E722D0 /* CollectionViewCell.swift */,
+				B965171C1DF8F7AB005F4987 /* AssignmentViewController.swift */,
 			);
 			name = Assignments;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
 				B93D66291DF236F200210219 /* EventViewController.swift in Sources */,
 				B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */,
+				B965171D1DF8F7AB005F4987 /* AssignmentViewController.swift in Sources */,
 				B965170F1DF874CC005F4987 /* SearchMemberGuestListClient.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
 				B91622D41DE760B2009D935C /* EventClient.swift in Sources */,

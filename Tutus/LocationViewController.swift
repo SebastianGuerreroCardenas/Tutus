@@ -16,7 +16,7 @@ class LocationViewController: BaseViewController, UITableViewDataSource, UITable
     
     var locationListModel = LocationListModel()
     var eventClient = EventClient()
-    var guestClient = GuestClient()
+    var locationClient = LocationClient()
     
     @IBAction func addLocationAction(_ sender: Any) {
         openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LocationCreation", strStoryboard: "LocationCreation", animationStyle: "fade")
@@ -31,8 +31,8 @@ class LocationViewController: BaseViewController, UITableViewDataSource, UITable
             currentEventObject = event
         }
         
-        let cellNib = UINib(nibName: "RiskTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "cell")
+        let cellNib = UINib(nibName: "LocationTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "locationCell")
         addSlideMenuButton()
         // get the data for the tabler
         locationListModel.refresh { [unowned self] in
@@ -61,7 +61,7 @@ class LocationViewController: BaseViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LocationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! LocationTableViewCell
         cell.locationLabel?.text = locationListModel.titleForRowAtIndexPath(indexPath)
         cell.descriptionLabel?.text = locationListModel.descriptionForRowAtIndexPath(indexPath)
         cell.id = locationListModel.idForRowAtIndexPath(indexPath)
@@ -78,17 +78,20 @@ class LocationViewController: BaseViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let editOption = UITableViewRowAction(style: .normal, title: "Edit") {action,index in
-            //let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
-//            self.guestClient.checkGuestIntoEvent(checkIn: true, guest: guest) {
+            let location: Location = self.locationListModel.locationtModelForRowAtIndexPath(index)
+//            self.locationClient.deleteLocation(id: location.id){
 //                self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
 //            }
         }
 
         let deleteOption = UITableViewRowAction(style: .normal, title: "Delete") {action,index in
-            //let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
-//            self.guestClient.checkGuestIntoEvent(checkIn: false, guest: guest) {
-//                self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
-//            }
+            let location: Location = self.locationListModel.locationtModelForRowAtIndexPath(index)
+            self.locationClient.deleteLocation(id: location.id){
+                //self.tableView.deleteRows(at: <#T##[IndexPath]#>, with: <#T##UITableViewRowAnimation#>)
+                //self.tableView.deselectRow(at: [index], animated: true)
+                self.tableView.deleteRows(at: [index], with: UITableViewRowAnimation.right)
+                //self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
+            }
 
         }
         editOption.backgroundColor = UIColor.blue

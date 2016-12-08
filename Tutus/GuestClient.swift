@@ -65,6 +65,21 @@ class GuestClient {
 
     }
     
+    func deleteGuest(id: String, completion: @escaping (() -> Void)) {
+        
+        
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
+        
+        
+        Alamofire.request("https://riskmanapi.herokuapp.com/guests/" + id,  method: .delete, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
+            
+            let json = JSON(response.result.value!)
+            
+            completion()
+        }
+        
+    }
+    
     func setDict(diction: [String : String] , completion: @escaping (() -> Void)) {
         self.dict = diction
         completion()
