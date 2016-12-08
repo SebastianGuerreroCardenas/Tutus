@@ -12,5 +12,6 @@ struct Event {
     let team_invite_code: String?
     let member_invite_code: String
     let event_role: String
+    var event_users: [User]
 }
 
