@@ -79,11 +79,12 @@ class EventGuestTeamListViewController: BaseViewController, UITableViewDataSourc
         cell.name?.text = eventGuestRiskListModel.titleForRowAtIndexPath(indexPath)
         cell.birthday?.text = eventGuestRiskListModel.birthdateForRowAtIndexPath(indexPath)
         cell.id = eventGuestRiskListModel.idForRowAtIndexPath(indexPath)
+        cell.phone?.text = eventGuestRiskListModel.phoneForRowAtIndexPath(indexPath)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailVC", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -115,16 +116,8 @@ class EventGuestTeamListViewController: BaseViewController, UITableViewDataSourc
         }
         editOption.backgroundColor = UIColor.blue
         checkInOption.backgroundColor = UIColor.green
-        checkOutOption.backgroundColor = UIColor.red
+        checkOutOption.backgroundColor = UIColor.orange
         return[editOption, checkInOption, checkOutOption]
-    }
-    
-    // MARK: Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailVC = segue.destination as? GuestDetailViewController,
-            let indexPath = sender as? IndexPath {
-            detailVC.guestDetailViewModel = eventGuestRiskListModel.detailViewModelForRowAtIndexPath(indexPath)
-        }
     }
     
     // MARK: Search Methods

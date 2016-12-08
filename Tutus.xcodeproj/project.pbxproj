@@ -65,6 +65,14 @@
 		B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971862F1DEF93A60096E506 /* EventCreation.storyboard */; };
 		B97186321DEF93D90096E506 /* EventCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186311DEF93D90096E506 /* EventCreationViewController.swift */; };
 		B97186341DEFA4D40096E506 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97186331DEFA4D40096E506 /* UserClient.swift */; };
+		B9D60EA61DF943A900598123 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EA41DF943A900598123 /* AssignmentTableViewCell.swift */; };
+		B9D60EA71DF943A900598123 /* AssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D60EA51DF943A900598123 /* AssignmentTableViewCell.xib */; };
+		B9D60EA91DF947CD00598123 /* AssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EA81DF947CD00598123 /* AssignmentTableViewController.swift */; };
+		B9D60EAB1DF9487A00598123 /* AssignmentListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EAA1DF9487A00598123 /* AssignmentListModel.swift */; };
+		B9D60EAD1DF9491800598123 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EAC1DF9491800598123 /* Assignment.swift */; };
+		B9D60EB01DF959C100598123 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EAF1DF959C100598123 /* QuestionViewController.swift */; };
+		B9D60EB21DF959E300598123 /* QuestionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EB11DF959E300598123 /* QuestionClient.swift */; };
+		B9D60EB61DF95A4600598123 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EB51DF95A4600598123 /* Question.swift */; };
 		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +163,14 @@
 		B971862F1DEF93A60096E506 /* EventCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventCreation.storyboard; sourceTree = "<group>"; };
 		B97186311DEF93D90096E506 /* EventCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreationViewController.swift; sourceTree = "<group>"; };
 		B97186331DEFA4D40096E506 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
+		B9D60EA41DF943A900598123 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
+		B9D60EA51DF943A900598123 /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
+		B9D60EA81DF947CD00598123 /* AssignmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewController.swift; sourceTree = "<group>"; };
+		B9D60EAA1DF9487A00598123 /* AssignmentListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentListModel.swift; sourceTree = "<group>"; };
+		B9D60EAC1DF9491800598123 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		B9D60EAF1DF959C100598123 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		B9D60EB11DF959E300598123 /* QuestionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionClient.swift; sourceTree = "<group>"; };
+		B9D60EB51DF95A4600598123 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
 		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +250,10 @@
 				8E294CEB1DF7D85400E722D0 /* CollectionReusableView.swift */,
 				8E294CED1DF7EF8200E722D0 /* CollectionViewCell.swift */,
 				B965171C1DF8F7AB005F4987 /* AssignmentViewController.swift */,
+				B9D60EA41DF943A900598123 /* AssignmentTableViewCell.swift */,
+				B9D60EA51DF943A900598123 /* AssignmentTableViewCell.xib */,
+				B9D60EA81DF947CD00598123 /* AssignmentTableViewController.swift */,
+				B9D60EAA1DF9487A00598123 /* AssignmentListModel.swift */,
 			);
 			name = Assignments;
 			sourceTree = "<group>";
@@ -263,6 +283,8 @@
 		B90CB8A81DE347F100A8D68D /* Tutus */ = {
 			isa = PBXGroup;
 			children = (
+				B9D60EB71DF961E500598123 /* Messages */,
+				B9D60EAE1DF9596200598123 /* Questions */,
 				8E118E391DF61E4A006AA6FA /* Assignments */,
 				8E118E381DF61E40006AA6FA /* Locations */,
 				B9224D961DF48F2D00F39F2E /* Guest */,
@@ -326,11 +348,11 @@
 		B9224D951DF48ECC00F39F2E /* EventRiskList */ = {
 			isa = PBXGroup;
 			children = (
+				B91622D11DE760A0009D935C /* Event.storyboard */,
 				B93D662C1DF34C1300210219 /* EventGuestRiskListViewController.swift */,
 				B93D662F1DF353A800210219 /* EventGuestRiskListModel.swift */,
 				B93D66361DF355FE00210219 /* RiskTableViewCell.swift */,
 				B93D66371DF355FE00210219 /* RiskTableViewCell.xib */,
-				B91622D11DE760A0009D935C /* Event.storyboard */,
 				B93D66341DF3549A00210219 /* SearchGuestListRiskClient.swift */,
 			);
 			name = EventRiskList;
@@ -355,6 +377,8 @@
 				B9224D9B1DF4A99D00F39F2E /* Event.swift */,
 				B96517071DF7816D005F4987 /* User.swift */,
 				B965171A1DF8DEF7005F4987 /* Location.swift */,
+				B9D60EAC1DF9491800598123 /* Assignment.swift */,
+				B9D60EB51DF95A4600598123 /* Question.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -388,6 +412,22 @@
 				8E9139061DF63C1D0004BC31 /* EventUserViewController.swift */,
 			);
 			name = EventCreation;
+			sourceTree = "<group>";
+		};
+		B9D60EAE1DF9596200598123 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				B9D60EAF1DF959C100598123 /* QuestionViewController.swift */,
+				B9D60EB11DF959E300598123 /* QuestionClient.swift */,
+			);
+			name = Questions;
+			sourceTree = "<group>";
+		};
+		B9D60EB71DF961E500598123 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Messages;
 			sourceTree = "<group>";
 		};
 		B9EB83251DE38C1300C0A4B9 /* Main StoryBoard */ = {
@@ -530,6 +570,7 @@
 				B96517061DF7608C005F4987 /* EventTeam.storyboard in Resources */,
 				B96517151DF8DA34005F4987 /* LocationTableViewCell.xib in Resources */,
 				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
+				B9D60EA71DF943A900598123 /* AssignmentTableViewCell.xib in Resources */,
 				B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */,
 				B96517031DF67CF5005F4987 /* EventMember.storyboard in Resources */,
 				B91622D21DE760A0009D935C /* Event.storyboard in Resources */,
@@ -712,6 +753,7 @@
 				8E118E451DF61FAD006AA6FA /* LocationCreationViewController.swift in Sources */,
 				8E294CEC1DF7D85400E722D0 /* CollectionReusableView.swift in Sources */,
 				B91622DF1DEF6093009D935C /* BaseViewController.swift in Sources */,
+				B9D60EB21DF959E300598123 /* QuestionClient.swift in Sources */,
 				B96517111DF88A0E005F4987 /* EventGuestTeamListViewController.swift in Sources */,
 				B97186341DEFA4D40096E506 /* UserClient.swift in Sources */,
 				B96517081DF7816D005F4987 /* User.swift in Sources */,
@@ -726,15 +768,21 @@
 				B93D662B1DF3419900210219 /* NoEventViewController.swift in Sources */,
 				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
 				B93D66291DF236F200210219 /* EventViewController.swift in Sources */,
+				B9D60EA61DF943A900598123 /* AssignmentTableViewCell.swift in Sources */,
 				B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */,
+				B9D60EB01DF959C100598123 /* QuestionViewController.swift in Sources */,
 				B965171D1DF8F7AB005F4987 /* AssignmentViewController.swift in Sources */,
 				B965170F1DF874CC005F4987 /* SearchMemberGuestListClient.swift in Sources */,
+				B9D60EA91DF947CD00598123 /* AssignmentTableViewController.swift in Sources */,
 				B90CB8AC1DE347F100A8D68D /* ViewController.swift in Sources */,
+				B9D60EB61DF95A4600598123 /* Question.swift in Sources */,
 				B91622D41DE760B2009D935C /* EventClient.swift in Sources */,
 				8E294CEE1DF7EF8200E722D0 /* CollectionViewCell.swift in Sources */,
 				8E118E3D1DF61EA0006AA6FA /* AssignmentClient.swift in Sources */,
 				8E118E3F1DF61EB0006AA6FA /* AssignmentCreationViewController.swift in Sources */,
+				B9D60EAB1DF9487A00598123 /* AssignmentListModel.swift in Sources */,
 				B90CB8AA1DE347F100A8D68D /* AppDelegate.swift in Sources */,
+				B9D60EAD1DF9491800598123 /* Assignment.swift in Sources */,
 				B9224D9C1DF4A99D00F39F2E /* Event.swift in Sources */,
 				B96517141DF8DA34005F4987 /* LocationTableViewCell.swift in Sources */,
 				8E118E431DF61EE7006AA6FA /* LocationClient.swift in Sources */,

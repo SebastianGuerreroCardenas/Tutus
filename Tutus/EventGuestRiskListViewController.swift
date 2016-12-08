@@ -72,12 +72,12 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RiskTableViewCell
         cell.name?.text = eventGuestRiskListModel.titleForRowAtIndexPath(indexPath)
         cell.birthday?.text = eventGuestRiskListModel.birthdateForRowAtIndexPath(indexPath)
+        cell.phone?.text = eventGuestRiskListModel.phoneForRowAtIndexPath(indexPath)
         cell.id = eventGuestRiskListModel.idForRowAtIndexPath(indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailVC", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -85,7 +85,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let deleteOption = UITableViewRowAction(style: .normal, title: "Delete") {action,index in
+        let deleteOption = UITableViewRowAction(style: .normal, title: "Del") {action,index in
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.deleteGuest(id: guest.id){
                 self.eventGuestRiskListModel.guests.remove(at: index.row)
@@ -101,14 +101,14 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
             self.present(controller, animated: true, completion: nil)
         }
         
-        let checkInOption = UITableViewRowAction(style: .normal, title: "Check In") {action,index in
+        let checkInOption = UITableViewRowAction(style: .normal, title: "CheckIn") {action,index in
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: true, guest: guest) {
                 self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
             }
         }
         
-        let checkOutOption = UITableViewRowAction(style: .normal, title: "Check Out") {action,index in
+        let checkOutOption = UITableViewRowAction(style: .normal, title: "CheckOut") {action,index in
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: false, guest: guest) {
                 self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
@@ -120,14 +120,6 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
         checkInOption.backgroundColor = UIColor.green
         checkOutOption.backgroundColor = UIColor.orange
         return[deleteOption, editOption,checkInOption, checkOutOption]
-    }
-    
-    // MARK: Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailVC = segue.destination as? GuestDetailViewController,
-            let indexPath = sender as? IndexPath {
-            detailVC.guestDetailViewModel = eventGuestRiskListModel.detailViewModelForRowAtIndexPath(indexPath)
-        }
     }
     
     // MARK: Search Methods

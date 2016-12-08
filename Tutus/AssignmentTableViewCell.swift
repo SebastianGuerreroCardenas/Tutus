@@ -1,20 +1,19 @@
 //
-//  RiskTableViewCell.swift
+//  AssignmentTableViewCell.swift
 //  Tutus
 //
-//  Created by Sebastian Guerrero on 12/3/16.
+//  Created by Sebastian Guerrero on 12/8/16.
 //  Copyright © 2016 Sebastian Guerrero. All rights reserved.
 //
 
 import UIKit
 
-class RiskTableViewCell: UITableViewCell {
-    var id: String = ""
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var birthday: UILabel!
-    @IBOutlet weak var phone: UILabel!
-    
-    
+class AssignmentTableViewCell: UITableViewCell {
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var endLabel: UILabel!
+    @IBOutlet weak var locationDescriptionLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

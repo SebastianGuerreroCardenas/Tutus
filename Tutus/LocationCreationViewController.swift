@@ -32,12 +32,13 @@ class LocationCreationViewController: BaseViewController {
         self.locationInfo["description"] = self.desField.text
         self.locationInfo["isEdit"] = String(self.isEdit)
         // if we are editing, the dictionary that was passed in also contains an eventId
-        
+        currentEvent = ""
         locationClient.setDict(diction: locationInfo) {
             self.locationClient.createLocation(){ dict in
                 print(self.locationClient.dict)
-                currentEvent = ""
-                self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+                //self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+                self.openViewControllerBasedOnRole(animationStyle: "fade")
+
             }
         }
     }

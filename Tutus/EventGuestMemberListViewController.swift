@@ -26,7 +26,8 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
     var guestClient = GuestClient()
     
     @IBAction func addGuestAction(_ sender: Any) {
-
+        print("Outside form The current Event ID is: " + currentEvent)
+        print("Outside Form The New ID is: " + newEvent)
         if eventGuestMemberListModel.guests.count < Int(currentEventObject.max_attendance)! {
             openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "GuestCreation", strStoryboard: "GuestCreation", animationStyle: "fade")
         }
@@ -78,11 +79,12 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
         cell.name?.text = eventGuestMemberListModel.titleForRowAtIndexPath(indexPath)
         cell.birthday?.text = eventGuestMemberListModel.birthdateForRowAtIndexPath(indexPath)
         cell.id = eventGuestMemberListModel.idForRowAtIndexPath(indexPath)
+        cell.phone?.text = eventGuestMemberListModel.phoneForRowAtIndexPath(indexPath)
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailVC", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -107,16 +109,8 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
         }
         
         editOption.backgroundColor = UIColor.blue
-        deleteOption.backgroundColor = UIColor.red
+        deleteOption.backgroundColor = UIColor.orange
         return[editOption, deleteOption]
-    }
-    
-    // MARK: Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailVC = segue.destination as? GuestDetailViewController,
-            let indexPath = sender as? IndexPath {
-            detailVC.guestDetailViewModel = eventGuestMemberListModel.detailViewModelForRowAtIndexPath(indexPath)
-        }
     }
     
     // MARK: Search Methods

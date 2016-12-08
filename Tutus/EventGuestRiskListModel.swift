@@ -44,6 +44,17 @@ class EventGuestRiskListModel {
         }
     }
     
+    func phoneForRowAtIndexPath(_ indexPath: IndexPath) -> String {
+        guard indexPath.row >= 0 && indexPath.row < guests.count else {
+            return ""
+        }
+        if filteredGuests.isEmpty {
+            return guests[indexPath.row].phone
+        } else {
+            return filteredGuests[indexPath.row].phone
+        }
+    }
+    
     func idForRowAtIndexPath(_ indexPath: IndexPath) -> String {
         guard indexPath.row >= 0 && indexPath.row < guests.count else {
             return ""

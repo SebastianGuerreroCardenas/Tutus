@@ -39,13 +39,15 @@ class GuestCreationViewController: BaseViewController {
         self.guestInfo["optionalTitle"] = optionalTitle
         self.guestInfo["isEdit"] = String(self.isEdit)
         // if we are editing, the dictionary that was passed in also contains an eventId
-        
+        currentEvent = ""
         guestClient.setDict(diction: guestInfo) {
             self.guestClient.createGuest(){ dict in
                 print(self.guestClient.dict)
                 //Here you are suppose to ge the role of the user for the event
-                currentEvent = ""
-                self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+                print("Inside form The current Event ID is: " + currentEvent)
+                print("Inside Form The New ID is: " + newEvent)
+                //self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "EventMain", strStoryboard: "Event", animationStyle: "fade")
+                self.openViewControllerBasedOnRole(animationStyle: "fade")
 
             }
         }

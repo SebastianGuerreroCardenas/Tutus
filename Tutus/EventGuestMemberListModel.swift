@@ -54,6 +54,17 @@ class EventGuestMemberListModel {
         }
     }
     
+    func phoneForRowAtIndexPath(_ indexPath: IndexPath) -> String {
+        guard indexPath.row >= 0 && indexPath.row < guests.count else {
+            return ""
+        }
+        if filteredGuests.isEmpty {
+            return guests[indexPath.row].phone
+        } else {
+            return filteredGuests[indexPath.row].phone
+        }
+    }
+    
     func guestModelForRowAtIndexPath(_ indexPath: IndexPath) -> Guest {
         if filteredGuests.isEmpty {
             return guests[indexPath.row]
