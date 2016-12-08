@@ -505,7 +505,7 @@
             </objects>
             <point key="canvasLocation" x="-2210" y="-3172"/>
         </scene>
-        <!--Locaitons-->
+        <!--Locations-->
         <scene sceneID="GtN-1a-znW">
             <objects>
                 <viewController id="0wA-dg-TgX" customClass="LocationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
@@ -544,7 +544,7 @@
                             <constraint firstItem="e3Y-se-caQ" firstAttribute="top" secondItem="aIz-36-fb0" secondAttribute="bottom" id="jh3-kE-RsM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Locaitons" id="Uyu-Et-dnU">
+                    <navigationItem key="navigationItem" title="Locations" id="Uyu-Et-dnU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="elG-s7-mNR">
                             <connections>
                                 <action selector="addLocationAction:" destination="0wA-dg-TgX" id="8Ii-l5-k0W"/>
