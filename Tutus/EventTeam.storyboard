@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="-1480.8" y="-568.06596701649175"/>
         </scene>
-        <!--Team-->
+        <!--Guest List-->
         <scene sceneID="aur-n9-s5r">
             <objects>
                 <viewController id="fna-kf-qZ0" customClass="EventGuestTeamListViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <constraint firstItem="lFY-I9-NXx" firstAttribute="leading" secondItem="lmb-nj-sxx" secondAttribute="leading" id="voT-eH-A6j"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Team" id="6mg-6M-SOX">
+                    <navigationItem key="navigationItem" title="Guest List" id="6mg-6M-SOX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qit-sA-V0b">
                             <connections>
                                 <action selector="addGuestAction:" destination="fna-kf-qZ0" id="Fhj-RQ-pAc"/>
@@ -224,4 +224,5 @@
         <image name="eventIcon" width="30" height="30"/>
         <image name="guestIcon" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="1" green="1" blue="0.97946506079999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
