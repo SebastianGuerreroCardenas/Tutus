@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-eM-d1E">
-                                <rect key="frame" x="0.0" y="318" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="297" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,11 +59,19 @@
                                     <action selector="cancelAction:" destination="h0r-A7-pSG" eventType="touchUpInside" id="JmN-iB-Gme"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcA-9Y-DJG">
+                                <rect key="frame" x="0.0" y="350" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="HkU-aw-mse"/>
                     <connections>
+                        <outlet property="desField" destination="HcA-9Y-DJG" id="vaP-Kq-2wG"/>
                         <outlet property="nameField" destination="Abp-eM-d1E" id="zjB-hE-zpR"/>
                         <outlet property="pageTitle" destination="8LM-4T-C44" id="zS2-tq-29D"/>
                         <outlet property="submitButton" destination="e04-RF-a4H" id="7eu-up-Vsa"/>
