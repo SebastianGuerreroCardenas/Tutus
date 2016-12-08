@@ -16,6 +16,7 @@ class LocationCreationViewController: BaseViewController {
     var isEdit = false
     
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var desField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageTitle: UILabel!
     
@@ -28,6 +29,7 @@ class LocationCreationViewController: BaseViewController {
     
     @IBAction func submitButtonTapped(sender: UIButton) {
         self.locationInfo["name"] = self.nameField.text
+        self.locationInfo["description"] = self.desField.text
         self.locationInfo["isEdit"] = String(self.isEdit)
         // if we are editing, the dictionary that was passed in also contains an eventId
         

@@ -22,7 +22,7 @@ class LocationClient {
         if dict["isEdit"] == "true" {
             print("editing location")
             let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
-            let parameters: Parameters = ["location": ["event_id": currentEventObject.id, "description": self.dict["name"]! as String]]
+            let parameters: Parameters = ["location": ["event_id": currentEventObject.id, "description": self.dict["description"]! as String, "name": self.dict["name"]! as String]]
             let urlForRequest = "https://riskmanapi.herokuapp.com/locations/" + self.dict["LocationId"]!
             
             Alamofire.request(urlForRequest, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
