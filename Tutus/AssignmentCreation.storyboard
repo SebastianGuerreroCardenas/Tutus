@@ -9,11 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Assignment Creation View Controller-->
+        <!--Create Assignments-->
         <scene sceneID="25D-sr-7U0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yYk-Gt-fdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <collectionViewController storyboardIdentifier="AssignmentCreation" id="wOA-5b-VER" customClass="AssignmentCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="wOA-5b-VER" customClass="AssignmentCreationViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="AssignmentCreation" dataMode="prototypes" id="gh9-3Q-tFF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,15 +72,19 @@
                             <outlet property="delegate" destination="wOA-5b-VER" id="q8p-VW-BhH"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="kw3-Lq-PTV"/>
+                    <navigationItem key="navigationItem" title="Create Assignments" id="iQQ-Fd-puc">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="whW-ri-RBe"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Pwy-Sz-U5S"/>
+                    </navigationItem>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYk-Gt-fdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="539.28035982008998"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aRZ-PG-AOD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I1F-Yf-bk4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AssignmentCreation" automaticallyAdjustsScrollViewInsets="NO" id="I1F-Yf-bk4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tel-iW-EMb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
