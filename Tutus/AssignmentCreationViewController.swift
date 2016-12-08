@@ -10,6 +10,15 @@ import UIKit
 
 class AssignmentCreationViewController: UICollectionViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        
+    
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        
+    }
+    
     var locations:[String] = []
     var people:[String] = []
     var hours: Int = 0
@@ -57,10 +66,6 @@ class AssignmentCreationViewController: UICollectionViewController, UIPickerView
         print(self.chosenPeople)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.hours
     }
@@ -81,13 +86,13 @@ class AssignmentCreationViewController: UICollectionViewController, UIPickerView
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
-    }
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
+//    }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView", for: indexPath) as UICollectionReusableView

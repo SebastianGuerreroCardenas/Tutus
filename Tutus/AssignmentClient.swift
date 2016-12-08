@@ -16,9 +16,42 @@ class AssignmentClient {
         
     }
     
+    func getLocationsByID(completion: @escaping (([Location]) -> Void)) {
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
+        
+        Alamofire.request("https://riskmanapi.herokuapp.com/locations", headers: headers).responseJSON {response in
+            
+            let json = JSON(response.result.value!)
+            var locationList: [Location] = []
+            print(json)
+            for (_,location):(String, JSON) in json {
+                locationList.append(Location(id: location["id"].stringValue, event_id: location["event_id"].stringValue, description: location["description"].stringValue, name: location["name"].stringValue))
+            }
+            completion(locationList)
+
+        }
+    }
+    
+    func getRiskTeam(completion: @escaping (([Location]) -> Void)) {
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
+        
+        Alamofire.request("https://riskmanapi.herokuapp.com/locations", headers: headers).responseJSON {response in
+            
+            let json = JSON(response.result.value!)
+            var locationList: [Location] = []
+            print(json)
+            for (_,location):(String, JSON) in json {
+                locationList.append(Location(id: location["id"].stringValue, event_id: location["event_id"].stringValue, description: location["description"].stringValue, name: location["name"].stringValue))
+            }
+            completion(locationList)
+            
+        }
+    }
+
+    
     var dict = [String : String]()
     
-    func createLocation(completion: @escaping ((Dictionary<String,String>) -> Void)) {
+    func createLocations(completion: @escaping ((Dictionary<String,String>) -> Void)) {
         if dict["isEdit"] == "true" {
             print("editing location")
             let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
