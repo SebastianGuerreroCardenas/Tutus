@@ -73,6 +73,8 @@
 		B9D60EB61DF95A4600598123 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EB51DF95A4600598123 /* Question.swift */; };
 		B9D60EB91DF962EC00598123 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EB81DF962EC00598123 /* MessageViewController.swift */; };
 		B9D60EBB1DF963D400598123 /* MessageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EBA1DF963D400598123 /* MessageClient.swift */; };
+		B9D60EBE1DFA151C00598123 /* eventUsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */; };
+		B9D60EBF1DFA151C00598123 /* eventUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */; };
 		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +173,8 @@
 		B9D60EB51DF95A4600598123 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B9D60EB81DF962EC00598123 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B9D60EBA1DF963D400598123 /* MessageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageClient.swift; sourceTree = "<group>"; };
+		B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventUsersCell.swift; sourceTree = "<group>"; };
+		B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventUsersCell.xib; sourceTree = "<group>"; };
 		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
 		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +343,8 @@
 				B91622D31DE760B2009D935C /* EventClient.swift */,
 				B93D66281DF236F200210219 /* EventViewController.swift */,
 				B93D662A1DF3419900210219 /* NoEventViewController.swift */,
+				B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */,
+				B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -573,6 +579,7 @@
 				B9D60EA71DF943A900598123 /* AssignmentTableViewCell.xib in Resources */,
 				B97186301DEF93A60096E506 /* EventCreation.storyboard in Resources */,
 				B96517031DF67CF5005F4987 /* EventMember.storyboard in Resources */,
+				B9D60EBF1DFA151C00598123 /* eventUsersCell.xib in Resources */,
 				B91622D21DE760A0009D935C /* Event.storyboard in Resources */,
 				B93D66391DF355FE00210219 /* RiskTableViewCell.xib in Resources */,
 				8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */,
@@ -746,6 +753,7 @@
 				B965170B1DF87474005F4987 /* EventGuestMemberListViewController.swift in Sources */,
 				B9224D9A1DF494D000F39F2E /* GuestDetailViewModel.swift in Sources */,
 				B93D66381DF355FE00210219 /* RiskTableViewCell.swift in Sources */,
+				B9D60EBE1DFA151C00598123 /* eventUsersCell.swift in Sources */,
 				B96517191DF8DEC0005F4987 /* LocationListModel.swift in Sources */,
 				B93D662D1DF34C1300210219 /* EventGuestRiskListViewController.swift in Sources */,
 				B90CB8DE1DE369B000A8D68D /* LoginViewController.swift in Sources */,

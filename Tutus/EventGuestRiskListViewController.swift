@@ -118,7 +118,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
             let guest: Guest = self.eventGuestRiskListModel.guestModelForRowAtIndexPath(index)
             self.guestClient.checkGuestIntoEvent(checkIn: false, guest: guest) {
                 self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.right)
-                self.titleLabel.title = "Checked In!"
+                self.titleLabel.title = "Checked Out!"
             }
             
         }
