@@ -28,11 +28,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-S8-oKg">
-                                <rect key="frame" x="127" y="526" width="121" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-S8-oKg">
+                                <rect key="frame" x="107" y="527" width="162" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.97091796789999996" green="0.80543906379999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Create Guest"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" image="button_add-guest"/>
                                 <connections>
                                     <action selector="submitButtonTappedWithSender:" destination="gM6-KV-RtV" eventType="touchUpInside" id="UkV-9z-reM"/>
                                 </connections>
@@ -109,4 +109,7 @@
             <point key="canvasLocation" x="413.60000000000002" y="-52.623688155922046"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_add-guest" width="162" height="40"/>
+    </resources>
 </document>

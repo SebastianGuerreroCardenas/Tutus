@@ -239,10 +239,10 @@
                     <tabBarItem key="tabBarItem" title="Questions" image="dataIcon" id="Kd5-wU-XCn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jlg-JU-FkA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jlg-JU-FkA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.98703879120000004" green="0.23440390829999999" blue="0.36417692899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.9882352941176471" green="0.23529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
