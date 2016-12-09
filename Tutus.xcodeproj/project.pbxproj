@@ -41,7 +41,7 @@
 		B9224D9A1DF494D000F39F2E /* GuestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D991DF494D000F39F2E /* GuestDetailViewModel.swift */; };
 		B9224D9C1DF4A99D00F39F2E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D9B1DF4A99D00F39F2E /* Event.swift */; };
 		B93D66271DF1F4B800210219 /* MenuViewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D66261DF1F4B800210219 /* MenuViewClient.swift */; };
-		B93D66291DF236F200210219 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D66281DF236F200210219 /* EventViewController.swift */; };
+		B93D66291DF236F200210219 /* AdminEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D66281DF236F200210219 /* AdminEventViewController.swift */; };
 		B93D662B1DF3419900210219 /* NoEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D662A1DF3419900210219 /* NoEventViewController.swift */; };
 		B93D662D1DF34C1300210219 /* EventGuestRiskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D662C1DF34C1300210219 /* EventGuestRiskListViewController.swift */; };
 		B93D66301DF353A800210219 /* EventGuestRiskListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D662F1DF353A800210219 /* EventGuestRiskListModel.swift */; };
@@ -78,6 +78,7 @@
 		B9D60EBE1DFA151C00598123 /* eventUsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */; };
 		B9D60EBF1DFA151C00598123 /* eventUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */; };
 		B9D60EC11DFA6CB800598123 /* AssignmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EC01DFA6CB800598123 /* AssignmentLocation.swift */; };
+		B9D60EC31DFA765B00598123 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EC21DFA765B00598123 /* EventViewController.swift */; };
 		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,7 +145,7 @@
 		B9224D991DF494D000F39F2E /* GuestDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestDetailViewModel.swift; sourceTree = "<group>"; };
 		B9224D9B1DF4A99D00F39F2E /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B93D66261DF1F4B800210219 /* MenuViewClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewClient.swift; sourceTree = "<group>"; };
-		B93D66281DF236F200210219 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		B93D66281DF236F200210219 /* AdminEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventViewController.swift; sourceTree = "<group>"; };
 		B93D662A1DF3419900210219 /* NoEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoEventViewController.swift; sourceTree = "<group>"; };
 		B93D662C1DF34C1300210219 /* EventGuestRiskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGuestRiskListViewController.swift; sourceTree = "<group>"; };
 		B93D662F1DF353A800210219 /* EventGuestRiskListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGuestRiskListModel.swift; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 		B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventUsersCell.swift; sourceTree = "<group>"; };
 		B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventUsersCell.xib; sourceTree = "<group>"; };
 		B9D60EC01DFA6CB800598123 /* AssignmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentLocation.swift; sourceTree = "<group>"; };
+		B9D60EC21DFA765B00598123 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
 		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -349,10 +351,11 @@
 				B96517011DF67C9D005F4987 /* EventMember */,
 				B9224D951DF48ECC00F39F2E /* EventRiskList */,
 				B91622D31DE760B2009D935C /* EventClient.swift */,
-				B93D66281DF236F200210219 /* EventViewController.swift */,
+				B93D66281DF236F200210219 /* AdminEventViewController.swift */,
 				B93D662A1DF3419900210219 /* NoEventViewController.swift */,
 				B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */,
 				B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */,
+				B9D60EC21DFA765B00598123 /* EventViewController.swift */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -786,7 +789,7 @@
 				B965170D1DF874A6005F4987 /* EventGuestMemberListModel.swift in Sources */,
 				B93D662B1DF3419900210219 /* NoEventViewController.swift in Sources */,
 				B90CB8E01DE36A5600A8D68D /* LoginClient.swift in Sources */,
-				B93D66291DF236F200210219 /* EventViewController.swift in Sources */,
+				B93D66291DF236F200210219 /* AdminEventViewController.swift in Sources */,
 				B9D60EA61DF943A900598123 /* AssignmentTableViewCell.swift in Sources */,
 				B93D66351DF3549A00210219 /* SearchGuestListRiskClient.swift in Sources */,
 				B9D60EB01DF959C100598123 /* QuestionViewController.swift in Sources */,
@@ -810,6 +813,7 @@
 				B9224D981DF48F4500F39F2E /* GuestDetailViewController.swift in Sources */,
 				B93D66301DF353A800210219 /* EventGuestRiskListModel.swift in Sources */,
 				B9D60EBB1DF963D400598123 /* MessageClient.swift in Sources */,
+				B9D60EC31DFA765B00598123 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

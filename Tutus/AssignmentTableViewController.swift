@@ -17,6 +17,24 @@ class AssignmentTableViewController: BaseViewController, UITableViewDataSource, 
     var eventClient = EventClient()
     var assignmentClient = AssignmentClient()
     
+    
+    @IBAction func addAssignmentAction(_ sender: Any) {
+        let loginStoryboard = UIStoryboard(name: "AssignmentCreation", bundle: nil)
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentCreation") as! AssignmentCreationViewController
+        
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func showAssignments(_ sender: Any) {
+        let loginStoryboard = UIStoryboard(name: "AssignmentGridView", bundle: nil)
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentView") as! AssignmentGridViewController
+        assignmentClient.fetchRepositories() { assignments in
+            controller.existingAssignments = assignments
+            self.present(controller, animated: true)
+        }
+        
+    }
+    
     @IBAction func addLocationAction(_ sender: Any) {
         openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "LocationCreation", strStoryboard: "LocationCreation", animationStyle: "fade")
     }
@@ -68,33 +86,8 @@ class AssignmentTableViewController: BaseViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "toDetailVC", sender: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let editOption = UITableViewRowAction(style: .normal, title: "Edit") {action,index in
-            let Storyboard = UIStoryboard(name: "LocationCreation", bundle: nil)
-            let controller = Storyboard.instantiateViewController(withIdentifier: "LocationCreation") as! LocationCreationViewController
-//            controller.locationInfo = self.assignmentListModel.assignmentsDictionaryForRowAtIndexPath(index)
-            self.present(controller, animated: true, completion: nil)
-        }
-        let deleteOption = UITableViewRowAction(style: .normal, title: "Delete") {action,index in
-            let assignment: Assignment = self.assignmentListModel.assignmentModelForRowAtIndexPath(index)
-            self.assignmentClient.deleteAssignment(id: assignment.id){
-                self.assignmentListModel.assignments.remove(at: index.row)
-                self.tableView.reloadData()
-            }
-            
-        }
-        editOption.backgroundColor = UIColor.blue
-        deleteOption.backgroundColor = UIColor.red
-        return[editOption, deleteOption]
-    }
+
 }
 

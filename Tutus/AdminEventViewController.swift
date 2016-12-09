@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class AdminEventViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
@@ -17,7 +17,9 @@ class EventViewController: BaseViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var maxAttendaceLabel: UILabel!
     @IBOutlet weak var inviteStartLabel: UILabel!
     @IBOutlet weak var inviteEndLabel: UILabel!
-
+    @IBOutlet weak var adminCodeLabel: UILabel!
+    @IBOutlet weak var memberCodeLabel: UILabel!
+    @IBOutlet weak var teamCodeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
@@ -27,7 +29,7 @@ class EventViewController: BaseViewController, UITableViewDataSource, UITableVie
         addSlideMenuButton()
         currentEvent = newEvent
         setLabels()
-        scrollView.contentSize.height = 800
+        scrollView.contentSize.height = 1000
         
     }
     
@@ -49,7 +51,7 @@ class EventViewController: BaseViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
-    
+
     
     func setLabels() {
         eventNameLabel.text = currentEventObject.title
@@ -59,7 +61,9 @@ class EventViewController: BaseViewController, UITableViewDataSource, UITableVie
         maxAttendaceLabel.text = currentEventObject.max_attendance
         inviteStartLabel.text = currentEventObject.time_to_send_invites
         inviteEndLabel.text = currentEventObject.list_close
-
+        adminCodeLabel.text = currentEventObject.admin_invite_code
+        memberCodeLabel.text = currentEventObject.member_invite_code
+        teamCodeLabel.text = currentEventObject.team_invite_code
     }
     
 }

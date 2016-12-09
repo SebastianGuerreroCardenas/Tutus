@@ -13,18 +13,19 @@ var currentEventObject: Event!
 var mainUser = UserClient()
 var haveZeroEvents: Bool = false
 var globalLocations: [Location] = []
+var globalAssignments: [Assignment] = []
 
 
-//extension UIViewController {
-//    func hideKeyboardWhenTappedAround() {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
-//    }
-//    
-//    func dismissKeyboard() {
-//        view.endEditing(true)
-//    }
-//}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
