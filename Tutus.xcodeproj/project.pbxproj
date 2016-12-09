@@ -77,6 +77,7 @@
 		B9D60EBB1DF963D400598123 /* MessageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EBA1DF963D400598123 /* MessageClient.swift */; };
 		B9D60EBE1DFA151C00598123 /* eventUsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */; };
 		B9D60EBF1DFA151C00598123 /* eventUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */; };
+		B9D60EC11DFA6CB800598123 /* AssignmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D60EC01DFA6CB800598123 /* AssignmentLocation.swift */; };
 		E6900FE952B32E051A086BA6 /* Pods_TutusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFDC11EC0BBB75621AD83F7 /* Pods_TutusUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +180,7 @@
 		B9D60EBA1DF963D400598123 /* MessageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageClient.swift; sourceTree = "<group>"; };
 		B9D60EBC1DFA151C00598123 /* eventUsersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventUsersCell.swift; sourceTree = "<group>"; };
 		B9D60EBD1DFA151C00598123 /* eventUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventUsersCell.xib; sourceTree = "<group>"; };
+		B9D60EC01DFA6CB800598123 /* AssignmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentLocation.swift; sourceTree = "<group>"; };
 		CA9A2505F6D1BBC8934992F0 /* Pods-Tutus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutus/Pods-Tutus.debug.xcconfig"; sourceTree = "<group>"; };
 		CB44204C22D4C5A2250BC30A /* Pods-TutusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusTests/Pods-TutusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D815CA8F864A0545BB9B333D /* Pods-TutusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutusUITests/Pods-TutusUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				B965171A1DF8DEF7005F4987 /* Location.swift */,
 				B9D60EAC1DF9491800598123 /* Assignment.swift */,
 				B9D60EB51DF95A4600598123 /* Question.swift */,
+				B9D60EC01DFA6CB800598123 /* AssignmentLocation.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -802,6 +805,7 @@
 				B96517141DF8DA34005F4987 /* LocationTableViewCell.swift in Sources */,
 				8E118E431DF61EE7006AA6FA /* LocationClient.swift in Sources */,
 				B90CB8B21DE347F100A8D68D /* Tutus.xcdatamodeld in Sources */,
+				B9D60EC11DFA6CB800598123 /* AssignmentLocation.swift in Sources */,
 				B93D66331DF353DE00210219 /* Guest.swift in Sources */,
 				B9224D981DF48F4500F39F2E /* GuestDetailViewController.swift in Sources */,
 				B93D66301DF353A800210219 /* EventGuestRiskListModel.swift in Sources */,

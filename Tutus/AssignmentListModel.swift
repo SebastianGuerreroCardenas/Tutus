@@ -1,7 +1,7 @@
 import Foundation
 
 class AsssignmentListModel {
-    var assignments = [Assignment]()
+    var assignments = [AssignmentLocation]()
     //var filteredGuests = [Location]()
     
     let client = AssignmentClient()
@@ -9,7 +9,15 @@ class AsssignmentListModel {
     
     func refresh(_ completion: @escaping () -> Void) {
         client.fetchRepositories { assignments in
-            self.assignments = assignments
+             
+            for assigment in assignments {
+                for loc in globalLocations {
+                    if assigment.location_id == loc.id {
+                        self.assignments.append(AssignmentLocation(id: assigment.id, location_name: loc.name, description: loc.description, start: assigment.start, end: assigment.end))
+                    }
+                }
+            }
+            
             completion()
         }
     }
@@ -22,7 +30,15 @@ class AsssignmentListModel {
         guard indexPath.row >= 0 && indexPath.row < assignments.count else {
             return ""
         }
-        return assignments[indexPath.row].location_id
+        return assignments[indexPath.row].location_name
+        
+    }
+    
+    func descriptionForRowAtIndexPath(_ indexPath: IndexPath) -> String {
+        guard indexPath.row >= 0 && indexPath.row < assignments.count else {
+            return ""
+        }
+        return assignments[indexPath.row].description
         
     }
     
@@ -46,13 +62,9 @@ class AsssignmentListModel {
         return assignments[indexPath.row].id
     }
     
-    func assignmentModelForRowAtIndexPath(_ indexPath: IndexPath) -> Assignment {
+    func assignmentModelForRowAtIndexPath(_ indexPath: IndexPath) -> AssignmentLocation {
         return assignments[indexPath.row]
     }
-    
-//    func locationtDictionaryForRowAtIndexPath(_ indexPath: IndexPath) -> [String : String] {
-//        let assignment: Assignment = assignment[indexPath.row]
-//        return ["name": assignment.name, "description": assignment.description, "isEdit" : "true", "LocationId" : assignment.id]
-//    }
+
     
 }
