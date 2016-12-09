@@ -63,6 +63,7 @@ class GuestCreationViewController: BaseViewController {
             self.submitButton.setTitle("Edit Guest",for: .normal)
             self.pageTitle.text = "Edit Guest"
         }
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {

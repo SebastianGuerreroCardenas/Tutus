@@ -125,7 +125,7 @@ class EventCreationViewController: BaseViewController {
             self.submitButton.setTitle("Edit Event",for: .normal)
             self.pageTitle.text = "Edit Event"
         }
-        //self.hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
 
     }
     

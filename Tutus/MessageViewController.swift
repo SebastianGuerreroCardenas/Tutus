@@ -13,15 +13,18 @@ class MessageViewController: UIViewController {
     var messageClient = MessageClient()
     @IBOutlet weak var messageField: UITextField!
     
-    @IBAction func sendMessage(_ sender: Any) {
-        messageClient.sendMessage(message: messageField.text! as String ) {
-            print("sent message")
-        }
+    @IBAction func messageAction(_ sender: Any) {
+            messageClient.sendMessage(message: messageField.text! as String ) {
+                print("sent message")
+            }
     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
 

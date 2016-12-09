@@ -53,6 +53,7 @@ class LocationCreationViewController: BaseViewController {
             self.submitButton.setTitle("Edit Location",for: .normal)
             self.pageTitle.text = "Edit Location"
         }
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func didReceiveMemoryWarning() {
