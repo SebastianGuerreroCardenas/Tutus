@@ -12,6 +12,20 @@ var newEvent = ""
 var currentEventObject: Event!
 var mainUser = UserClient()
 var haveZeroEvents: Bool = false
+var globalLocations: [Location] = []
+
+
+//extension UIViewController {
+//    func hideKeyboardWhenTappedAround() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
+//    }
+//    
+//    func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
+//}
+
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
@@ -197,6 +211,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             strStoryboard = "EventMember"
         }
         self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: strIdentifier, strStoryboard: strStoryboard, animationStyle: animationStyle)
+
 
     }
     

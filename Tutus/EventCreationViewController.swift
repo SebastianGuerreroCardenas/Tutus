@@ -125,13 +125,7 @@ class EventCreationViewController: BaseViewController {
             self.submitButton.setTitle("Edit Event",for: .normal)
             self.pageTitle.text = "Edit Event"
         }
-//        
-//        if !loginClient.isLoggedIn(){
-//            print("is not logged in")
-//            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-//            let controller = loginStoryboard.instantiateViewController(withIdentifier: "LoginController") as UIViewController
-//            present(controller, animated: true, completion: nil)
-//        }
+        //self.hideKeyboardWhenTappedAround()
 
     }
     

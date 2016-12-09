@@ -51,31 +51,17 @@ class AssignmentClient {
     
     var dict = [String : String]()
     
-    func createLocations(completion: @escaping ((Dictionary<String,String>) -> Void)) {
-        if dict["isEdit"] == "true" {
-            print("editing location")
-            let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
-            let parameters: Parameters = ["location": ["event_id": currentEventObject.id, "description": self.dict["description"]! as String, "name": self.dict["name"]! as String]]
-            let urlForRequest = "https://riskmanapi.herokuapp.com/locations/" + self.dict["LocationId"]!
+    func createAssignment(completion: @escaping ((Dictionary<String,String>) -> Void)) {
+        
+        print("creating assignment")
+        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
+        let parameters: Parameters = ["assignment": ["event_id": currentEventObject.id, "location_id": self.dict["location_id"]! as String, "user_id": self.dict["user_id"]! as String, "start": self.dict["start"]! as String, "end": self.dict["end"]! as String, "attended": self.dict["attended"]! as String]]
             
-            Alamofire.request(urlForRequest, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
+        Alamofire.request("https://riskmanapi.herokuapp.com/assignments", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
                 
-                let json = JSON(response.result.value!)
+            let json = JSON(response.result.value!)
                 
-                completion(self.dict)
-            }
-        }
-        else {
-            print("creating location")
-            let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
-            let parameters: Parameters = ["location": ["event_id": currentEventObject.id, "description": self.dict["description"]! as String, "name": self.dict["name"]! as String]]
-            
-            Alamofire.request("https://riskmanapi.herokuapp.com/locations", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
-                
-                let json = JSON(response.result.value!)
-                
-                completion(self.dict)
-            }
+            completion(self.dict)
         }
     }
     

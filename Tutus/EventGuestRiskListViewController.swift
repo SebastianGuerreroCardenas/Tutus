@@ -25,6 +25,7 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
     var eventGuestRiskListModel = EventGuestRiskListModel()
     var eventClient = EventClient()
     var guestClient = GuestClient()
+    var locationClient = LocationClient()
     
     @IBAction func addGuestAction(_ sender: Any) {
         print("add a guest")
@@ -40,6 +41,9 @@ class EventGuestRiskListViewController: BaseViewController, UITableViewDataSourc
             currentEventObject = event
             self.eventClient.getEventUsers() { event_users in
                 currentEventObject.event_users = event_users
+                self.locationClient.fetchRepositories() { locs in
+                    globalLocations = locs
+                }
             }
         }
 

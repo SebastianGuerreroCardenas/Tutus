@@ -10,24 +10,21 @@ import UIKit
 
 class AssignmentCreationViewController: UICollectionViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var locations:[String] = []
+    var locations:[Location] = []
     var people:[User] = []
     var hours: Int = 0
     var startTime: String = "not loaded"
     var endTime: String = "not loaded"
-    var chosenPeople:[[Assignment]] = [[]] //user object for picker and location ID for creating assignment object
+    var newAssignments:[Assignment] = []
     let assignmentsClient = AssignmentClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let placeholder = Assignment(id: "1", location_id: "1", user_id: "1", start: "1", end: "1")
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         let date1 = dateFormatter.date(from: currentEventObject.start)
         let date2 = dateFormatter.date(from: currentEventObject.end)
-        print(currentEventObject.start)
-        print(currentEventObject.end)
         self.hours = Int(((date2?.timeIntervalSince(date1!))! / 60) / 60)
     
         let dateFormatter2 = DateFormatter()
@@ -35,40 +32,39 @@ class AssignmentCreationViewController: UICollectionViewController, UIPickerView
         self.startTime = dateFormatter2.string(from:date1!)
         self.endTime = dateFormatter2.string(from:date2!)
 
-        self.assignmentsClient.getLocationsByID(){ locations in
-            for loc in self.assignmentsClient.locations {
-                self.locations.append(loc.name)
-            }
-        }
-        self.locations = ["Location 1", "Location 2", "Location 3", "Location 4", "Location 5"]
+        self.locations = globalLocations
         
         for u in currentEventObject.event_users {
             self.people.append(u)
         }
-        self.chosenPeople = []
-        for i in 1...self.locations.count {
-            var secList = [Assignment]()
-            for j in 1...self.hours {
-                secList.append(placeholder)
-            }
-            self.chosenPeople.append(secList)
-        }
-        self.people = [mainUser.userObject, mainUser.userObject, mainUser.userObject, mainUser.userObject, mainUser.userObject]
+        self.people = currentEventObject.event_users
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         var assignmentsInfo = [String: [String: String]]()
-        for section in 0...self.chosenPeople.count {
-            for person in 0...self.chosenPeople[section].count {
+        for a in self.newAssignments {
 //                let startT = (self.startTime[0 .. 11] + String(Int(self.startTime.[11 .. 13]) + section) + self.startTime.[13 ..< 19])
 //                let endT = (String(self.startTime.characters[0..10]) + String(Int(String(self.startTime.characters[11..12])) + section + 1) + String(self.startTime.characters[13..18]))
-                assignmentsInfo[self.chosenPeople[section][person].user_id + self.chosenPeople[section][person].location_id] = ["event_id": String(currentEventObject.id), "location_id": self.chosenPeople[section][person].location_id, "user_id": self.chosenPeople[section][person].user_id, "start": self.startTime, "end": self.endTime, "attended": "false"]
+                assignmentsInfo[a.location_id+a.user_id] = ["event_id": String(currentEventObject.id), "location_id": a.location_id, "user_id": a.user_id, "start": self.startTime, "end": self.endTime, "attended": "false"]
+            
+        }
+        for assign in assignmentsInfo.keys {
+            self.assignmentsClient.setDict(diction: assignmentsInfo[assign]!) {
+                self.assignmentsClient.createAssignment() { dict in
+                    print(dict)
+                    let storyboard = UIStoryboard(name: "Event", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "EventMain") as UIViewController
+                    self.present(controller, animated: true)
+                }
             }
         }
-        print(assignmentsInfo)
+        
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Event", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "EventMain") as UIViewController
+        present(controller, animated: true)
         print("CANCEL!!!")
     }
 
@@ -85,7 +81,7 @@ class AssignmentCreationViewController: UICollectionViewController, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.chosenPeople[Int(pickerView.restorationIdentifier!)!][Int(pickerView.accessibilityHint!)!] = Assignment(id: "", location_id: String(row), user_id: people[row].id, start: "", end: "")
+        self.newAssignments.append(Assignment(id: "", location_id: self.locations[Int(pickerView.accessibilityHint!)!].id, user_id: people[row].id, start: "", end: ""))
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -99,7 +95,7 @@ class AssignmentCreationViewController: UICollectionViewController, UIPickerView
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
         let locationLabel = cell.viewWithTag(2) as! UILabel
-        locationLabel.text = self.locations[indexPath.row]
+        locationLabel.text = self.locations[indexPath.row].name
         let picker = cell.viewWithTag(4) as! UIPickerView
         picker.delegate = self
         picker.dataSource = self
