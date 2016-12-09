@@ -48,18 +48,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-0v-Owi">
-                                <rect key="frame" x="141" y="405" width="92" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2r-LN-T9k">
+                                <rect key="frame" x="92" y="475" width="191" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Join an Event"/>
-                                <connections>
-                                    <action selector="joinAnEventAction:" destination="9Sv-J4-Fcx" eventType="touchUpInside" id="B8c-Cn-G0i"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2r-LN-T9k">
-                                <rect key="frame" x="133" y="457" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create an Event"/>
+                                <state key="normal" image="button_create-event">
+                                    <color key="titleColor" red="0.9882352941176471" green="0.23529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="createEventAction:" destination="9Sv-J4-Fcx" eventType="touchUpInside" id="6bN-yi-f4d"/>
                                 </connections>
@@ -70,6 +64,16 @@
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logoutAction:" destination="9Sv-J4-Fcx" eventType="touchUpInside" id="3eb-6y-keg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-0v-Owi">
+                                <rect key="frame" x="107" y="387" width="161" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_join-event">
+                                    <color key="titleColor" red="0.9882352941176471" green="0.23529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinAnEventAction:" destination="9Sv-J4-Fcx" eventType="touchUpInside" id="B8c-Cn-G0i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,5 +171,9 @@
             <point key="canvasLocation" x="-1524" y="152"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_create-event" width="191" height="40"/>
+        <image name="button_join-event" width="161" height="40"/>
+    </resources>
     <color key="tintColor" red="1" green="1" blue="0.97946506079999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
