@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Assignment Grid-->
+        <!--Assignment Grid View Controller-->
         <scene sceneID="2OH-V3-vGX">
             <objects>
-                <collectionViewController storyboardIdentifier="AssignmentView" id="GIl-6l-Hcg" customClass="AssignmentGrid" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="AssignmentView" id="GIl-6l-Hcg" customClass="AssignmentGridViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="AssignmentsGridView" dataMode="prototypes" id="1CO-ae-1RG" customClass="AssignmentGridViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="AiK-3X-t1O">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="iwL-AJ-QM6"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="iwL-AJ-QM6">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="GIl-6l-Hcg" id="TNl-qq-g0c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBF-54-4I3" userLabel="First Responder" sceneMemberID="firstResponder"/>

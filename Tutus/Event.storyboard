@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -454,7 +455,7 @@
             </objects>
             <point key="canvasLocation" x="-1482" y="-845"/>
         </scene>
-        <!--Assignment Info-->
+        <!--Assignment-->
         <scene sceneID="8bn-mG-7vO">
             <objects>
                 <viewController id="MqE-6G-3Xo" customClass="AssignmentViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
@@ -465,20 +466,22 @@
                     <view key="view" contentMode="scaleToFill" id="tn7-jO-fcB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-DX-goh">
-                                <rect key="frame" x="216" y="121" width="136" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9824252724647522" green="0.34482249617576599" blue="0.45473200082778931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Edit View Controller"/>
-                                <connections>
-                                    <action selector="editAssignmentAction:" destination="MqE-6G-3Xo" eventType="touchUpInside" id="wzy-hn-9lZ"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Assignment Info" id="RyE-n1-3Jr"/>
+                    <navigationItem key="navigationItem" title="Assignment" id="RyE-n1-3Jr">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Add" id="CuL-NV-1qS">
+                                <connections>
+                                    <action selector="addAssignmentAction:" destination="MqE-6G-3Xo" id="Por-Ym-I1j"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="show" id="2pL-ry-lg1">
+                                <connections>
+                                    <action selector="showAssignments:" destination="MqE-6G-3Xo" id="Ue4-2I-KbJ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAD-nq-Pa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
