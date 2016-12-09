@@ -44,12 +44,9 @@ class AssignmentTableViewController: BaseViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         currentEvent = newEvent
-        eventClient.getEventByID() { event in
-            currentEventObject = event
-        }
-        
-        let cellNib = UINib(nibName: "LocationTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "locationCell")
+
+        let cellNib = UINib(nibName: "AssignmentTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "assignmentCell")
         addSlideMenuButton()
         // get the data for the tabler
         assignmentListModel.refresh { [unowned self] in
@@ -78,10 +75,12 @@ class AssignmentTableViewController: BaseViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! LocationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "assignmentCell", for: indexPath) as! AssignmentTableViewCell
         cell.locationLabel?.text = assignmentListModel.titleForRowAtIndexPath(indexPath)
-        //cell.descriptionLabel?.text = assignmentListModel.descriptionForRowAtIndexPath(indexPath)
-        cell.id = assignmentListModel.idForRowAtIndexPath(indexPath)
+        cell.locationDescriptionLabel?.text = assignmentListModel.descriptionForRowAtIndexPath(indexPath)
+        cell.startLabel?.text = assignmentListModel.startForRowAtIndexPath(indexPath)
+        cell.endLabel?.text = assignmentListModel.endForRowAtIndexPath(indexPath)
+
         return cell
     }
     

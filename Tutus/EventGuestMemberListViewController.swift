@@ -43,8 +43,10 @@ class EventGuestMemberListViewController: BaseViewController, UITableViewDataSou
         titleLabel.title = "Invite Guests!"
         eventClient.getEventByID() { event in
             currentEventObject = event
+            self.eventClient.getEventUsers() { event_users in
+                currentEventObject.event_users = event_users
+            }
         }
-        
         let cellNib = UINib(nibName: "RiskTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
         addSlideMenuButton()

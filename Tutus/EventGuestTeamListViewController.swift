@@ -24,6 +24,8 @@ class EventGuestTeamListViewController: BaseViewController, UITableViewDataSourc
     var eventGuestRiskListModel = EventGuestRiskListModel()
     var eventClient = EventClient()
     var guestClient = GuestClient()
+    var locationClient = LocationClient()
+    var assignmentClient = AssignmentClient()
     
     @IBAction func addGuestAction(_ sender: Any) {
         openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "GuestCreation", strStoryboard: "GuestCreation", animationStyle: "fade")
@@ -43,6 +45,16 @@ class EventGuestTeamListViewController: BaseViewController, UITableViewDataSourc
         titleLabel.title = "Guest List"
         eventClient.getEventByID() { event in
             currentEventObject = event
+            self.eventClient.getEventUsers() { event_users in
+                currentEventObject.event_users = event_users
+                self.locationClient.fetchRepositories() { locs in
+                    globalLocations = locs
+                    self.assignmentClient.fetchRepositories() { assignments in
+                        globalAssignments = assignments
+                        
+                    }
+                }
+            }
         }
         
         let cellNib = UINib(nibName: "RiskTableViewCell", bundle: nil)

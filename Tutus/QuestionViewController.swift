@@ -32,6 +32,7 @@ class QuestionViewController: BaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         getQuestion()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func didReceiveMemoryWarning() {

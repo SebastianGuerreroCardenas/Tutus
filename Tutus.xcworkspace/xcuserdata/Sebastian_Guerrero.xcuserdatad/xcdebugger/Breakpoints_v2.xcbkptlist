@@ -1149,13 +1149,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tutus/MessageViewController.swift"
-            timestampString = "502883470.341711"
+            timestampString = "502954820.141626"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "sendMessage(_:)"
-            landmarkType = "7">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "MessageViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
