@@ -647,10 +647,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naU-TC-DGf">
-                                <rect key="frame" x="167" y="539" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naU-TC-DGf">
+                                <rect key="frame" x="129" y="529" width="124" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" image="button_submit">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -774,6 +774,7 @@
     </scenes>
     <resources>
         <image name="assignmnetsIcon" width="30" height="30"/>
+        <image name="button_submit" width="124" height="40"/>
         <image name="dataIcon" width="30" height="30"/>
         <image name="eventIcon" width="30" height="30"/>
         <image name="guestIcon" width="30" height="30"/>
