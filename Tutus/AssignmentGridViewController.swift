@@ -60,8 +60,11 @@ class AssignmentGridViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewGridCell", for: indexPath) as UICollectionViewCell
         let locationLabel = cell.viewWithTag(2) as! UILabel
         locationLabel.text = self.locations[indexPath.row].name
+        print(self.locations[indexPath.row].name)
         let personLabel = cell.viewWithTag(3) as! UILabel
         personLabel.text = "This is a person" //put the data here
+        
+        
         return cell
     }
     

@@ -13,7 +13,7 @@
         <scene sceneID="2OH-V3-vGX">
             <objects>
                 <collectionViewController id="GIl-6l-Hcg" customClass="AssignmentGridViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="AssignmentsGridView" dataMode="prototypes" id="1CO-ae-1RG" customClass="AssignmentGridViewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="AssignmentsGridView" dataMode="prototypes" id="1CO-ae-1RG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,16 +31,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u74-Da-7Bi">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="54"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u74-Da-7Bi">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="64"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nb-Gy-Fvv">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nb-Gy-Fvv">
                                             <rect key="frame" x="0.0" y="62" width="170" height="108"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="0.54273392568613543" blue="0.64296712380336085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -49,6 +47,18 @@
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.9824252725" green="0.34482249619999999" blue="0.45473200079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9nb-Gy-Fvv" firstAttribute="centerX" secondItem="7Fh-ZN-hcc" secondAttribute="centerX" id="3Lo-VF-rCO"/>
+                                    <constraint firstItem="u74-Da-7Bi" firstAttribute="leading" secondItem="7Fh-ZN-hcc" secondAttribute="leading" id="NQM-gT-rii"/>
+                                    <constraint firstItem="u74-Da-7Bi" firstAttribute="centerX" secondItem="7Fh-ZN-hcc" secondAttribute="centerX" id="WYl-yv-bJZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="u74-Da-7Bi" secondAttribute="trailing" id="b29-T0-8g9"/>
+                                    <constraint firstItem="9nb-Gy-Fvv" firstAttribute="top" secondItem="7Fh-ZN-hcc" secondAttribute="top" constant="62" id="m29-Nt-5ic"/>
+                                    <constraint firstItem="9nb-Gy-Fvv" firstAttribute="leading" secondItem="7Fh-ZN-hcc" secondAttribute="leading" id="q2x-sE-3od"/>
+                                    <constraint firstAttribute="trailing" secondItem="9nb-Gy-Fvv" secondAttribute="trailing" id="tD1-2g-0Po"/>
+                                    <constraint firstAttribute="bottom" secondItem="9nb-Gy-Fvv" secondAttribute="bottom" id="u3B-nE-SNx"/>
+                                    <constraint firstAttribute="bottom" secondItem="u74-Da-7Bi" secondAttribute="bottom" constant="106" id="uu5-eE-OPn"/>
+                                    <constraint firstItem="u74-Da-7Bi" firstAttribute="top" secondItem="7Fh-ZN-hcc" secondAttribute="top" id="y5E-Eo-CPc"/>
+                                </constraints>
                                 <size key="customSize" width="170" height="170"/>
                             </collectionViewCell>
                         </cells>
@@ -86,7 +96,7 @@
         <!--Navigation Controller-->
         <scene sceneID="UKe-VS-3D1">
             <objects>
-                <navigationController storyboardIdentifier="AssignmentView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIM-r3-F4o" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AssignmentGrid" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIM-r3-F4o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n3E-Yj-Wv4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

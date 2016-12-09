@@ -26,8 +26,8 @@ class AssignmentTableViewController: BaseViewController, UITableViewDataSource, 
     }
     
     @IBAction func showAssignments(_ sender: Any) {
-        let loginStoryboard = UIStoryboard(name: "AssignmentGridView", bundle: nil)
-        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentView") as UIViewController  //as! AssignmentGridViewController
+        let loginStoryboard = UIStoryboard(name: "AssignmentGrid", bundle: nil)
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentGrid") as UIViewController  //as! AssignmentGridViewController
         //        assignmentsClient.fetchRepositories() { assignments in
         //            controller.existingAssignments = assignments
         //            self.present(controller, animated: true)
