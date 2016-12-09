@@ -12,7 +12,7 @@
         <!--Assignment Grid View Controller-->
         <scene sceneID="2OH-V3-vGX">
             <objects>
-                <collectionViewController storyboardIdentifier="AssignmentView" id="GIl-6l-Hcg" customClass="AssignmentGridViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="AssignmentView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GIl-6l-Hcg" customClass="AssignmentGridViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="AssignmentsGridView" dataMode="prototypes" id="1CO-ae-1RG" customClass="AssignmentGridViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
         <!--Navigation Controller-->
         <scene sceneID="UKe-VS-3D1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AIM-r3-F4o" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIM-r3-F4o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n3E-Yj-Wv4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
