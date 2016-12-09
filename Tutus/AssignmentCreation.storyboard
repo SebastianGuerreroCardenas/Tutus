@@ -21,18 +21,18 @@
                             <size key="itemSize" width="179" height="187"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="11"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CollectionViewCell" id="c2T-xa-ma5">
-                                <rect key="frame" x="0.0" y="50" width="180" height="180"/>
+                                <rect key="frame" x="10" y="60" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <pickerView tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzC-jR-5YG">
-                                            <rect key="frame" x="0.0" y="58" width="180" height="122"/>
+                                            <rect key="frame" x="0.0" y="58" width="170" height="122"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <connections>
@@ -50,7 +50,7 @@
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.9824252725" green="0.34482249619999999" blue="0.45473200079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="customSize" width="180" height="180"/>
+                                <size key="customSize" width="170" height="170"/>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionReusableView" id="RCp-Rb-ifY">
