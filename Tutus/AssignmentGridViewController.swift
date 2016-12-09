@@ -38,7 +38,7 @@ class AssignmentGridViewController: UICollectionViewController {
             self.people.append(u)
         }
         self.people = currentEventObject.event_users
-        print(self.existingAssignments)
+        self.existingAssignments = globalAssignments
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
@@ -52,11 +52,12 @@ class AssignmentGridViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(self.existingAssignments.count / self.hours)
         return self.existingAssignments.count / self.hours
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewGridCell", for: indexPath) as UICollectionViewCell
         let locationLabel = cell.viewWithTag(2) as! UILabel
         locationLabel.text = self.locations[indexPath.row].name
         let personLabel = cell.viewWithTag(3) as! UILabel

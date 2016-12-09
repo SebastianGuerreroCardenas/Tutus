@@ -20,19 +20,20 @@ class AssignmentTableViewController: BaseViewController, UITableViewDataSource, 
     
     @IBAction func addAssignmentAction(_ sender: Any) {
         let loginStoryboard = UIStoryboard(name: "AssignmentCreation", bundle: nil)
-        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentCreation") as! AssignmentCreationViewController
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentCreation") as UIViewController //as! AssignmentCreationViewController
         
         self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func showAssignments(_ sender: Any) {
         let loginStoryboard = UIStoryboard(name: "AssignmentGridView", bundle: nil)
-        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentView") as! AssignmentGridViewController
-        assignmentClient.fetchRepositories() { assignments in
-            controller.existingAssignments = assignments
-            self.present(controller, animated: true)
-        }
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentView") as UIViewController  //as! AssignmentGridViewController
+        //        assignmentsClient.fetchRepositories() { assignments in
+        //            controller.existingAssignments = assignments
+        //            self.present(controller, animated: true)
+        //        }
         
+        self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func addLocationAction(_ sender: Any) {
@@ -44,9 +45,6 @@ class AssignmentTableViewController: BaseViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         currentEvent = newEvent
-        eventClient.getEventByID() { event in
-            currentEventObject = event
-        }
         
         let cellNib = UINib(nibName: "LocationTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "locationCell")

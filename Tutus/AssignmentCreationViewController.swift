@@ -38,6 +38,7 @@ class AssignmentCreationViewController: UICollectionViewController, UIPickerView
             self.people.append(u)
         }
         self.people = currentEventObject.event_users
+        print(currentEventObject.event_users)
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
@@ -52,12 +53,12 @@ class AssignmentCreationViewController: UICollectionViewController, UIPickerView
             self.assignmentsClient.setDict(diction: assignmentsInfo[assign]!) {
                 self.assignmentsClient.createAssignment() { dict in
                     print(dict)
-                    let storyboard = UIStoryboard(name: "Event", bundle: nil)
-                    let controller = storyboard.instantiateViewController(withIdentifier: "EventMain") as UIViewController
-                    self.present(controller, animated: true)
                 }
             }
         }
+        let storyboard = UIStoryboard(name: "Event", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "EventMain") as UIViewController
+        self.present(controller, animated: true)
         
     }
     
