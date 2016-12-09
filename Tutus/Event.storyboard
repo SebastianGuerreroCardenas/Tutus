@@ -486,7 +486,8 @@
                                     <action selector="addAssignmentAction:" destination="MqE-6G-3Xo" id="Por-Ym-I1j"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="show" id="2pL-ry-lg1">
+                            <barButtonItem title="Show All" id="2pL-ry-lg1">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="showAssignments:" destination="MqE-6G-3Xo" id="Ue4-2I-KbJ"/>
                                 </connections>

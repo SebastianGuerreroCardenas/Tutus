@@ -92,7 +92,7 @@
         <!--Navigation Controller-->
         <scene sceneID="aRZ-PG-AOD">
             <objects>
-                <navigationController storyboardIdentifier="AssignmentCreation" automaticallyAdjustsScrollViewInsets="NO" id="I1F-Yf-bk4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AssignmentCreation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I1F-Yf-bk4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tel-iW-EMb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

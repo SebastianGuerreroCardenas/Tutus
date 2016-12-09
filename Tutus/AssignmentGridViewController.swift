@@ -38,18 +38,13 @@ class AssignmentGridViewController: UICollectionViewController {
             self.people.append(u)
         }
         self.people = currentEventObject.event_users
-        
-        self.assignmentsClient.createAssignment() { dict in
-            print(dict)
-            //self.existingAssignments = dict
-        }
+        print(self.existingAssignments)
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Event", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "EventMain") as UIViewController
         present(controller, animated: true)
-        print("CANCEL!!!")
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

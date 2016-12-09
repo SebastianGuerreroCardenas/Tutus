@@ -17,7 +17,7 @@
 		8E1309971DF4C80C00577E51 /* GuestCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */; };
 		8E1309991DF4C83E00577E51 /* GuestCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */; };
 		8E13099B1DF4C86200577E51 /* GuestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13099A1DF4C86200577E51 /* GuestClient.swift */; };
-		8E4058351DFA52D700956043 /* AssignmentsGridView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4058341DFA52D700956043 /* AssignmentsGridView.storyboard */; };
+		8E4058351DFA52D700956043 /* AssignmentGridView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4058341DFA52D700956043 /* AssignmentGridView.storyboard */; };
 		8E4058371DFA565F00956043 /* AssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4058361DFA565F00956043 /* AssignmentViewController.swift */; };
 		8E9139051DF63AF40004BC31 /* EventInvite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9139041DF63AF40004BC31 /* EventInvite.storyboard */; };
 		8E9139071DF63C1D0004BC31 /* EventUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9139061DF63C1D0004BC31 /* EventUserViewController.swift */; };
@@ -113,7 +113,7 @@
 		8E1309961DF4C80C00577E51 /* GuestCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GuestCreation.storyboard; sourceTree = "<group>"; };
 		8E1309981DF4C83E00577E51 /* GuestCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCreationViewController.swift; sourceTree = "<group>"; };
 		8E13099A1DF4C86200577E51 /* GuestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestClient.swift; sourceTree = "<group>"; };
-		8E4058341DFA52D700956043 /* AssignmentsGridView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AssignmentsGridView.storyboard; sourceTree = "<group>"; };
+		8E4058341DFA52D700956043 /* AssignmentGridView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AssignmentGridView.storyboard; sourceTree = "<group>"; };
 		8E4058361DFA565F00956043 /* AssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentViewController.swift; sourceTree = "<group>"; };
 		8E9139041DF63AF40004BC31 /* EventInvite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventInvite.storyboard; sourceTree = "<group>"; };
 		8E9139061DF63C1D0004BC31 /* EventUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventUserViewController.swift; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 				8E118E3C1DF61EA0006AA6FA /* AssignmentClient.swift */,
 				8E118E3E1DF61EB0006AA6FA /* AssignmentCreationViewController.swift */,
 				B965171C1DF8F7AB005F4987 /* AssignmentGridViewController.swift */,
-				8E4058341DFA52D700956043 /* AssignmentsGridView.storyboard */,
+				8E4058341DFA52D700956043 /* AssignmentGridView.storyboard */,
 				B9D60EA41DF943A900598123 /* AssignmentTableViewCell.swift */,
 				B9D60EA51DF943A900598123 /* AssignmentTableViewCell.xib */,
 				B9D60EA81DF947CD00598123 /* AssignmentTableViewController.swift */,
@@ -583,7 +583,7 @@
 			files = (
 				8E118E411DF61ECC006AA6FA /* LocationCreation.storyboard in Resources */,
 				B96517061DF7608C005F4987 /* EventTeam.storyboard in Resources */,
-				8E4058351DFA52D700956043 /* AssignmentsGridView.storyboard in Resources */,
+				8E4058351DFA52D700956043 /* AssignmentGridView.storyboard in Resources */,
 				B96517151DF8DA34005F4987 /* LocationTableViewCell.xib in Resources */,
 				B90CB8DC1DE3695000A8D68D /* Login.storyboard in Resources */,
 				B9D60EA71DF943A900598123 /* AssignmentTableViewCell.xib in Resources */,
