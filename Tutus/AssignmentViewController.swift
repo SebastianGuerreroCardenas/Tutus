@@ -13,22 +13,18 @@ class AssignmentViewController: BaseViewController {
     
     @IBAction func addAssignmentAction(_ sender: Any) {
         let loginStoryboard = UIStoryboard(name: "AssignmentCreation", bundle: nil)
-        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentCreation") as! AssignmentGridViewController
-        assignmentsClient.fetchRepositories() { assignments in
-            controller.existingAssignments = assignments
-            self.present(controller, animated: true)
-            
-        }
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentCreation") as! AssignmentCreationViewController
         
         self.present(controller, animated: true, completion: nil)
     }
 
     @IBAction func showAssignments(_ sender: Any) {
         let loginStoryboard = UIStoryboard(name: "AssignmentGridView", bundle: nil)
-        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentView") as UIViewController
-        
-        
-        self.present(controller, animated: true, completion: nil)
+        let controller = loginStoryboard.instantiateViewController(withIdentifier: "AssignmentView") as! AssignmentGridViewController
+        assignmentsClient.fetchRepositories() { assignments in
+            controller.existingAssignments = assignments
+            self.present(controller, animated: true)
+        }
         
     }
     
