@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Assignment Grid View Controller-->
+        <!--Show Assignments-->
         <scene sceneID="2OH-V3-vGX">
             <objects>
-                <collectionViewController storyboardIdentifier="AssignmentView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GIl-6l-Hcg" customClass="AssignmentGridViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="AssignmentsGridView" dataMode="prototypes" id="1CO-ae-1RG" customClass="AssignmentGridViewController">
+                <collectionViewController id="GIl-6l-Hcg" customClass="AssignmentGridViewController" customModule="Tutus" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="AssignmentsGridView" dataMode="prototypes" id="1CO-ae-1RG" customClass="AssignmentGridViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -24,7 +24,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="7Fh-ZN-hcc">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewGridCell" reuseIdentifier="CollectionViewGridCell" id="7Fh-ZN-hcc">
                                 <rect key="frame" x="10" y="60" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="GIl-6l-Hcg" id="TJr-HK-11B"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="AiK-3X-t1O">
+                    <navigationItem key="navigationItem" title="Show Assignments" id="AiK-3X-t1O">
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="iwL-AJ-QM6">
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="GIl-6l-Hcg" id="TNl-qq-g0c"/>
@@ -86,7 +86,7 @@
         <!--Navigation Controller-->
         <scene sceneID="UKe-VS-3D1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIM-r3-F4o" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AssignmentView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIM-r3-F4o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n3E-Yj-Wv4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
