@@ -10,7 +10,7 @@ class SearchGuestListRiskClient {
 
     
         Alamofire.request(urlString, headers: headers).responseJSON {response in
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             var guestList: [Guest] = []
             print(json)
             for (index,guest):(String, JSON) in json {

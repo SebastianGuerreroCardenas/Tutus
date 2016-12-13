@@ -6,6 +6,18 @@
 //  Copyright © 2016 Sebastian Guerrero. All rights reserved.
 //
 
+//
+// MODULES TO TEST:
+// MessageClient - sendMessage
+// QuestionClient - submitData, getQuestion
+// AssignmentClient - getLocationsById, getRiskTeam, createAssignment, deleteLocation, deleteAssignment, getAssignments
+// LocationClient - createLocation, deleteLocation, getLocations
+// GuestClient - createGuest, checkGuestIntoEvent, deleteGuest
+// EventClient - createEvent, createEventUser, getEventById, getUsersById, getEventUsers
+// UserClient - createNewUser, getEventUsersByAuthToken, setMainUserRole
+// LoginClient - fetchProfile, getData
+//
+
 import XCTest
 @testable import Tutus
 

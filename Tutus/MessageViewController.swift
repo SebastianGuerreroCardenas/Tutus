@@ -8,15 +8,16 @@
 
 import UIKit
 
-class MessageViewController: UIViewController {
+class MessageViewController: BaseViewController {
     
     var messageClient = MessageClient()
     @IBOutlet weak var messageField: UITextField!
     
     @IBAction func messageAction(_ sender: Any) {
-            messageClient.sendMessage(message: messageField.text! as String ) {
-                print("sent message")
-            }
+        messageClient.sendMessage(message: messageField.text! as String ) {
+            print("sent message")
+        }
+
     }
     
     
@@ -25,6 +26,7 @@ class MessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        addSlideMenuButton()
         // Do any additional setup after loading the view.
     }
 

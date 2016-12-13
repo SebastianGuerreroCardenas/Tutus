@@ -8,7 +8,7 @@ class LocationListModel {
     //let parser = RepositoriesParser()
     
     func refresh(_ completion: @escaping () -> Void) {
-        client.fetchRepositories { locations in
+        client.getLocations { locations in
             self.locations = locations
             completion()
         }

@@ -8,7 +8,7 @@ class AsssignmentListModel {
     //let parser = RepositoriesParser()
     
     func refresh(_ completion: @escaping () -> Void) {
-        client.fetchRepositories { assignments in
+        client.getAssignments { assignments in
              
             for assigment in assignments {
                 for loc in globalLocations {

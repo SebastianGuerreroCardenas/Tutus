@@ -35,9 +35,9 @@ class QuestionClient {
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
         
         Alamofire.request("https://riskmanapi.herokuapp.com/questions", headers: headers).responseJSON {response in
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             
-            var question: Question = Question(id: json["id"].stringValue , question: json["question"].stringValue )
+            let question: Question = Question(id: json["id"].stringValue , question: json["question"].stringValue )
             
             completion(question)
         }
