@@ -66,12 +66,12 @@ class LocationClient {
         completion()
     }
     
-    func fetchRepositories(completion: @escaping (([Location]) -> Void)) {
+    func getLocations(completion: @escaping (([Location]) -> Void)) {
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
         
         Alamofire.request("https://riskmanapi.herokuapp.com/locations", headers: headers).responseJSON {response in
             
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             var locationList: [Location] = []
             print(json)
             for (_,location):(String, JSON) in json {

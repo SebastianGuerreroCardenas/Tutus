@@ -60,7 +60,7 @@ class UserClient {
         
         Alamofire.request("https://riskmanapi.herokuapp.com/getuser", headers: headers).responseJSON {response in
             
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             
             let user = User(id: json["id"].stringValue, role: "", email: json["email"].stringValue, full_name: json["full_name"].stringValue, auth_token: json["auth_token"].stringValue, created_at: json["created_at"].stringValue)
             
@@ -74,7 +74,7 @@ class UserClient {
         
         Alamofire.request("https://riskmanapi.herokuapp.com/event_users", headers: headers).responseJSON {response in
             
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             print(json)
             
             for (_,eventUser):(String, JSON) in json {

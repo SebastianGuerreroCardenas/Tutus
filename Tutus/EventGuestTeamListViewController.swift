@@ -47,9 +47,9 @@ class EventGuestTeamListViewController: BaseViewController, UITableViewDataSourc
             currentEventObject = event
             self.eventClient.getEventUsers() { event_users in
                 currentEventObject.event_users = event_users
-                self.locationClient.fetchRepositories() { locs in
+                self.locationClient.getLocations() { locs in
                     globalLocations = locs
-                    self.assignmentClient.fetchRepositories() { assignments in
+                    self.assignmentClient.getAssignments() { assignments in
                         globalAssignments = assignments
                         
                     }

@@ -22,7 +22,7 @@ class MenuViewClient {
         
         Alamofire.request("https://riskmanapi.herokuapp.com/events", headers: headers).responseJSON {response in
             
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             for (_,event):(String, JSON) in json {
                 eventOptions.append(["title": event["title"].stringValue, "icon":"partyIcon", "id": event["id"].stringValue])
             }
@@ -35,7 +35,7 @@ class MenuViewClient {
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
         
         Alamofire.request("https://riskmanapi.herokuapp.com/events", headers: headers).responseJSON {response in
-            let json: JSON = JSON(response.result.value)
+            let json: JSON = JSON(response.result.value!)
             var firstID:String = ""
             if (json.count != 0) {
                 firstID = json[0]["id"].stringValue

@@ -9,7 +9,7 @@ class SearchMemberGuestListClient {
         
         Alamofire.request("https://riskmanapi.herokuapp.com/invitations", headers: headers).responseJSON {response in
             
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             var guestList: [Guest] = []
             print("dfhasldkjfhasldkjfhasdlkjfhasldkjfhslkj")
             print(json)

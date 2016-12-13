@@ -100,12 +100,12 @@ class AssignmentClient {
         
     }
     
-    func fetchRepositories(completion: @escaping (([Assignment]) -> Void)) {
+    func getAssignments(completion: @escaping (([Assignment]) -> Void)) {
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
         
         Alamofire.request("https://riskmanapi.herokuapp.com/assignments", headers: headers).responseJSON {response in
             
-            let json = JSON(response.result.value)
+            let json = JSON(response.result.value!)
             var assignmentList: [Assignment] = []
             print(json)
             for (_,assignment):(String, JSON) in json {

@@ -27,6 +27,7 @@ class QuestionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getQuestion()
+        addSlideMenuButton()
         // Do any additional setup after loading the view.
     }
 
