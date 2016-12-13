@@ -20,12 +20,18 @@
 
 import XCTest
 @testable import Tutus
+var currentEvent = ""
+var newEvent = ""
+var currentEventObject: Event!
+var mainUser = UserClient()
 
 class TutusTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        mainUser.dict["id"] = "tokenhere" as AnyObject?
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
     
     override func tearDown() {
