@@ -8,7 +8,7 @@ class EventGuestRiskListModel {
     //let parser = RepositoriesParser()
     
     func refresh(_ completion: @escaping () -> Void) {
-        client.fetchRepositories { guests in
+        client.getGuests { guests in
             self.guests = guests
             completion()
         }

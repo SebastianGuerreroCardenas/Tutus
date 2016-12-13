@@ -3,7 +3,7 @@ import Alamofire
 import SwiftyJSON
 
 class SearchGuestListRiskClient {
-    func fetchRepositories(_ completion: @escaping ([Guest]) -> Void) {
+    func getGuests(_ completion: @escaping ([Guest]) -> Void) {
         
         let urlString = "https://riskmanapi.herokuapp.com/guests"
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
