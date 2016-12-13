@@ -15,23 +15,7 @@ class AssignmentClient {
     var locations = [Location]()
     
     init() {}
-    
-    func getLocationsByID(completion: @escaping (([Location]) -> Void)) {
-        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEventObject.id]
         
-        Alamofire.request("https://riskmanapi.herokuapp.com/locations", headers: headers).responseJSON {response in
-            
-            let json = JSON(response.result.value!)
-            var locationList: [Location] = []
-            for (_,location):(String, JSON) in json {
-                locationList.append(Location(id: location["id"].stringValue, event_id: location["event_id"].stringValue, description: location["description"].stringValue, name: location["name"].stringValue))
-            }
-            self.locations = locationList
-            completion(locationList)
-
-        }
-    }
-    
     func getRiskTeam(completion: @escaping (([Location]) -> Void)) {
         let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String, "EventId": currentEvent]
         
@@ -63,21 +47,6 @@ class AssignmentClient {
                 
             completion(self.dict)
         }
-    }
-    
-    func deleteLocation(id: String, completion: @escaping (() -> Void)) {
-        
-        
-        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
-        
-        
-        Alamofire.request("https://riskmanapi.herokuapp.com/locations/" + id,  method: .delete, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
-            
-            let json = JSON(response.result.value!)
-            
-            completion()
-        }
-        
     }
     
     func setDict(diction: [String : String] , completion: @escaping (() -> Void)) {
