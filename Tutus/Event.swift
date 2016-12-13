@@ -1,5 +1,5 @@
 struct Event {
-    let id: String
+    var id: String
     let title: String
     let location: String
     let start: String
