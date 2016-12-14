@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class UserClient {
     
-    var dict: [String : AnyObject]!
+    var dict = [String : AnyObject]()
     var id: String = ""
     var userObject: User!
     

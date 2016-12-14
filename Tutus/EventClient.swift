@@ -77,18 +77,18 @@ class EventClient {
     }
 
 
-    func getUsersByID(userID: String, role: String,completion: @escaping ((User) -> Void)) {
-        let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
-        
-        Alamofire.request("https://riskmanapi.herokuapp.com/users/" + userID, headers: headers).responseJSON {response in
+ //   func getUsersByID(userID: String, role: String,completion: @escaping ((User) -> Void)) {
+ //       let headers: HTTPHeaders = ["AuthorizationToken": mainUser.dict["id"]! as! String]
+ //
+ //       Alamofire.request("https://riskmanapi.herokuapp.com/users/" + userID, headers: headers).responseJSON {response in
             
-            let json = JSON(response.result.value!)
-            
-            let user = User(id: json["id"].stringValue, role: role, email: json["email"].stringValue, full_name: json["full_name"].stringValue, auth_token: json["auth_token"].stringValue, created_at: json["created_at"].stringValue)
+//            let json = JSON(response.result.value!)
 
-            completion(user)
-        }
-    }
+//            let user = User(id: json["id"].stringValue, role: role, email: json["email"].stringValue, full_name: json["full_name"].stringValue, auth_token: json["auth_token"].stringValue, created_at: json["created_at"].stringValue)
+
+//            completion(user)
+//        }
+//    }
     
     //needs testing
     func getEventUsers(completion: @escaping (([User]) -> Void)) {
