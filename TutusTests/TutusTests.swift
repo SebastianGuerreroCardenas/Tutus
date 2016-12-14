@@ -44,64 +44,66 @@ class TutusTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        mainUser.dict["id"] = "102396696923318" as AnyObject?
-        let locationClient = LocationClient()
-        let guestClient = GuestClient()
-        let assignmentsClient = AssignmentClient()
-        inviteInfo = [:]
-        // create event that is in the future with random string title and set ID (event_user for current user will automatically be set)
-        var eventInfo = [String: String]()
-        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        eventTitle = dateFormatter.string(from: Date())
-        eventInfo["title"] = eventTitle
-        eventInfo["location"] = "Test Location"
-        eventInfo["startTime"] = "2017-12-05 15:10:00"
-        eventInfo["endTime"] = "2017-12-06 15:10:00"
-        eventInfo["maxInvites"] = "3"
-        eventInfo["listOpen"] = "2017-12-02 15:10:00"
-        eventInfo["listClose"] = "2017-12-03 15:10:00"
-        eventInfo["isEdit"] = String(false)
-        eventClient.setDict(diction: eventInfo) {
-            eventClient.createEvent(){ dict in
-            }
-        }
-
-        // get the event object using getEventOptions and matching title and then get the ID and use getEventById
-        menuViewClient.getEventOptions { events in
-            for event in events {
-                if event["title"] == eventTitle {
-                    currentEventObject.id = event["id"]!
-                    currentEvent = event["id"]!
+        //mainUser.dict["id"] = "102396696923318" as AnyObject?
+        mainUser.setDictForTesting {
+            let locationClient = LocationClient()
+            let guestClient = GuestClient()
+            let assignmentsClient = AssignmentClient()
+            inviteInfo = [:]
+            // create event that is in the future with random string title and set ID (event_user for current user will automatically be set)
+            var eventInfo = [String: String]()
+            dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+            eventTitle = dateFormatter.string(from: Date())
+            eventInfo["title"] = eventTitle
+            eventInfo["location"] = "Test Location"
+            eventInfo["startTime"] = "2017-12-05 15:10:00"
+            eventInfo["endTime"] = "2017-12-06 15:10:00"
+            eventInfo["maxInvites"] = "3"
+            eventInfo["listOpen"] = "2017-12-02 15:10:00"
+            eventInfo["listClose"] = "2017-12-03 15:10:00"
+            eventInfo["isEdit"] = String(false)
+            eventClient.setDict(diction: eventInfo) {
+                eventClient.createEvent(){ dict in
                 }
             }
-        }
-        eventClient.getEventByID() { event in
-            currentEventObject = event
-            inviteInfo["invite"] = currentEventObject.team_invite_code
-            eventClient.getEventUsers() { event_users in
-                currentEventObject.event_users = event_users
-                eventClient.setDict(diction: inviteInfo) {
-                    
-                    // create a guest for the event
-                    eventClient.createEventUser(){ dict in
+            
+            // get the event object using getEventOptions and matching title and then get the ID and use getEventById
+            menuViewClient.getEventOptions { events in
+                for event in events {
+                    if event["title"] == eventTitle {
+                        currentEventObject.id = event["id"]!
+                        currentEvent = event["id"]!
+                    }
+                }
+            }
+            eventClient.getEventByID() { event in
+                currentEventObject = event
+                inviteInfo["invite"] = currentEventObject.team_invite_code
+                eventClient.getEventUsers() { event_users in
+                    currentEventObject.event_users = event_users
+                    eventClient.setDict(diction: inviteInfo) {
                         
-                        locationClient.setDict(diction: ["name": "Test Location", "description" : "Test Location Description", "isEdit": "false"]) {
-                            // create a location for the event
-                            locationClient.createLocation(){ dict in
-                                
-                                guestClient.setDict(diction: ["name": "Guest Name", "phone": "Guest Phone", "birthdaye": "Guest Birthdate","optionalText": "Guest Andrew ID", "optionalTitle": "Andrew ID", "isEdit": "false"]) {
+                        // create a guest for the event
+                        eventClient.createEventUser(){ dict in
+                            
+                            locationClient.setDict(diction: ["name": "Test Location", "description" : "Test Location Description", "isEdit": "false"]) {
+                                // create a location for the event
+                                locationClient.createLocation(){ dict in
                                     
-                                    guestClient.createGuest(){ dict in
+                                    guestClient.setDict(diction: ["name": "Guest Name", "phone": "Guest Phone", "birthdaye": "Guest Birthdate","optionalText": "Guest Andrew ID", "optionalTitle": "Andrew ID", "isEdit": "false"]) {
                                         
-                                        // get the location info back to get the ID
-                                        locationClient.getLocations() { locs in
+                                        guestClient.createGuest(){ dict in
                                             
-                                            globalLocations = locs
-                                            // create an assignment of the main user to the single location
-                                            assignmentsClient.setDict(diction: ["event_id": String(currentEventObject.id), "location_id": globalLocations[0].id, "user_id": mainUser.dict["id"] as! String, "start": "2017-12-05 15:10:00", "end": "2017-12-06 15:10:00", "attended": "false"]) {
+                                            // get the location info back to get the ID
+                                            locationClient.getLocations() { locs in
                                                 
-                                                assignmentsClient.createAssignment() { dict in
+                                                globalLocations = locs
+                                                // create an assignment of the main user to the single location
+                                                assignmentsClient.setDict(diction: ["event_id": String(currentEventObject.id), "location_id": globalLocations[0].id, "user_id": mainUser.dict["id"] as! String, "start": "2017-12-05 15:10:00", "end": "2017-12-06 15:10:00", "attended": "false"]) {
                                                     
+                                                    assignmentsClient.createAssignment() { dict in
+                                                        
+                                                    }
                                                 }
                                             }
                                         }
@@ -112,12 +114,11 @@ class TutusTests: XCTestCase {
                     }
                 }
             }
+            
+        
+        
         }
         
-        
-
-        
-
     }
     
     func testExample() {

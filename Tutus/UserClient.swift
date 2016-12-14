@@ -86,6 +86,11 @@ class UserClient {
         }
     }
     
+    func setDictForTesting(completion: @escaping(() -> Void)) {
+        self.dict["id"] = "102396696923318" as AnyObject?
+        completion()
+    }
+    
     
     
 }
