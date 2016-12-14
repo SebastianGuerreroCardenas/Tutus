@@ -27,13 +27,28 @@ let dateFormatter = DateFormatter()
 var eventTitle = ""
 let eventClient = EventClient()
 var globalLocations: [Location] = []
+var inviteInfo = [String: String]()
+
+
+//SPECIAL NOTES:
+
+//the reason why the test are nested is because alot of our testing depended on closures, 
+//that would happen at different times, but for testing purposes we do them at the same time.
+//Lastly there is like a 5% chance that they might fail because of an asyncronous issue. 
+// Essentially our applicaiton uses a couple of global varibles to keep track of the user. 
+//So in our test we set that up but because they are happening asychronsly it sometimes doesnt set the user and trying doing other things.
+//Please if it fails once tryin running it again.
+
 
 class TutusTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
         mainUser.dict["id"] = "102396696923318" as AnyObject?
-        
+        let locationClient = LocationClient()
+        let guestClient = GuestClient()
+        let assignmentsClient = AssignmentClient()
+        inviteInfo = [:]
         // create event that is in the future with random string title and set ID (event_user for current user will automatically be set)
         var eventInfo = [String: String]()
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
@@ -50,7 +65,7 @@ class TutusTests: XCTestCase {
             eventClient.createEvent(){ dict in
             }
         }
-        
+
         // get the event object using getEventOptions and matching title and then get the ID and use getEventById
         menuViewClient.getEventOptions { events in
             for event in events {
@@ -62,61 +77,52 @@ class TutusTests: XCTestCase {
         }
         eventClient.getEventByID() { event in
             currentEventObject = event
+            inviteInfo["invite"] = currentEventObject.team_invite_code
             eventClient.getEventUsers() { event_users in
                 currentEventObject.event_users = event_users
+                eventClient.setDict(diction: inviteInfo) {
+                    
+                    // create a guest for the event
+                    eventClient.createEventUser(){ dict in
+                        
+                        locationClient.setDict(diction: ["name": "Test Location", "description" : "Test Location Description", "isEdit": "false"]) {
+                            // create a location for the event
+                            locationClient.createLocation(){ dict in
+                                
+                                guestClient.setDict(diction: ["name": "Guest Name", "phone": "Guest Phone", "birthdaye": "Guest Birthdate","optionalText": "Guest Andrew ID", "optionalTitle": "Andrew ID", "isEdit": "false"]) {
+                                    
+                                    guestClient.createGuest(){ dict in
+                                        
+                                        // get the location info back to get the ID
+                                        locationClient.getLocations() { locs in
+                                            
+                                            globalLocations = locs
+                                            // create an assignment of the main user to the single location
+                                            assignmentsClient.setDict(diction: ["event_id": String(currentEventObject.id), "location_id": globalLocations[0].id, "user_id": mainUser.dict["id"] as! String, "start": "2017-12-05 15:10:00", "end": "2017-12-06 15:10:00", "attended": "false"]) {
+                                                
+                                                assignmentsClient.createAssignment() { dict in
+                                                    
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         
-        // createEventUser using team invite code from that event for that event
-        var inviteInfo = [String: String]()
-        inviteInfo["invite"] = currentEventObject.team_invite_code
-        eventClient.setDict(diction: inviteInfo) {
-            eventClient.createEventUser(){ dict in
-            }
-        }
         
-        // create a location for the event
-        let locationClient = LocationClient()
-        var locationInfo = [String: String]()
-        locationInfo["name"] = "Test Location"
-        locationInfo["description"] = "Test Location Description"
-        locationInfo["isEdit"] = String(false)
-        locationClient.setDict(diction: locationInfo) {
-            locationClient.createLocation(){ dict in
-            }
-        }
+
         
-        // create a guest for the event
-        let guestClient = GuestClient()
-        var guestInfo = [String: String]()
-        guestInfo["name"] = "Guest Name"
-        guestInfo["phone"] = "Guest Phone"
-        guestInfo["birthdate"] = "Guest Birthdate"
-        guestInfo["optionalText"] = "Guest Andrew ID"
-        guestInfo["optionalTitle"] = "Andrew ID"
-        guestInfo["isEdit"] = String(false)
-        guestClient.setDict(diction: guestInfo) {
-            guestClient.createGuest(){ dict in
-            }
-        }
-        
-        // get the location info back to get the ID
-        locationClient.getLocations() { locs in
-            globalLocations = locs
-        }
-        
-        // create an assignment of the main user to the single location
-        let assignmentsClient = AssignmentClient()
-        var assignmentsInfo = [String: [String: String]]()
-        assignmentsInfo["Test Assignment"] = ["event_id": String(currentEventObject.id), "location_id": globalLocations[0].id, "user_id": mainUser.dict["id"] as! String, "start": "2017-12-05 15:10:00", "end": "2017-12-06 15:10:00", "attended": "false"]
-        assignmentsClient.setDict(diction: assignmentsInfo["Test Assignment"]!) {
-            assignmentsClient.createAssignment() { dict in
-            }
-        }
+
     }
     
     func testExample() {
         // test getEventCount by checking to see if getEventOptions returns the same length array and that the first ID matches its ID
+        let locationClient = LocationClient()
         var eventCountCount = 0
         var eventOptionsCount = 1
         var firstId = "0"
@@ -124,37 +130,46 @@ class TutusTests: XCTestCase {
         menuViewClient.getEventCount { count, id in
             eventCountCount = count
             firstId = id
-        }
-        menuViewClient.getEventOptions { events in
-            eventOptionsCount = events.count
-            for event in events {
-                if event["title"] == eventTitle {
-                    retrievedEvent = event
+            
+            // test that getEventUsers gives an eventUser with role team
+            menuViewClient.getEventOptions { events in
+                eventOptionsCount = events.count
+                for event in events {
+                    if event["title"] == eventTitle {
+                        retrievedEvent = event
+                        XCTAssertEqual(retrievedEvent["id"], firstId)
+                        XCTAssertEqual(eventCountCount, eventOptionsCount)
+                        
+                        // test that there is a location for the event  and there is only one
+                        locationClient.getLocations() { locs in
+                        
+                        }
+                    }
                 }
             }
         }
-        XCTAssertEqual(retrievedEvent["id"], firstId)
-        XCTAssertEqual(eventCountCount, eventOptionsCount)
+
+        
+        
+        
         
         // test that getEventUsers gives an eventUser with role team
         eventClient.getEventUsers() { event_users in
             currentEventObject.event_users = event_users
+            XCTAssertEqual(currentEventObject.event_users.count, 2)
+            XCTAssertEqual(currentEventObject.event_users[0].auth_token, mainUser.dict["id"]! as! String)
+            XCTAssertEqual(currentEventObject.event_users[1].auth_token, mainUser.dict["id"]! as! String)
         }
-        XCTAssertEqual(currentEventObject.event_users.count, 2)
-        XCTAssertEqual(currentEventObject.event_users[0].id, mainUser.dict["id"])
-        XCTAssertEqual(currentEventObject.event_users[1].id, mainUser.dict["id"])
-        
-        // test that there is a location for the event  and there is only one
-        XCTAssertEqual(globalLocations.count, 1)
         
         // test that getGuests gives you a single guest with the right info
         let client = SearchGuestListRiskClient()
         var guests = [Guest]()
         client.getGuests { gs in
             guests = gs
+            XCTAssertEqual(guests.count, 1)
+            XCTAssertEqual(guests[0].name, "Guest Name")
         }
-        XCTAssertEqual(guests.count, 1)
-        XCTAssertEqual(guests[0].name, "Guest Name")
+
         
         // test that the main user has an assignment at the current location
         let aclient = AssignmentClient()
@@ -164,17 +179,12 @@ class TutusTests: XCTestCase {
                 for loc in globalLocations {
                     if assigment.location_id == loc.id {
                         aassignments.append(AssignmentLocation(id: assigment.id, location_name: loc.name, description: loc.description, start: assigment.start, end: assigment.end))
+                        XCTAssertEqual(aassignments.count, 1)
                     }
                 }
             }
         }
-        XCTAssertEqual(aassignments.count, 1)
 
-        // delete the assignment and make sure it's gone (DO WE NEED TO TEST THIS???)
-        
-        // delete the location for the event and then use getLocationsById to make sure it's gone (DO WE NEED TO TEST THIS???)
-        
-        // delete the guest and make sure it's gone (DO WE NEED TO TEST THIS???)
         
     }
     
